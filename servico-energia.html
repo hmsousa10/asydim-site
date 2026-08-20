@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Energy Procurement &amp; Renováveis — Asydim</title>
+  <meta name="description" content="Soluções de Energy Procurement, energia solar fotovoltaica UPAC, Comunidades de Energia Renovável (CER) e Energy as a Service. Asydim — Consultoria e Formação Sustentável." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo-wrap">
+        <img src="images/logo.png" alt="Logo Asydim" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+        <span class="logo-fallback" style="display:none;"><svg style="display:inline; vertical-align:middle;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><path d="M12 18a6 6 0 0 0 6-6H6a6 6 0 0 0 6 6z"/></svg></span>
+        <span class="logo-text">Asydim</span>
+      </a>
+      <nav class="nav-links" aria-label="Menu principal">
+        <a href="index.html#sobre"    class="nav-link">Sobre Nós</a>
+        <a href="index.html#servicos" class="nav-link">Serviços</a>
+        <a href="index.html#projetos" class="nav-link">Projetos</a>
+        <a href="index.html#contacto" class="nav-link">Contacto</a>
+        <a href="index.html#contacto" class="btn-nav">Falar Connosco</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="nav-drawer-backdrop" id="nav-backdrop"></div>
+  <nav class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <div class="mobile-drawer-brand">
+        <img src="images/logo.png" alt="Logo" class="mobile-drawer-logo" onerror="this.style.display='none'" />
+        <span class="mobile-drawer-logo-text">Asydim</span>
+      </div>
+      <button class="mobile-drawer-close" id="drawer-close" aria-label="Fechar menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="mobile-drawer-body">
+      <span class="mobile-drawer-label">Navegação</span>
+      <a href="index.html#sobre"    class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></span>Sobre Nós</a>
+      <a href="index.html#servicos" class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span>Serviços</a>
+      <a href="index.html#projetos" class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/></svg></span>Projetos</a>
+      <a href="index.html#contacto" class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Contacto</a>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="index.html#contacto" class="btn-primary btn-full" id="btn-drawer-cta">Falar Connosco</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO — ENERGIA (SOLAR DASHBOARD) ===== -->
+  <section class="en-hero">
+    <!-- Animated particle rays (solar effect) -->
+    <div class="en-hero-rays"></div>
+    <div class="en-hero-radial"></div>
+
+    <div class="container">
+      <div class="en-hero-inner">
+
+        <!-- LEFT: Text -->
+        <div class="en-hero-text">
+          <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 22px;">
+            <a href="index.html#servicos" class="sp-hero-back" style="margin-bottom: 0;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              Voltar aos Serviços
+            </a>
+            <div class="en-hero-badge" style="margin-bottom: 0;">
+              <span class="en-hero-badge-dot"></span>
+              Pilar 01 · Energy &amp; Renováveis
+            </div>
+          </div>
+          <h1 class="en-hero-h1">Energy Procurement<br><em>&amp; Energias Renováveis</em></h1>
+          <p class="sp-hero-desc">Aliamos a inteligência do mercado energético à geração de energia limpa. Reduzimos os seus custos operacionais e aceleramos a transição para um modelo energético autónomo e sustentável.</p>
+          <div class="sp-hero-actions">
+            <a href="index.html#contacto" class="btn-hero-primary">Pedir Proposta</a>
+            <a href="#servicos-detalhe"   class="btn-hero-ghost">Ver Soluções ↓</a>
+          </div>
+          <!-- Tech tags -->
+          <div class="sp-hero-tags">
+            <span class="tech-tag tech-tag--amber">[UPAC]</span>
+            <span class="tech-tag">[ESG]</span>
+            <span class="tech-tag tech-tag--amber">[PVSyst]</span>
+            <span class="tech-tag">[CER]</span>
+            <span class="tech-tag tech-tag--blue">[OMIE/MIBEL]</span>
+            <span class="tech-tag tech-tag--amber">[EaaS]</span>
+          </div>
+        </div>
+
+        <!-- RIGHT: Energy dashboard widget -->
+        <div class="en-hero-visual">
+          <div class="en-hero-glow"></div>
+          <div class="en-dash-card">
+            <!-- Window chrome -->
+            <div class="sp-dash-header">
+              <span class="sp-dash-dot"></span>
+              <span class="sp-dash-dot"></span>
+              <span class="sp-dash-dot"></span>
+              <span class="sp-dash-title">ASYDIM · ENERGY MONITOR</span>
+            </div>
+
+            <!-- Live metrics -->
+            <div class="en-dash-metrics">
+              <div class="en-dash-metric-main">
+                <span class="en-dash-metric-label">Produção Solar Agora</span>
+                <div class="en-dash-metric-value">
+                  <span class="en-dash-big">47.3</span>
+                  <span class="en-dash-unit">kW</span>
+                  <span class="en-dash-live">● LIVE</span>
+                </div>
+              </div>
+              <div class="en-dash-metric-row">
+                <div class="en-dash-kpi">
+                  <span class="en-dash-kpi-label">Poupança Hoje</span>
+                  <span class="en-dash-kpi-val en-kpi-green">€ 84</span>
+                </div>
+                <div class="en-dash-kpi">
+                  <span class="en-dash-kpi-label">CO₂ Evitado</span>
+                  <span class="en-dash-kpi-val en-kpi-green">23 kg</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bar chart (hourly production) -->
+            <div class="en-dash-chart-wrap">
+              <div class="en-dash-chart-label">Produção por hora (kWh)</div>
+              <div class="en-dash-bars">
+                <div class="en-bar-group"><div class="en-bar" style="height:35%"></div><span>8h</span></div>
+                <div class="en-bar-group"><div class="en-bar" style="height:55%"></div><span>9h</span></div>
+                <div class="en-bar-group"><div class="en-bar" style="height:72%"></div><span>10h</span></div>
+                <div class="en-bar-group"><div class="en-bar" style="height:88%"></div><span>11h</span></div>
+                <div class="en-bar-group"><div class="en-bar en-bar--active" style="height:100%"></div><span>12h</span></div>
+                <div class="en-bar-group"><div class="en-bar" style="height:92%"></div><span>13h</span></div>
+                <div class="en-bar-group"><div class="en-bar" style="height:78%"></div><span>14h</span></div>
+                <div class="en-bar-group"><div class="en-bar en-bar--dim" style="height:45%"></div><span>15h</span></div>
+              </div>
+            </div>
+
+            <!-- ROI strip -->
+            <div class="en-dash-footer-strip">
+              <div class="en-dash-roi">
+                <span>ROI estimado</span>
+                <strong>3.2 anos</strong>
+              </div>
+              <div class="en-dash-roi-bar">
+                <div class="en-dash-roi-fill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /en-hero-inner -->
+    </div>
+  </section>
+
+  <!-- ===== BENTO GRID — SOLUÇÕES ENERGÉTICAS ===== -->
+  <section class="sp-section" id="servicos-detalhe">
+    <div class="container">
+      <div class="sp-section-head reveal reveal--up">
+        <p class="eyebrow">O Que Fazemos</p>
+        <h2>Soluções Energéticas <span>Completas</span></h2>
+        <p>Da auditoria energética ao dimensionamento fotovoltaico, cobrimos todo o ciclo de transformação da sua empresa.</p>
+      </div>
+
+      <!-- Bento Grid — Layout diferente do especialidade: 3 colunas, hero card topo -->
+      <div class="en-bento-grid">
+
+        <!-- Card 1 — HERO WIDE: Energy Procurement -->
+        <div class="en-bento-card en-bento-card--hero reveal reveal--up">
+          <div class="en-bento-card-bg"></div>
+          <div class="en-bento-inner">
+            <div class="bento-badge bento-badge--amber">[Energy Procurement] [OMIE] [MIBEL]</div>
+            <div class="en-bento-icon en-icon--amber">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3>Monitorização &amp; Energy Procurement</h3>
+            <p>Acompanhamento em tempo real do mercado de eletricidade e gás natural. Negociamos contratos de fornecimento nas melhores condições para a sua empresa, com monitorização contínua OMIE/MIBEL.</p>
+            <ul>
+              <li>Análise de consumos e perfil de carga detalhado</li>
+              <li>Negociação com comercializadores em mercado liberalizado</li>
+              <li>Relatórios de poupança e benchmarking setorial</li>
+              <li>Monitorização contínua de preços spot OMIE/MIBEL</li>
+            </ul>
+            <div class="bento-glass">
+              <p><svg style="display:inline; margin-right:4px; vertical-align:-3px; stroke: var(--amber2);" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> Clientes que aderiram ao nosso serviço de procurement reduziram a fatura energética em média <strong>22% no primeiro ano</strong>, sem qualquer investimento inicial.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 — STAT: ROI -->
+        <div class="en-bento-card en-bento-card--stat reveal reveal--right">
+          <div class="en-stat-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><text x="4" y="20" font-size="20" stroke="none" fill="currentColor">€</text></svg>
+          </div>
+          <div class="en-stat-num">3–5<span style="display:block;">anos</span></div>
+          <div class="en-stat-label">Retorno médio do investimento solar (ROI)</div>
+        </div>
+
+        <!-- Card 3 — MEDIUM: Solar UPAC -->
+        <div class="en-bento-card en-bento-card--medium reveal reveal--up">
+          <div class="bento-badge bento-badge--amber">[UPAC] [PVSyst] [Fotovoltaico]</div>
+          <div class="en-bento-icon en-icon--amber">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </div>
+          <h3>Energia Solar Fotovoltaica (UPAC)</h3>
+          <p>Dimensionamento, projeto e instalação de sistemas fotovoltaicos com PVSyst. Maximizamos a produção e minimizamos o tempo de retorno para a sua organização.</p>
+          <ul>
+            <li>Estudo de viabilidade e análise de ROI</li>
+            <li>Dimensionamento técnico (PVSyst)</li>
+            <li>Instalação e ligação à rede (DGEG)</li>
+            <li>Monitorização da produção em tempo real</li>
+          </ul>
+        </div>
+
+        <!-- Card 4 — MEDIUM: CER -->
+        <div class="en-bento-card en-bento-card--medium reveal reveal--up">
+          <div class="bento-badge">[CER] [AutoConsumo] [DGEG]</div>
+          <div class="en-bento-icon en-icon--green">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Comunidades de Energia Renovável (CER)</h3>
+          <p>Constituição e gestão de Comunidades de Energia Renovável e regimes de AutoConsumo Coletivo. Partilhe energia e reduza a fatura de forma coletiva e legal.</p>
+          <ul>
+            <li>Estruturação jurídica e regulatória da CER</li>
+            <li>Gestão de coeficientes de repartição (DGEG)</li>
+            <li>Plataforma de monitorização e faturação</li>
+            <li>AutoConsumo Coletivo em condomínios e PME</li>
+          </ul>
+        </div>
+
+        <!-- Card 5 — STAT: CO₂ -->
+        <div class="en-bento-card en-bento-card--stat en-bento-card--stat-green reveal reveal--left">
+          <div class="en-stat-icon en-stat-icon--green">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="en-stat-num en-stat-num--green">-60<span>%</span></div>
+          <div class="en-stat-label">Redução típica de emissões CO₂ em empresas com UPAC + CER</div>
+        </div>
+
+        <!-- Card 6 — WIDE: EaaS -->
+        <div class="en-bento-card en-bento-card--wide-bottom reveal reveal--up" style="padding: 0;">
+          <div class="eaas-card-grid" style="padding: 40px;">
+            <div class="eaas-card-content">
+              <div class="eaas-badge">[EaaS] [BESS] [Scope 1·2·3]</div>
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px;">
+                <h3 style="margin-bottom: 0;">Energy as a Service (EaaS)</h3>
+                <img src="images/parceiros/youdera.svg" alt="Youdera" style="height: 26px; flex-shrink: 0;" />
+              </div>
+              <p>Modelo de serviço integrado onde a Asydim assume a gestão completa da sua infraestrutura energética — sem investimento inicial da sua parte. Paga apenas pelos resultados.</p>
+              <ul>
+                <li>Modelo pay-per-use sem CAPEX para o cliente</li>
+                <li>Gestão de ativos energéticos (BESS, PV, micro-redes)</li>
+                <li>Consultoria de sustentabilidade e estratégia ESG</li>
+                <li>Relatórios de emissões Scope 1, 2 e 3</li>
+              </ul>
+            </div>
+            <div class="eaas-card-visual">
+              <img src="images/eaas-bg.png" alt="Energy as a Service Infrastructure" class="eaas-bg-img" />
+              <div class="eaas-glass-badge">
+                <span class="zero">ZERO</span>
+                <span class="text">CAPEX Inicial</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /en-bento-grid -->
+    </div>
+  </section>
+
+  <!-- ===== HORIZONTAL TIMELINE — PROCESSO ===== -->
+  <section class="sp-section sp-section--alt">
+    <div class="container">
+      <div class="sp-section-head text-center reveal reveal--up">
+        <p class="eyebrow" style="text-align: center; display: block; margin: 0 auto 16px;">Como Trabalhamos</p>
+        <h2 style="text-align:center;">O Nosso <span>Processo</span></h2>
+        <p style="margin: 14px auto 0; text-align:center; max-width:520px;">Um método transparente e orientado a resultados concretos e mensuráveis — da auditoria à monitorização contínua.</p>
+      </div>
+
+      <div class="sp-timeline en-timeline reveal reveal--up">
+        <div class="sp-timeline-track">
+
+          <div class="sp-timeline-step">
+            <div class="sp-step-num en-step-num">1</div>
+            <div class="sp-step-body">
+              <h3>Auditoria Energética</h3>
+              <p>Analisamos consumos históricos, perfil de carga, contratos e infraestrutura. Identificamos poupanças imediatas.</p>
+            </div>
+          </div>
+
+          <div class="sp-timeline-step">
+            <div class="sp-step-num en-step-num">2</div>
+            <div class="sp-step-body">
+              <h3>Estudo &amp; Proposta</h3>
+              <p>Elaboramos estudo técnico-económico com simulações de ROI, payback e impacto ambiental (CO₂ evitado).</p>
+            </div>
+          </div>
+
+          <div class="sp-timeline-step">
+            <div class="sp-step-num en-step-num">3</div>
+            <div class="sp-step-body">
+              <h3>Implementação</h3>
+              <p>Gerimos todo o processo: aprovação regulatória (DGEG), instalação e entrada em exploração com fiscalização técnica.</p>
+            </div>
+          </div>
+
+          <div class="sp-timeline-step">
+            <div class="sp-step-num en-step-num">4</div>
+            <div class="sp-step-body">
+              <h3>Monitorização &amp; Reporting</h3>
+              <p>Dashboards em tempo real e relatórios periódicos de desempenho, poupança e impacto ESG para stakeholders.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA PREMIUM — MESH SOLAR ===== -->
+  <div class="sp-cta-wrap">
+    <div class="sp-cta-mesh sp-cta-mesh--energy"></div>
+    <div class="sp-cta-geo sp-cta-geo--tl"></div>
+    <div class="sp-cta-geo sp-cta-geo--br"></div>
+    <!-- Solar ray accent -->
+    <div class="en-cta-ray en-cta-ray--1"></div>
+    <div class="en-cta-ray en-cta-ray--2"></div>
+
+    <div class="container">
+      <div class="sp-cta-inner reveal reveal--up">
+        <div class="sp-cta-eyebrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>
+          Análise Gratuita
+        </div>
+        <h2>Pronto para Reduzir a sua<br><em>Fatura de Energia?</em></h2>
+        <p>Fale connosco e receba uma análise gratuita do potencial de poupança da sua empresa — sem compromisso.</p>
+        <div class="sp-cta-btns">
+          <a href="index.html#contacto" class="btn-hero-primary">Pedir Análise Gratuita</a>
+          <a href="index.html"          class="btn-hero-ghost">Voltar ao Início</a>
+        </div>
+        <div class="glass-box" style="max-width:500px; margin: 28px auto 0;">
+          <p><svg style="display:inline; margin-right:4px; vertical-align:-3px; stroke: var(--amber);" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg> Resposta em menos de 24h úteis · Sem compromisso · Estudo de ROI incluído</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Logo Asydim" class="footer-logo" onerror="this.style.display='none'" />
+        <p>Consultoria &amp; Formação Sustentável</p>
+        <p class="footer-sub">Informática · Inovação · Sustentabilidade</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navegação</h5>
+        <a href="index.html#sobre">Sobre Nós</a>
+        <a href="index.html#servicos">Serviços</a>
+        <a href="index.html#projetos">Projetos</a>
+        <a href="index.html#contacto">Contacto</a>
+      </div>
+      <div class="footer-col">
+        <h5>Soluções</h5>
+        <a href="servico-energia.html">Energy Procurement &amp; Renováveis</a>
+        <a href="servico-domotica.html">Smart House &amp; Domótica</a>
+        <a href="servico-engenharia.html">Engenharia Civil &amp; Remodelações</a>
+        <a href="servico-especialidade.html">Projetos de Especialidade</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contacto</h5>
+        <a href="mailto:info@asydim.com">info@asydim.com</a>
+        <a href="https://www.asydim.pt" target="_blank" rel="noopener">www.asydim.pt</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2025 Asydim — Todos os direitos reservados · Desenvolvido em Portugal</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

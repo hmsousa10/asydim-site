@@ -1,0 +1,290 @@
+HUGO SOUSA · MEDREMINDER · PROPOSTA COMERCIAL
+MedReminder
+Nunca falhar uma toma. Verificar. Cuidar. Otimizar.
+Proposta Comercial de Produto Digital
+Aplicação móvel de gestão e adesão à medicação — multi-perfil
+Hugo Sousa
+AUTOR E DESIGNER DO PROJETO
+Engenharia Informática · UX/UI Developer
+Projeto Individual · Junho de 2026MedReminder Hugo Sousa
+Índice
+A Conteúdo
+1 Argumento Comercial — Porquê Investir no MedReminder 2
+1.1 O Mercado — Quatro Segmentos, Uma Plataforma . . . . . . . . . . . . . . . . . . 3
+1.2 O Modelo de Rede — Crescimento Orgânico por Convicção . . . . . . . . . . . . . . 4
+1.3 Modelo de Receita e Go-to-Market . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+1.4 Risco, Compliance e Confiança . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+2 O Produto em Detalhe — Montra de UX/UI 6
+2.1 Entrada e Onboarding . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+2.2 Paciente — Gestão de Tomas e Segurança . . . . . . . . . . . . . . . . . . . . . . . 7
+2.3 Cuidador — Monitorização Remota . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+2.4 Farmacêutico — Verificador Clínico ao Balcão . . . . . . . . . . . . . . . . . . . . . 10
+2.5 Biohacker — Alta Performance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+3 Análise Competitiva — O Oceano Azul 13
+4 Próximos Passos — Roadmap 2026–2027 14
+Fontes e Notas 15
+1MedReminder Hugo Sousa
+1 Argumento Comercial — Porquê Investir no MedReminder
+O problema não é o esquecimento. É o isolamento.
+Há um momento exato em que a saúde de uma pessoa começa a deteriorar-se em silêncio: quando
+ela toma o medicamento errado, quando salta uma dose crítica sem que ninguém saiba, ou quando o
+farmacêutico ao balcão não tem tempo para verificar uma interação perigosa.
+Este problema é sistémico.50 % dos doentes crónicos não cumprem a sua prescriçãode forma
+consistente (OMS, 2023), não por má vontade, mas porque o sistema que os envolve estáfragmentado:
+o paciente vive isolado, a família opera só por suspeita, a farmácia trabalha sem dados e obiohacker
+moderno não tem ferramentas científicas adequadas. Esta falha coletiva custa à Europa C125 B por
+anoem hospitalizações evitáveis — um número que representa milhares de vidas e famílias destruídas.
+O MedReminder não é mais uma aplicação de lembretes.
+É a primeira plataforma a unir todos os intervenientes na saúde de uma pessoa — num
+único ecossistema colaborativo.
+50 %
+dos doentes crónicos
+não cumpre a prescrição (OMS)
+C125 B
+custo anual na Europa
+em hospitalizações evitáveis
+USD1,7 B
+TAM global em 2026
+mercado de adesão à medicação
+2MedReminder Hugo Sousa
+O Mercado — Quatro Segmentos, Uma Plataforma
+O MedReminder não aposta num nicho. Ataca simultaneamente quatro segmentos com dores distintas
+mas interligadas, criando um efeito de rede que nenhum concorrente consegue replicar com uma solução
+de perfil único.
+Segmento Dimensão A Dor que o MedReminder Resolve
+Pacientes Crónicos
+Prioridade n.º 1
+620 M
+75 % dos idosos tomam mais de 5 medicamentos diários.
+São sobrecarregados por interfaces complexas e jargão
+médico. O MedReminder dá-lhes autonomia real: Pill
+Scanner por câmara, alarmes inconfundíveis e linguagem
+acessível.
+Cuidadores Informais
+A “Geração Sanduíche”
+380 M
+Filhos adultos que gerem simultaneamente os pais idosos
+e os filhos. Vivem em ansiedade permanente por não
+saberem se a dose foi tomada. O MedReminder dá-lhes
+tranquilidade em tempo real, sem invadir a privacidade do
+familiar.
+Rede de Farmácias
+Parceiro Estratégico B2B
+470 M
+O farmacêutico ao balcão depende de memória e
+pesquisas lentas para detetar interações perigosas. O
+Interaction Checkerdo MedReminder integra APIs clínicas
+certificadas (DrugBank / FDA), transformando o balcão num
+ponto de intervenção profissional.
+Biohackers e Atletas
+Wellnessde Alta
+Performance
+230 M
+Um segmento em explosão que exige rigor científico na
+suplementação. Nenhuma aplicação cruza dados de
+wearables (Oura Ring, Apple Health) com um motor de
+resolução de antagonismos vitamínicos. O MedReminder é
+o único a fazê-lo.
+3MedReminder Hugo Sousa
+O Modelo de Rede — Crescimento Orgânico por Convicção
+A vantagem competitiva mais profunda do MedReminder não é tecnológica: éestrutural. Cada novo
+utilizador que entra pela sua própria necessidade arrasta organicamente outros perfis para a plataforma.
+Não há custo de aquisição incremental — o crescimento é auto-sustentado pelo ecossistema:
+• O Paciente instala a aplicação pela suasimplicidade radical— um ecrã principal, um botão, uma
+toma confirmada. A curva de aprendizagem é zero.
+• O Cuidador é convidado pelo próprio paciente ou pela família, movido pela necessidade desegurança
+remota sem intrusão. Entra no ecossistema sem atrito.
+• A Farmácia adota a plataforma como ferramenta profissional ao balcão e passa arecomendar
+ativamente o MedReminderaos seus utentes, funcionando como canal de distribuição orgânico
+com credibilidade clínica.
+• O Biohacker descobre a plataforma pela vertente de performance evalida publicamente a sua
+inovaçãojunto das comunidades dewellness, gerando visibilidade premium orgânica.
+Por Que Agora — A Janela de Oportunidade
+O envelhecimento acelerado da população europeia, a pressão crescente sobre os sistemas de saúde
+públicos e a massificação dos wearables criaram, pela primeira vez, as condições ideais para uma plataforma
+como o MedReminder.Quem entrar neste mercado nos próximos 18 meses estabelece o padrão de
+referência europeu.Os concorrentes existentes (Medisafe, CareZone) apostaram em perfis isolados e
+mercados norte-americanos — deixando o ecossistema europeu multi-perfilcompletamente por explorar.
+Modelo de Receita e Go-to-Market
+Monetização (freemium + B2B):
+•Paciente (B2C): gratuito para maximizar aquisição e efeito de rede.
+•Cuidador (B2C): subscrição mensal para monitorização, alertas e exportação de relatórios (PDF).
+•Farmácias (B2B): licença por balcão/loja com integração clínica e histórico de consultas.
+•Biohacker (Premium): integrações, otimização destacke exportação de dados.
+Go-to-market (3 canais iniciais):
+•Pilotos com farmácias: onboarding B2B + recomendação orgânica ao paciente e cuidador.
+•Comunidades e associações: doentes crónicos e cuidadores (parcerias, eventos, conteúdo).
+• Aquisição digital: ASO, landing page e campanhas focadas emuse-cases(segurança + autonomia).
+4MedReminder Hugo Sousa
+Risco, Compliance e Confiança
+• Privacidade e consentimento: partilha de dados apenas com autorização explícita e perfis isolados
+em contexto multi-paciente.
+•Limites clínicos: apoio à adesão e gestão de risco — não substitui diagnóstico médico.
+• Segurança: encriptação, controlo de acesso (RBAC) e auditoria operacional alinhada com RGPD/ISO
+27001.
+A proposta de valor descrita acima não é teórica — está completamente prototipada. As próximas páginas
+mostram osecrãs reais do protótipo Figma: cada fluxo de utilizador, cada decisão de design e cada
+detalhe de interação que sustenta o argumento comercial apresentado. Nenhuma feature foi prometida
+sem ter sido desenhada.
+5MedReminder Hugo Sousa
+2 O Produto em Detalhe — Montra de UX/UI
+A aplicação MedReminder foi desenhada de raíz para servir diferentes demografias, totalizando quase
+50 ecrãspixel-perfectdistribuídos por quatro perfis distintos. Em vez de forçar uma interface única e
+genérica, o design adapta-se dinamicamente às necessidades visuais, cognitivas e deworkflowde cada
+utilizador — do idoso de 75 anos ao atleta de alta performance.
+Entrada e Onboarding
+O ponto de entrada é universal. A filosofia deZero Atritogarante que o utilizador não fica preso em ecrãs
+de registo exaustivos. O utilizador seleciona o seu perfil e a interface transforma-se instantaneamente.
+Ecrã de Boas-vindas: acesso universal
+ Seleção de Perfil: 4 caminhos distintos
+Figura 1– O ponto de entrada da aplicação.
+6MedReminder Hugo Sousa
+Paciente — Gestão de Tomas e Segurança
+O perfil focado no idoso (Rosa) ou doente crónico. Apresenta tipografia de alto contraste, botões largos
+(Regra de Fitts otimizada) e linguagem extremamente acessível.
+1. Acesso e Painel Principal
+Ologiné simplificado. A página inicial dá destaque único à próxima toma, eliminando ruído visual. O
+alarme assume controlo do ecrã até a toma ser confirmada.
+Iniciar Sessão
+ Criar Conta
+ Painel Principal
+ Alarme (Próxima Toma)
+2. Adicionar Medicação ePill Scanner
+Para evitar erros de digitação, o paciente pode usar a câmara. O algoritmo reconhece o comprimido,
+analisa-o e faz a correspondência direta na base de dados.
+Adicionar Manualmente
+ Scanner (Câmara)
+ Correspondência Encontrada
+7MedReminder Hugo Sousa
+3. Verificações de Segurança e Estilo de Vida
+Quando há conflitos, a aplicação não usa jargão médico. Explica o risco visualmente e sugere alternativas
+seguras ou horários distanciados para compatibilidade com álcool ou cafeína.
+Aviso de Risco
+ Alternativas Seguras
+ Alertas de Rotina
+ Estilo de Vida
+4. Calendário e Definições
+Calendário de Adesão
+ Definições do Paciente
+8MedReminder Hugo Sousa
+Cuidador — Monitorização Remota
+Desenhado para a “Geração Sanduíche” (adultos que cuidam dos pais e dos filhos). Permite contexto
+multi-paciente e exportação clínica.
+1. Seleção de Paciente e Painéis Independentes
+A Sofia pode alternar entre os dados da Rosa (mãe) e do António (sogro). Os contextos são isolados
+para não haver confusão nas tomas.
+Multi-Paciente
+ Painel Rosa
+ Painel António
+2. Calendários de Adesão e Estado de Saúde
+Cores vivas indicam meses perfeitos e dias de falha, tranquilizando o cuidador instantaneamente ao abrir
+a aplicação.
+Calendário (Rosa)
+ Calendário (António)
+ Medicação da Rosa
+ Medicação do António
+9MedReminder Hugo Sousa
+3. Alertas e Exportação de Relatórios (PDF)
+Se a Rosa falhar uma toma crítica, a aplicação envia uma notificaçãopush. Para as consultas, é possível
+gerar relatórios com um toque.
+Notificações
+ Relatório (Rosa)
+ Relatório (António)
+ Definições
+Farmacêutico — Verificador Clínico ao Balcão
+Interface de alta densidade de informação. Substitui a navegação em fóruns e guias desatualizados por
+integração API farmacêutica direta.
+1. Ferramentas do Verificador de Interações
+Pesquisa instantânea com apresentação do mecanismo biológico da interação.
+Painel Clínico
+ Verificador de Interações
+ Pesquisa de Princípios Ativos
+10MedReminder Hugo Sousa
+2. Scanner de Formulação e Histórico
+O farmacêutico pode ler códigos de barras de embalagens ao balcão para obter instantaneamente o
+Guia de Severidade.
+Leitura de Ingrediente
+ Escala de Severidade
+ Histórico de Consultas
+ Definições da Farmácia
+Biohacker — Alta Performance
+Perfilpremiumfocado em suplementação, rastreamento de dados e integração comwearablesde fitness.
+1. Otimização de Suplementos (Stack Optimization)
+Algoritmo que previne antagonismos vitamínicos (p. ex.: separação de Ferro e Cálcio no horário).
+Painel de Rastreamento
+ Otimizador deStack
+ Horário Inteligente
+11MedReminder Hugo Sousa
+2. Integrações e Tendências de Absorção
+Ligação ao Oura Ring e Apple Health para correlacionar tomas de Magnésio com a qualidade do sono
+profundo.
+Análise de Tendências
+ Detalhe do Suplemento
+ Sincronização de
+Wearables
+Configurações Bio
+12MedReminder Hugo Sousa
+3 Análise Competitiva — O Oceano Azul
+Existem aplicações de gestão de medicação no mercado. Nenhuma, porém,resolve o problema
+de forma holística— todas optaram por servir um único perfil, sacrificando o efeito de rede que é o
+verdadeiro diferenciador do MedReminder.
+Produto Paciente Cuidador Farmácia Biohacker Foco Geográfico
+MedReminder
+✓ ✓ ✓ ✓
+União Europeia —
+multi-perfil nativo
+Medisafe
+✓ ◦ × ×
+EUA — seguradoras e
+pacientes
+CareZone
+◦ ✓ × ×
+EUA — cuidadores familiares
+MyTherapy
+✓ ◦ × ×
+Europa — adesão simples
+Cronometer
+× × × ◦
+Global — nutrição apenas
+✓Funcionalidade nativa e completa◦Parcial ou limitada×Ausente
+Três Vantagens Inimitáveis
+• Ecossistema a Quatro Frentes:Nenhum concorrente possui a visão de um produto desenhado
+de raíz para conectar simultaneamente os quatro intervenientes na saúde de um indivíduo. Esta
+arquitetura cria umfosso competitivo estrutural: quanto mais perfis entram, mais valioso se
+torna o ecossistema para todos.
+• Segurança Clínica Acionável:Ferramentas como a Medisafealertamo paciente. O MedRe-
+minderempodera o farmacêuticoao balcão com APIs clínicas certificadas (DrugBank / FDA),
+transformando um aviso genérico numa intervenção profissional informada.
+• Dados de Wearables com Rigor Científico:Nenhuma aplicação cruza dados de dispositivos
+wearable(Oura Ring, Apple Health) com um motor de resolução inteligente deantagonismos
+vitamínicos. O MedReminder é o único a fazê-lo.
+13MedReminder Hugo Sousa
+4 Próximos Passos — Roadmap 2026–2027
+O desenvolvimento do MedReminder segue uma estratégia faseada que priorizavelocidade de valida-
+ção: cada fase termina com um marco mensurável, não apenas com código entregue.
+1 Fase 1 — MVP FuncionalQ3 2026 (3 meses)
+• Migração dos protótipos Figma paraReact Native(iOS + Android).
+• Implementação doPill Scannercom bibliotecas de Visão Computacional (TensorFlow Lite).
+• Fluxo completo doperfil Paciente: registo, alarmes, calendário de adesão.
+Marco:100 utilizadores beta com taxa de adesão≥80 % após 30 dias.
+2 Fase 2 — Ecossistema ColaborativoQ4 2026 (3 meses)
+• Arquiteturacloud:Node.js+Supabasecom sincronização em tempo real.
+• Ativação doperfil Cuidador: notificaçõespush, painéis multi-paciente e exportação PDF .
+• Implementação do modelofreemiume pagamentos viaStripe.
+Marco:Primeiro par Paciente + Cuidador ativo; ARR inicial de C10 000.
+3 Fase 3 — APIs, B2B e SegurançaQ1–Q2 2027 (4 meses)
+• Integração comDrugBank APIeFDA Open Datapara oInteraction Checkerfarmacêutico.
+• Lançamento doperfil Farmacêuticoe onboarding das primeiras 50 farmácias parceiras.
+•Perfil Biohacker: integração Oura Ring, Apple Health e motor deStack Optimization.
+• Certificação de segurança de dados de saúde:Conformidade RGPDe auditoria ISO 27001.
+Marco:50 farmácias B2B ativas; plataforma com os quatro perfis em produção.
+14MedReminder Hugo Sousa
+A Fontes e Notas
+• Adesão à medicação (50 %):Organização Mundial da Saúde (OMS), 2023. (Atualizar com referência completa
+na versão final.)
+• Custo anual na Europa (C125 B):valor apresentado como ordem de grandeza; substituir por fonte económi-
+ca/relatório na versão final.
+•TAM (USD 1,7 B):estimativa de mercado; substituir por fonte e clarificar se é TAM/SAM/SOM.
+•APIs clínicas:DrugBank (API) e FDA Open Data são referências de integração previstas no roadmap.
+•Convenções:M = milhões; B = mil milhões.
+15

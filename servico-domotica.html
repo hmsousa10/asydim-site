@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart House &amp; Domótica — Asydim</title>
+  <meta name="description" content="Transformamos espaços em Smart Buildings com domótica Teletask, IoT e gestão inteligente de energia. Asydim." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo-wrap">
+        <img src="images/logo.png" alt="Logo Asydim" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+        <span class="logo-fallback" style="display:none;">🌿</span>
+        <span class="logo-text">Asydim</span>
+      </a>
+      <nav class="nav-links" aria-label="Menu principal">
+        <a href="index.html#sobre"    class="nav-link">Sobre Nós</a>
+        <a href="index.html#servicos" class="nav-link">Serviços</a>
+        <a href="index.html#projetos" class="nav-link">Projetos</a>
+        <a href="index.html#contacto" class="nav-link">Contacto</a>
+        <a href="index.html#contacto" class="btn-nav">Falar Connosco</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="nav-drawer-backdrop" id="nav-backdrop"></div>
+  <nav class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <div class="mobile-drawer-brand">
+        <img src="images/logo.png" alt="Logo" class="mobile-drawer-logo" onerror="this.style.display='none'" />
+        <span class="mobile-drawer-logo-text">Asydim</span>
+      </div>
+      <button class="mobile-drawer-close" id="drawer-close" aria-label="Fechar menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="mobile-drawer-body">
+      <span class="mobile-drawer-label">Navegação</span>
+      <a href="index.html#sobre"    class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></span>Sobre Nós</a>
+      <a href="index.html#servicos" class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span>Serviços</a>
+      <a href="index.html#projetos" class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/></svg></span>Projetos</a>
+      <a href="index.html#contacto" class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Contacto</a>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="index.html#contacto" class="btn-primary btn-full" id="btn-drawer-cta">Falar Connosco</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO — SMART HOME APP WIDGET ===== -->
+  <section class="dm-hero">
+    <div class="dm-hero-circuit"></div>
+    <div class="dm-hero-radial"></div>
+
+    <div class="container">
+      <div class="dm-hero-inner">
+
+        <!-- LEFT: Text -->
+        <div class="dm-hero-text">
+          <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 22px;">
+            <a href="index.html#servicos" class="sp-hero-back" style="margin-bottom: 0;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              Voltar aos Serviços
+            </a>
+            <div class="dm-hero-badge" style="margin-bottom: 0;">
+              <span class="dm-hero-badge-dot"></span>
+              Pilar 02 · Smart Buildings
+            </div>
+          </div>
+          <h1 class="dm-hero-h1">Smart House<br><em>&amp; Domótica</em></h1>
+          <p class="sp-hero-desc">Transformamos espaços habitacionais e comerciais em Smart Buildings altamente eficientes. Com integração tecnológica de topo, garantimos conforto, segurança e consumo inteligente.</p>
+          <div class="sp-hero-actions">
+            <a href="index.html#contacto" class="btn-hero-primary">Pedir Proposta</a>
+            <a href="#servicos-detalhe"   class="btn-hero-ghost">Ver Soluções ↓</a>
+          </div>
+          <div class="sp-hero-tags">
+            <span class="tech-tag tech-tag--blue">[Teletask]</span>
+            <span class="tech-tag">[IoT]</span>
+            <span class="tech-tag tech-tag--blue">[KNX]</span>
+            <span class="tech-tag tech-tag--violet">[DALI]</span>
+            <span class="tech-tag">[BMS]</span>
+            <span class="tech-tag tech-tag--blue">[HVAC]</span>
+          </div>
+        </div>
+
+        <!-- RIGHT: Smart home control panel -->
+        <div class="dm-hero-visual">
+          <div class="dm-hero-glow"></div>
+          <div class="dm-app-card">
+            <div class="sp-dash-header">
+              <span class="sp-dash-dot"></span><span class="sp-dash-dot"></span><span class="sp-dash-dot"></span>
+              <span class="sp-dash-title">ASYDIM · SMART HOME</span>
+            </div>
+            <!-- Room tabs -->
+            <div class="dm-room-tabs">
+              <button class="dm-room-tab dm-room-tab--active">Sala</button>
+              <button class="dm-room-tab">Suite</button>
+              <button class="dm-room-tab">Cozinha</button>
+              <button class="dm-room-tab">Escritório</button>
+            </div>
+            <!-- Control tiles grid -->
+            <div class="dm-tiles">
+              <div class="dm-tile dm-tile--on">
+                <div class="dm-tile-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>
+                </div>
+                <span class="dm-tile-label">Luz</span>
+                <span class="dm-tile-val">75%</span>
+                <div class="dm-tile-toggle dm-toggle--on"></div>
+              </div>
+              <div class="dm-tile dm-tile--on">
+                <div class="dm-tile-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <span class="dm-tile-label">Clima</span>
+                <span class="dm-tile-val">22°C</span>
+                <div class="dm-tile-toggle dm-toggle--on"></div>
+              </div>
+              <div class="dm-tile">
+                <div class="dm-tile-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                </div>
+                <span class="dm-tile-label">Acesso</span>
+                <span class="dm-tile-val">Trancado</span>
+                <div class="dm-tile-toggle"></div>
+              </div>
+              <div class="dm-tile dm-tile--on">
+                <div class="dm-tile-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                </div>
+                <span class="dm-tile-label">Consumo</span>
+                <span class="dm-tile-val">1.2 kW</span>
+                <div class="dm-tile-toggle dm-toggle--on"></div>
+              </div>
+            </div>
+            <!-- Scene strip -->
+            <div class="dm-scenes">
+              <span class="dm-scene-label">Cenário Ativo:</span>
+              <button class="dm-scene dm-scene--active">🌅 Acordar</button>
+              <button class="dm-scene">🎬 Cinema</button>
+              <button class="dm-scene">🌙 Noite</button>
+            </div>
+            <!-- Status bar -->
+            <div class="dm-status-bar">
+              <span class="dm-status-dot"></span>
+              <span>Todos os sistemas online · Teletask v4.2</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURE LIST — SERVIÇOS ===== -->
+  <section class="sp-section" id="servicos-detalhe">
+    <div class="container">
+      <div class="sp-section-head reveal reveal--up">
+        <p class="eyebrow">O Que Fazemos</p>
+        <h2>Automação <span>Inteligente</span> do seu Espaço</h2>
+        <p>Instalamos e configuramos sistemas de domótica de topo, integrados numa plataforma central de controlo acessível por smartphone ou tablet.</p>
+      </div>
+
+      <!-- Feature blocks: alternating layout with glass accent -->
+      <div class="dm-features">
+
+        <div class="dm-feature reveal reveal--left">
+          <div class="dm-feature-visual dm-fv--teal">
+            <img src="images/dm_teletask.jpg" alt="Smart Home Interface" class="dm-fv-bg-img" />
+            <div class="dm-fv-glass-badge">
+              <div class="dm-fv-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <div class="dm-fv-badge">[Teletask] [KNX]</div>
+            </div>
+          </div>
+          <div class="dm-feature-content">
+            <span class="eyebrow">Serviço 01</span>
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px;">
+              <h3 style="margin-bottom: 0;">Domótica <span>Teletask</span></h3>
+              <img src="images/parceiros/idr.png" alt="IDR" style="height: 26px; flex-shrink: 0;" />
+            </div>
+            <p>Instalação e programação de sistemas Teletask — a referência europeia em automação residencial e comercial. Controlo total de todos os equipamentos do edifício numa única plataforma.</p>
+            <ul class="zp-list">
+              <li>Programação de cenários personalizados</li>
+              <li>Interface via app iOS e Android</li>
+              <li>Integração com assistentes de voz (Alexa, Google)</li>
+              <li>Painéis de controlo Touch elegantes</li>
+            </ul>
+            <div class="dm-feature-glass">
+              <p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:8px; vertical-align:text-bottom;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Sistema Teletask certificado com suporte a mais de <strong>10.000 funções programáveis</strong> num único projeto residencial ou comercial.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dm-feature dm-feature--reverse reveal reveal--right">
+          <div class="dm-feature-content">
+            <span class="eyebrow">Serviço 02</span>
+            <h3>Gestão Centralizada <span>de Sistemas</span></h3>
+            <p>Integração e controlo centralizado de iluminação, estores, climatização e segurança. Todos os sistemas comunicam entre si de forma autónoma e eficiente.</p>
+            <ul class="zp-list">
+              <li>Iluminação DALI e RGB dinâmica</li>
+              <li>Controlo de estores e persianas motorizadas</li>
+              <li>Climatização multi-zona (HVAC)</li>
+              <li>Gestão de acessos e videoporteiros IP</li>
+            </ul>
+          </div>
+          <div class="dm-feature-visual dm-fv--violet">
+            <img src="images/dm_lighting.jpg" alt="Smart Lighting" class="dm-fv-bg-img" />
+            <div class="dm-fv-glass-badge">
+              <div class="dm-fv-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+              </div>
+              <div class="dm-fv-badge dm-fv-badge--violet">[DALI] [HVAC] [IP]</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dm-feature reveal reveal--left">
+          <div class="dm-feature-visual dm-fv--blue">
+            <img src="images/dm_iot.jpg" alt="Sensors IoT" class="dm-fv-bg-img" />
+            <div class="dm-fv-glass-badge">
+              <div class="dm-fv-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+              </div>
+              <div class="dm-fv-badge dm-fv-badge--blue">[IoT] [BMS] [MQTT]</div>
+            </div>
+          </div>
+          <div class="dm-feature-content">
+            <span class="eyebrow">Serviço 03</span>
+            <h3>Internet of Things <span>(IoT)</span></h3>
+            <p>Integração de dispositivos IoT para monitorização contínua de consumos, qualidade do ar, temperatura e humidade. Dados em tempo real para decisões mais inteligentes.</p>
+            <ul class="zp-list">
+              <li>Sensores de presença, temperatura e CO₂</li>
+              <li>Dashboards de monitorização em tempo real</li>
+              <li>Alertas automáticos por anomalia</li>
+              <li>Integração com plataformas BMS</li>
+            </ul>
+            <div class="dm-feature-glass">
+              <p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:8px; vertical-align:text-bottom;"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"/></svg> Os nossos sensores IoT reduzem em média <strong>30% o consumo energético</strong> ao otimizar automaticamente iluminação e climatização por presença.</p>
+            </div>
+          </div>
+        </div>
+      </div><!-- /dm-features -->
+    </div>
+  </section>
+
+  <!-- ===== HORIZONTAL TIMELINE ===== -->
+  <section class="sp-section sp-section--alt">
+    <div class="container">
+      <div class="sp-section-head text-center reveal reveal--up">
+        <p class="eyebrow" style="text-align: center; display: block; margin: 0 auto 16px;">Como Trabalhamos</p>
+        <h2 style="text-align:center;">O Nosso <span>Processo</span></h2>
+        <p style="margin:14px auto 0; text-align:center; max-width:520px;">Do levantamento técnico à entrega chave-na-mão, estamos presentes em cada fase do projeto.</p>
+      </div>
+      <div class="sp-timeline dm-timeline reveal reveal--up">
+        <div class="sp-timeline-track">
+
+          <div class="sp-timeline-step">
+            <div class="sp-step-num dm-step-num">1</div>
+            <div class="sp-step-body">
+              <h3>Visita &amp; Levantamento</h3>
+              <p>Avaliamos infraestrutura existente, necessidades e oportunidades de automação. Definimos âmbito técnico e orçamento.</p>
+            </div>
+          </div>
+
+          <div class="sp-timeline-step">
+            <div class="sp-step-num dm-step-num">2</div>
+            <div class="sp-step-body">
+              <h3>Projeto &amp; Programação</h3>
+              <p>Projeto técnico detalhado e programação dos controladores Teletask com os cenários e preferências do cliente.</p>
+            </div>
+          </div>
+
+          <div class="sp-timeline-step">
+            <div class="sp-step-num dm-step-num">3</div>
+            <div class="sp-step-body">
+              <h3>Instalação &amp; Integração</h3>
+              <p>Instalação de todos os componentes com respeito total pela estética do espaço e integração com sistemas de terceiros.</p>
+            </div>
+          </div>
+
+          <div class="sp-timeline-step">
+            <div class="sp-step-num dm-step-num">4</div>
+            <div class="sp-step-body">
+              <h3>Formação &amp; Suporte</h3>
+              <p>Formação dos utilizadores e suporte técnico contínuo com manutenção preventiva e corretiva incluída.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA PREMIUM ===== -->
+  <div class="sp-cta-wrap">
+    <div class="sp-cta-mesh sp-cta-mesh--domotica"></div>
+    <div class="sp-cta-geo sp-cta-geo--tl"></div>
+    <div class="sp-cta-geo sp-cta-geo--br"></div>
+    <div class="sp-cta-geo sp-cta-geo--tr"></div>
+    <!-- Circuit node accents -->
+    <div class="dm-cta-node dm-cta-node--1"></div>
+    <div class="dm-cta-node dm-cta-node--2"></div>
+
+    <div class="container">
+      <div class="sp-cta-inner reveal reveal--up">
+        <div class="sp-cta-eyebrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Smart Building
+        </div>
+        <h2>Transforme o seu Espaço<br><em>num Smart Building</em></h2>
+        <p>Conforto, eficiência e segurança num único sistema integrado. Solicite uma visita técnica gratuita e sem compromisso.</p>
+        <div class="sp-cta-btns">
+          <a href="index.html#contacto" class="btn-hero-primary">Pedir Visita Técnica</a>
+          <a href="index.html"          class="btn-hero-ghost">Voltar ao Início</a>
+        </div>
+        <div class="glass-box" style="max-width:480px; margin:28px auto 0;">
+          <p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:8px; vertical-align:text-bottom;"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> Visita técnica gratuita · Sem compromisso · Parceiro Teletask Certificado</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Logo Asydim" class="footer-logo" onerror="this.style.display='none'" />
+        <p>Consultoria &amp; Formação Sustentável</p>
+        <p class="footer-sub">Informática · Inovação · Sustentabilidade</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navegação</h5>
+        <a href="index.html#sobre">Sobre Nós</a>
+        <a href="index.html#servicos">Serviços</a>
+        <a href="index.html#projetos">Projetos</a>
+        <a href="index.html#contacto">Contacto</a>
+      </div>
+      <div class="footer-col">
+        <h5>Soluções</h5>
+        <a href="servico-energia.html">Energy Procurement &amp; Renováveis</a>
+        <a href="servico-domotica.html">Smart House &amp; Domótica</a>
+        <a href="servico-engenharia.html">Engenharia Civil &amp; Remodelações</a>
+        <a href="servico-especialidade.html">Projetos de Especialidade</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contacto</h5>
+        <a href="mailto:info@asydim.com">info@asydim.com</a>
+        <a href="https://www.asydim.pt" target="_blank" rel="noopener">www.asydim.pt</a>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container"><p>© 2025 Asydim — Todos os direitos reservados · Desenvolvido em Portugal</p></div></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

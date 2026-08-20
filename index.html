@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asydim — Consultoria e Formação Sustentável</title>
+  <meta name="description" content="Asydim: Consultoria e Formação Sustentável. Telecom, Energia Solar, IoT, HealthTech e AgroTech com IA. Portugal." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#inicio" class="logo-wrap" id="logo-link">
+        <img
+          src="images/logo.png"
+          alt="Logo Asydim"
+          class="logo-img"
+          id="logo-img"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+        />
+        <span class="logo-fallback" style="display:none;">🌿</span>
+        <span class="logo-text">Asydim</span>
+      </a>
+      <!-- Desktop nav -->
+      <nav class="nav-links" id="nav-links" aria-label="Menu principal">
+        <a href="#sobre" class="nav-link">Sobre Nós</a>
+        <a href="#servicos" class="nav-link">Serviços</a>
+        <a href="#projetos" class="nav-link">Projetos</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+        <a href="#contacto" class="btn-nav" id="btn-nav-cta">Falar Connosco</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER (separate from nav) -->
+  <div class="nav-drawer-backdrop" id="nav-backdrop"></div>
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <div class="mobile-drawer-brand">
+        <img src="images/logo.png" alt="Asydim" class="mobile-drawer-logo"
+          onerror="this.style.display='none'" />
+        <span class="mobile-drawer-logo-text">Asydim</span>
+      </div>
+      <button class="mobile-drawer-close" id="drawer-close" aria-label="Fechar menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="mobile-drawer-body">
+      <p class="mobile-drawer-label">Navegação</p>
+      <a href="#sobre" class="mobile-drawer-link">
+        <span class="mobile-drawer-icon">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        </span>
+        <span>Sobre Nós</span>
+      </a>
+      <a href="#servicos" class="mobile-drawer-link">
+        <span class="mobile-drawer-icon">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        </span>
+        <span>Serviços</span>
+      </a>
+      <a href="#projetos" class="mobile-drawer-link">
+        <span class="mobile-drawer-icon">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </span>
+        <span>Projetos</span>
+      </a>
+      <a href="#contacto" class="mobile-drawer-link">
+        <span class="mobile-drawer-icon">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </span>
+        <span>Contacto</span>
+      </a>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="#contacto" class="btn-primary btn-full" id="btn-drawer-cta">Falar Connosco →</a>
+    </div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="inicio">
+    <!-- 3D Interactive Energy/Telecom Network Background -->
+    <div class="hero-bg" id="vanta-bg" style="position: absolute; inset: 0; z-index: 0;"></div>
+    <!-- Soft overlay to make text pop -->
+    <div class="hero-overlay-gradient" style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 60%, #030806 100%); z-index: 0; pointer-events: none;"></div>
+
+    <!-- 3D Holographic Floating Orbs representing the 4 Pillars -->
+    <div class="floating-orbs-container" id="floating-orbs">
+      <div class="parallax-wrap orb-1" data-speed="1.5"><img src="images/orb_solar.png" class="floating-orb" alt="Energia Solar 3D" /></div>
+      <div class="parallax-wrap orb-2" data-speed="-2.5"><img src="images/orb_telecom.png" class="floating-orb" alt="Telecomunicações 3D" /></div>
+      <div class="parallax-wrap orb-3" data-speed="2"><img src="images/orb_domotica.png" class="floating-orb" alt="Domótica 3D" /></div>
+      <div class="parallax-wrap orb-4" data-speed="-1.5"><img src="images/orb_ai.png" class="floating-orb" alt="Inteligência Artificial 3D" /></div>
+    </div>
+    <div class="container hero-content">
+
+      <div class="hero-tag" id="hero-tag">
+        <span class="hero-tag-dot"></span>
+        Consultoria &amp; Formação Sustentável · Portugal
+      </div>
+
+      <h1 class="hero-title" id="hero-title">
+        Tecnologia que serve<br />
+        <em>as pessoas e o planeta</em>
+      </h1>
+
+      <p class="hero-sub" id="hero-sub">
+        Integramos energias renováveis, smart-house e IA em cada projeto. Soluções tecnológicas concretas para empresas que querem crescer de forma inteligente.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#servicos" class="btn-hero-primary" id="btn-hero-primary">Ver os Nossos Serviços</a>
+        <a href="#contacto" class="btn-hero-ghost" id="btn-hero-ghost">Falar com a Equipa</a>
+      </div>
+
+      <div class="hero-trust" id="hero-trust">
+        <div class="trust-item"><strong>+10</strong><span>Anos de experiência</span></div>
+        <div class="trust-sep"></div>
+        <div class="trust-item"><strong>4</strong><span>Áreas de atuação</span></div>
+        <div class="trust-sep"></div>
+        <div class="trust-item"><strong>B2B</strong><span>Foco empresarial</span></div>
+      </div>
+    </div>
+
+    <a href="#sobre" class="hero-scroll-btn" id="hero-scroll-btn" aria-label="Scroll para baixo">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+    </a>
+  </section>
+
+  <!-- ===== SOBRE ===== -->
+  <section class="sobre" id="sobre">
+    <div class="container sobre-grid">
+      <div class="sobre-img-col">
+        <div class="sobre-img-wrap">
+          <div class="sobre-img-mask">
+            <img
+              src="images/sobre_smart_city.png"
+              alt="Dashboard de controlo de energia numa smart city"
+              class="sobre-img"
+              id="sobre-img"
+              loading="lazy"
+            />
+          </div>
+          <div class="sobre-badge">
+            <span class="sobre-badge-num">+10</span>
+            <span class="sobre-badge-label">Anos de<br/>Experiência</span>
+          </div>
+        </div>
+      </div>
+      <div class="sobre-text">
+        <p class="eyebrow">Sobre Nós</p>
+        <h2 class="section-title">Especialistas em<br /><span class="text-green">Consultoria Sustentável</span></h2>
+        <p class="body-text">
+          A <strong>Asydim</strong> nasceu com um propósito claro: tornar a tecnologia e a sustentabilidade acessíveis às empresas portuguesas. Somos consultores, engenheiros e formadores comprometidos com resultados tangíveis.
+        </p>
+        <p class="body-text">
+          Da fibra ótica à inteligência artificial, da energia solar às infraestruturas inteligentes — atuamos onde a tecnologia encontra as pessoas e cria valor real.
+        </p>
+        <div class="sobre-pills">
+          <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Sustentabilidade</span>
+          <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Energias Renováveis</span> 
+          <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg> Telecomunicações</span>
+          <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg> Inteligência Artificial</span>
+        </div>
+        <a href="#contacto" class="btn-primary" id="btn-sobre-cta">Conhecer a Equipa →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVIÇOS ===== -->
+  <section class="servicos" id="servicos">
+    <div class="container">
+      <p class="eyebrow text-center">As Nossas Áreas de Atuação</p>
+      <h2 class="section-title text-center">Os Nossos <span class="text-green">4 Pilares</span> de Atuação</h2>
+      <p class="section-sub text-center">Organizamos a nossa atuação em quatro grandes áreas. Uma abordagem integrada que garante inovação tecnológica, eficiência e excelência na construção em cada projeto.</p>
+
+      <div class="cards-grid cards-grid--4" id="servicos-grid">
+
+        <article class="card" id="card-energia">
+          <div class="card-top card-top--amber"></div>
+          <div class="card-icon-wrap card-iw--amber"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div>
+          <span class="card-num">01</span>
+          <h3 class="card-title">Energy Procurement &amp; Renováveis</h3>
+          <p class="card-sub">Eficiência e Transição Energética</p>
+          <p class="card-desc">Aliamos a inteligência do mercado energético à geração de energia limpa e sustentável. O nosso objetivo é reduzir os custos operacionais da sua empresa, através da negociação de melhores contratos e da transição para produção fotovoltaica.</p>
+          <ul class="card-list">
+            <li>Monitorização de mercado e Energy Procurement</li>
+            <li>Dimensionamento e instalação de paineis solares UPAC (PVSyst)</li>
+            <li>Comunidades de Energia Renovável (CER) e AutoConsumo Coletivo (ACC)</li>
+            <li>Energy as a Service (EaaS) | Consultoria ESG e gap analysis</li>
+          </ul>
+          <a href="servico-energia.html" class="card-cta">Saber Mais <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </article>
+
+        <article class="card" id="card-domotica">
+          <div class="card-top card-top--teal"></div>
+          <div class="card-icon-wrap card-iw--teal"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <span class="card-num">02</span>
+          <h3 class="card-title">Smart House &amp; Domótica</h3>
+          <p class="card-sub">Inteligência, Controlo e Conforto</p>
+          <p class="card-desc">Transformamos espaços habitacionais e comerciais em Smart Buildings altamente eficientes. Com integração tecnológica de topo, garantimos que o seu edifício trabalha para si, focando-se no conforto, segurança e consumo inteligente.</p>
+          <ul class="card-list">
+            <li>Instalação e configuração de Domótica Teletask</li>
+            <li>Gestão centralizada de iluminação, estores e climatização</li>
+            <li>Integração de dispositivos IoT para monitorização contínua</li>
+            <li>Sistemas avançados de segurança, videovigilância e controlo de acessos</li>
+          </ul>
+          <a href="servico-domotica.html" class="card-cta">Saber Mais <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </article>
+
+        <article class="card" id="card-engenharia">
+          <div class="card-top card-top--green"></div>
+          <div class="card-icon-wrap card-iw--green"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <span class="card-num">03</span>
+          <h3 class="card-title">Engenharia Civil &amp; Remodelações</h3>
+          <p class="card-sub">Construção, Reabilitação e Simulação</p>
+          <p class="card-desc">Unimos a visão da engenharia e da arquitetura à execução exímia. Materializamos projetos desde a prancheta até à chave na mão, garantindo que o planeamento sustentável resulta numa obra sem desvios.</p>
+          <ul class="card-list">
+            <li>Gestão, fiscalização e otimização de obra</li>
+            <li>Remodelações e projetos chave-na-mão</li>
+            <li>Planeamento de arquitetura sustentável</li>
+            <li>Integração de infraestruturas tecnológicas e redes estruturadas na obra</li>
+            <li>Reabilitação e adaptação de espaços para o setor hoteleiro e alojamento</li>
+          </ul>
+          <a href="servico-engenharia.html" class="card-cta">Saber Mais <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </article>
+
+        <article class="card" id="card-especialidade">
+          <div class="card-top card-top--blue"></div>
+          <div class="card-icon-wrap card-iw--blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg></div>
+          <span class="card-num">04</span>
+          <h3 class="card-title">Projetos &amp; Telecomunicações</h3>
+          <p class="card-sub">A Nossa Base Técnica e Tecnológica (B2B)</p>
+          <p class="card-desc">O pilar mais transversal da nossa operação: infraestrutura complexa, sistemas digitais e capacitação técnica que suportam as outras áreas e as operações vitais dos nossos clientes empresariais.</p>
+          <ul class="card-list">
+            <li>Redes de fibra ótica e auditoria de redes B2B</li>
+            <li>Projetos de eficiência energética residencial e empresarial</li>
+            <li>Simulação energética avançada de edifícios (PowerSim)</li>
+            <li>SaaS com IA: MedReminder (HealthTech) &amp; VETIA (AgroTech)</li>
+            <li>Formações técnicas certificadas e Simuladores de Decisão</li>
+          </ul>
+          <a href="servico-especialidade.html" class="card-cta">Saber Mais <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PARCEIROS ===== -->
+  <section class="parceiros" id="parceiros">
+    <div class="parceiros-inner">
+      <div class="parceiros-label">
+        <span class="parceiros-label-dot"></span>
+        Os Nossos Parceiros
+      </div>
+      <div class="parceiros-track-wrap">
+        <!-- fade masks -->
+        <div class="parceiros-fade parceiros-fade--left"></div>
+        <div class="parceiros-fade parceiros-fade--right"></div>
+        <!-- ticker -->
+        <div class="parceiros-track" id="parceiros-track">
+          <!-- SET A — duplicated by JS for seamless loop -->
+          <div class="parceiro-item">
+            <div class="parceiro-logo-wrap">
+              <img src="images/parceiros/univermotion.png" alt="Univermotion"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="parceiro-logo-fallback">U</div>
+            </div>
+            <span class="parceiro-name">Univermotion</span>
+          </div>
+          <div class="parceiro-item">
+            <div class="parceiro-logo-wrap">
+              <img src="images/parceiros/idr.png" alt="IDR"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="parceiro-logo-fallback">I</div>
+            </div>
+          </div>
+          <div class="parceiro-item">
+            <div class="parceiro-logo-wrap">
+              <img src="images/parceiros/youdera.svg" alt="Youdera"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="parceiro-logo-fallback">Y</div>
+            </div>
+          </div>
+          <div class="parceiro-item">
+            <div class="parceiro-logo-wrap">
+              <img src="images/parceiros/whatxnext.png" alt="WhatXnext" class="filter-invert-hue"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="parceiro-logo-fallback">W</div>
+            </div>
+          </div>
+          <div class="parceiro-item">
+            <div class="parceiro-logo-wrap">
+              <img src="images/parceiros/tps.png" alt="TPS" class="filter-invert"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="parceiro-logo-fallback">T</div>
+            </div>
+          </div>
+          <div class="parceiro-item">
+            <div class="parceiro-logo-wrap">
+              <img src="images/parceiros/acdc.png" alt="ACDC Energia"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="parceiro-logo-fallback">A</div>
+            </div>
+          </div>
+          <div class="parceiro-item">
+            <div class="parceiro-logo-wrap">
+              <img src="images/parceiros/ucharge.png" alt="uCharge"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="parceiro-logo-fallback">U</div>
+            </div>
+          </div>
+          <div class="parceiro-item">
+            <div class="parceiro-logo-wrap">
+              <img src="images/parceiros/velocestral.png" alt="Velocestral"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="parceiro-logo-fallback">V</div>
+            </div>
+            <span class="parceiro-name">Velocestral</span>
+          </div>
+          <div class="parceiro-item">
+            <div class="parceiro-logo-wrap">
+              <div class="parceiro-logo-fallback" style="display:flex;">C</div>
+            </div>
+            <span class="parceiro-name">Cativoportunidades Construção</span>
+          </div>
+          <div class="parceiro-item">
+            <div class="parceiro-logo-wrap">
+              <img src="images/parceiros/dados.png" alt="Dados Século XXI"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="parceiro-logo-fallback">D</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projetos" id="projetos">
+    <div class="container">
+      <p class="eyebrow text-center">Trabalho Real</p>
+      <h2 class="section-title text-center">Os Nossos <span class="text-green">Projetos</span></h2>
+      <p class="section-sub text-center">Instalações fotovoltaicas reais — do dimensionamento à chave-na-mão.</p>
+
+      <!-- CARROSSEL -->
+      <div class="carousel" id="proj-carousel">
+
+        <!-- SETAS MINIMALISTAS (OUTSIDE) -->
+        <button class="car-arrow car-arrow--prev" id="car-prev" aria-label="Slide anterior">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="car-arrow car-arrow--next" id="car-next" aria-label="Próximo slide">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+
+        <div class="car-content">
+          <!-- TRACK -->
+          <div class="carousel-track-wrap">
+            <div class="carousel-track" id="carousel-track">
+
+              <div class="carousel-slide" data-tag="Solar Industrial" data-title="Instalação Solar Industrial — Projeto Porto">
+                <img src="images/projeto1.jpg" alt="Instalação solar industrial junto ao cais, Porto" />
+              </div>
+
+              <div class="carousel-slide" data-tag="Comercial" data-title="Cobertura Fotovoltaica Comercial">
+                <img src="images/projeto2.jpg" alt="Cobertura fotovoltaica num telhado comercial" />
+              </div>
+
+              <div class="carousel-slide" data-tag="Ground-Mount" data-title="Sistema Ground-Mount">
+                <img src="images/projeto3.jpg" alt="Sistema fotovoltaico ground-mount instalado" />
+              </div>
+
+              <div class="carousel-slide" data-tag="Grande Escala" data-title="Infraestrutura Solar de Grande Escala">
+                <img src="images/projeto4.jpg" alt="Infraestrutura solar de grande escala junto ao canal" />
+              </div>
+
+            </div>
+          </div>
+
+          <!-- LEGENDA CENTERED -->
+          <div class="car-caption" id="car-caption">
+            <span class="car-cap-tag" id="car-tag">Solar Industrial</span>
+            <strong class="car-cap-title" id="car-title">Instalação Solar Industrial — Projeto Porto</strong>
+          </div>
+        </div>
+
+        <!-- BULLETS -->
+        <div class="car-dots" id="car-dots">
+          <button class="car-dot active" data-idx="0" aria-label="Slide 1"></button>
+          <button class="car-dot" data-idx="1" aria-label="Slide 2"></button>
+          <button class="car-dot" data-idx="2" aria-label="Slide 3"></button>
+          <button class="car-dot" data-idx="3" aria-label="Slide 4"></button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== LEGACY ===== -->
+  <section class="legacy" id="legacy">
+    <div class="container">
+      <div class="legacy-header text-center">
+        <p class="eyebrow"><span class="eyebrow-text">As Nossas Raízes</span></p>
+        <h2 class="section-title">Serviços que nos <span class="text-green">Definem</span></h2>
+      </div>
+      <div class="legacy-grid">
+        <div class="legacy-item" id="leg-esg-mob">
+          <div class="leg-esg-content">
+            <div class="legacy-icon icon-green"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div>
+            <h4>Sustentabilidade & Transição</h4>
+            <p>Unimos a visão estratégica à infraestrutura no terreno. Respondemos à urgência das metas de sustentabilidade oferecendo diagnóstico, consultoria e a implementação física da solução.</p>
+            <div class="legacy-vetores">
+              <div class="vetor">
+                <div class="vetor-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M12 6v6l4 2"/></svg></div>
+                <div class="vetor-content">
+                  <h5>Consultoria ESG</h5>
+                  <p>Diagnóstico, planeamento estratégico e relatórios (GRI/CSRD).</p>
+                </div>
+              </div>
+              <div class="vetor">
+                <div class="vetor-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><line x1="10" y1="2" x2="10" y2="6"/><line x1="14" y1="2" x2="14" y2="6"/><rect x="9" y="11" width="6" height="7" rx="1"/><polyline points="12 11 12 8"/></svg></div>
+                <div class="vetor-content">
+                  <h5>Mobilidade Elétrica</h5>
+                  <p>Passamos da teoria à prática. Infraestrutura de carregamento VE.</p>
+                </div>
+              </div>
+            </div>
+            <a href="raiz-sustentabilidade.html" class="card-cta" style="margin-top:16px;">Saber Mais <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+          <div class="leg-media">
+            <img src="images/consultoria.png" alt="Consultoria Sustentável" />
+            <div class="leg-media-overlay"></div>
+          </div>
+        </div>
+        
+        <div class="legacy-item leg-small" id="leg-procurement">
+          <div class="leg-media leg-media--small">
+            <img src="images/energy_procurement.png" alt="Dashboard de Energy Procurement" />
+            <div class="leg-media-overlay"></div>
+          </div>
+          <div class="leg-small-content">
+            <div class="legacy-icon icon-blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+            <h4>Energy Procurement</h4>
+            <p>Monitorização em tempo real do mercado energético. Negociamos os melhores contratos para reduzir a sua fatura.</p>
+            <a href="raiz-procurement.html" class="card-cta" style="margin-top:12px;">Saber Mais <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div class="legacy-item leg-small" id="leg-decisao">
+          <div class="leg-media leg-media--small">
+            <img src="images/apoio_decisao.png" alt="Reunião de planeamento e Apoio à Decisão" />
+            <div class="leg-media-overlay"></div>
+          </div>
+          <div class="leg-small-content">
+            <div class="legacy-icon icon-purple"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="6"/><path d="M12 6a6 6 0 1 0 0 12 6 6 0 0 0 0-12z"/><path d="M12 12v4"/><line x1="12" y1="18" x2="12" y2="22"/></svg></div>
+            <h4>Apoio à Decisão</h4>
+            <p>Simuladores de Gestão de Projetos, Serviços e Planeamento Estratégico — powered by WhatNext.</p>
+            <a href="raiz-decisao.html" class="card-cta" style="margin-top:12px;">Saber Mais <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section class="contacto" id="contacto">
+    <div class="container">
+      <div class="contacto-grid">
+        <div class="contacto-info">
+          <p class="eyebrow">Contacto</p>
+          <h2 class="section-title">Vamos falar?</h2>
+          <p class="body-text">A nossa equipa está disponível para responder às suas dúvidas e apresentar uma proposta personalizada em menos de 24 horas.</p>
+          <div class="info-list">
+            <a href="mailto:info@asydim.com" class="info-item" id="link-email">
+              <div class="info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div><strong>Email</strong><span>info@asydim.com</span></div>
+            </a>
+            <a href="https://www.asydim.pt" target="_blank" rel="noopener" class="info-item" id="link-web">
+              <div class="info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+              <div><strong>Website</strong><span>www.asydim.pt</span></div>
+            </a>
+            <div class="info-item" id="info-local">
+              <div class="info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <div><strong>Localização</strong><span>Portugal — Norte</span></div>
+            </div>
+          </div>
+        </div>
+        <form class="contacto-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome">Nome *</label>
+              <input type="text" id="nome" name="nome" placeholder="O seu nome" required />
+            </div>
+            <div class="form-group">
+              <label for="empresa">Empresa</label>
+              <input type="text" id="empresa" name="empresa" placeholder="Nome da empresa" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="email@empresa.pt" required />
+          </div>
+          <div class="form-group">
+            <label for="servico">Serviço de interesse</label>
+            <select id="servico" name="servico">
+              <option value="">Selecione um serviço...</option>
+              <option value="telecom">Telecom &amp; Infraestruturas</option>
+              <option value="energia">Energia &amp; IoT</option>
+              <option value="energia">Energy Procurement &amp; Renováveis</option>
+              <option value="domotica">Smart House &amp; Domótica</option>
+              <option value="engenharia">Engenharia Civil &amp; Remodelações</option>
+              <option value="especialidade">Projetos de Especialidade (B2B)</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte-nos um pouco sobre o seu projeto..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-full" id="btn-submit">Enviar Mensagem</button>
+          <p class="form-success" id="form-success" style="display:none;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Obrigado! Entraremos em contacto brevemente.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img
+          src="images/logo.png"
+          alt="Logo Asydim"
+          class="footer-logo"
+          onerror="this.style.display='none'"
+        />
+        <p>Consultoria &amp; Formação Sustentável</p>
+        <p class="footer-sub">Informática · Inovação · Sustentabilidade</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navegação</h5>
+        <a href="#sobre">Sobre Nós</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <div class="footer-col">
+        <h5>Soluções</h5>
+        <a href="#card-energia">Energy Procurement &amp; Renováveis</a>
+        <a href="#card-domotica">Smart House &amp; Domótica</a>
+        <a href="#card-engenharia">Engenharia Civil &amp; Remodelações</a>
+        <a href="#card-especialidade">Projetos de Especialidade</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contacto</h5>
+        <a href="mailto:info@asydim.com">info@asydim.com</a>
+        <a href="https://www.asydim.pt" target="_blank" rel="noopener">www.asydim.pt</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2025 Asydim — Todos os direitos reservados · Desenvolvido em Portugal</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- 3D Environment Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>

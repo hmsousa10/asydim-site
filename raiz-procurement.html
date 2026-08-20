@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Energy Procurement — Asydim</title>
+  <meta name="description" content="Monitorização do mercado energético ibérico OMIE/MIBEL e negociação especializada de contratos de energia para empresas. Asydim." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo-wrap">
+        <img src="images/logo.png" alt="Logo Asydim" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+        <span class="logo-fallback" style="display:none;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+        <span class="logo-text">Asydim</span>
+      </a>
+      <nav class="nav-links" aria-label="Menu principal">
+        <a href="index.html#sobre"    class="nav-link">Sobre Nós</a>
+        <a href="index.html#servicos" class="nav-link">Serviços</a>
+        <a href="index.html#projetos" class="nav-link">Projetos</a>
+        <a href="index.html#contacto" class="nav-link">Contacto</a>
+        <a href="index.html#contacto" class="btn-nav">Falar Connosco</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="nav-drawer-backdrop" id="nav-backdrop"></div>
+  <nav class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <div class="mobile-drawer-brand">
+        <img src="images/logo.png" alt="Logo" class="mobile-drawer-logo" onerror="this.style.display='none'" />
+        <span class="mobile-drawer-logo-text">Asydim</span>
+      </div>
+      <button class="mobile-drawer-close" id="drawer-close" aria-label="Fechar menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="mobile-drawer-body">
+      <span class="mobile-drawer-label">Navegação</span>
+      <a href="index.html#sobre"    class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></span>Sobre Nós</a>
+      <a href="index.html#servicos" class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span>Serviços</a>
+      <a href="index.html#projetos" class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/></svg></span>Projetos</a>
+      <a href="index.html#contacto" class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Contacto</a>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="index.html#contacto" class="btn-primary btn-full" id="btn-drawer-cta">Falar Connosco</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO — ENERGY MARKET TERMINAL ===== -->
+  <section class="ep-hero">
+    <div class="ep-hero-grid"></div>
+    <div class="ep-hero-radial"></div>
+    <div class="ep-hero-ticker">
+      <div class="ep-ticker-track">
+        <!-- Set A -->
+        <span class="ep-tick ep-tick--up">OMIE ▲ 87.4 €/MWh</span>
+        <span class="ep-tick-sep">·</span>
+        <span class="ep-tick ep-tick--down">GAS ▼ 41.2 €/MWh</span>
+        <span class="ep-tick-sep">·</span>
+        <span class="ep-tick ep-tick--up">CO2 ▲ 62.8 €/t</span>
+        <span class="ep-tick-sep">·</span>
+        <span class="ep-tick ep-tick--neutral">MIBEL INDEX 94.1</span>
+        <span class="ep-tick-sep">·</span>
+        <span class="ep-tick ep-tick--down">BRENT ▼ 78.3 €/bbl</span>
+        <span class="ep-tick-sep">·</span>
+        <span class="ep-tick ep-tick--up">SOLAR ▲ 38.6 €/MWh</span>
+        <span class="ep-tick-sep">·</span>
+        <span class="ep-tick ep-tick--up">ELÉTR. ▲ 91.2 €/MWh</span>
+        <span class="ep-tick-sep">·</span>
+        <span class="ep-tick ep-tick--down">GÁS NAT. ▼ 38.7 €/MWh</span>
+        <span class="ep-tick-sep">·</span>
+        <span class="ep-tick ep-tick--neutral">CARBON OFFSET 58.4 €/t</span>
+        <span class="ep-tick-sep">·</span>
+        <span class="ep-tick ep-tick--up">EÓLICA ▲ 44.1 €/MWh</span>
+        <span class="ep-tick-sep">·</span>
+        <!-- Set B (duplicate for seamless loop) -->
+        <span class="ep-tick ep-tick--up">OMIE ▲ 87.4 €/MWh</span>
+        <span class="ep-tick-sep">·</span>
+        <span class="ep-tick ep-tick--down">GAS ▼ 41.2 €/MWh</span>
+        <span class="ep-tick-sep">·</span>
+        <span class="ep-tick ep-tick--up">CO2 ▲ 62.8 €/t</span>
+        <span class="ep-tick-sep">·</span>
+        <span class="ep-tick ep-tick--neutral">MIBEL INDEX 94.1</span>
+        <span class="ep-tick-sep">·</span>
+        <span class="ep-tick ep-tick--down">BRENT ▼ 78.3 €/bbl</span>
+        <span class="ep-tick-sep">·</span>
+        <span class="ep-tick ep-tick--up">SOLAR ▲ 38.6 €/MWh</span>
+        <span class="ep-tick-sep">·</span>
+        <span class="ep-tick ep-tick--up">ELÉTR. ▲ 91.2 €/MWh</span>
+        <span class="ep-tick-sep">·</span>
+        <span class="ep-tick ep-tick--down">GÁS NAT. ▼ 38.7 €/MWh</span>
+        <span class="ep-tick-sep">·</span>
+        <span class="ep-tick ep-tick--neutral">CARBON OFFSET 58.4 €/t</span>
+        <span class="ep-tick-sep">·</span>
+        <span class="ep-tick ep-tick--up">EÓLICA ▲ 44.1 €/MWh</span>
+        <span class="ep-tick-sep">·</span>
+      </div>
+    </div>
+
+    <div class="ep-hero::after"></div>
+
+    <div class="container">
+      <div class="ep-hero-inner">
+
+        <!-- LEFT: Text -->
+        <div class="ep-hero-text">
+          <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-bottom:28px;">
+            <a href="index.html#legacy" class="sp-hero-back" style="margin-bottom:0; color:rgba(255,255,255,.5);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              As Nossas Raízes
+            </a>
+            <div class="ep-eyebrow-badge">
+              <span class="ep-badge-pulse"></span>
+              Raiz 02 · Estratégia de Mercado
+            </div>
+          </div>
+
+          <h1 class="ep-hero-h1">Energy<br><em>Procurement</em></h1>
+
+          <p class="ep-hero-desc">Monitorização de alto nível do mercado energético ibérico <strong>OMIE/MIBEL</strong>. Assumimos a representação do seu negócio para negociar contratos que protegem as suas margens num mercado altamente volátil.</p>
+
+          <div class="ep-hero-actions">
+            <a href="index.html#contacto" class="btn-hero-primary">Pedir Análise Gratuita</a>
+            <a href="#servicos-detalhe"   class="btn-hero-ghost">Ver Abordagem ↓</a>
+          </div>
+
+          <!-- KPI strip -->
+          <div class="ep-kpi-strip">
+            <div class="ep-kpi">
+              <span class="ep-kpi-value">24/7</span>
+              <span class="ep-kpi-label">Monitorização OMIE</span>
+            </div>
+            <div class="ep-kpi-divider"></div>
+            <div class="ep-kpi">
+              <span class="ep-kpi-value">-32<span>%</span></span>
+              <span class="ep-kpi-label">Redução média fatura</span>
+            </div>
+            <div class="ep-kpi-divider"></div>
+            <div class="ep-kpi">
+              <span class="ep-kpi-value">RFP</span>
+              <span class="ep-kpi-label">Concurso estruturado</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Market price chart simulation -->
+        <div class="ep-hero-chart-wrap">
+          <div class="ep-market-card">
+            <div class="ep-market-header">
+              <div class="rt-terminal-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="ep-market-title">OMIE/MIBEL · LIVE FEED</span>
+              <span class="ep-market-live">
+                <span class="ep-live-dot"></span>LIVE
+              </span>
+            </div>
+
+            <!-- Sparkline SVG chart -->
+            <div class="ep-chart-area">
+              <div class="ep-chart-label">€/MWh — Mercado Spot Ibérico</div>
+              <svg viewBox="0 0 320 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="ep-sparkline">
+                <defs>
+                  <linearGradient id="sparkGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="rgba(244,162,97,.4)"/>
+                    <stop offset="100%" stop-color="rgba(244,162,97,0)"/>
+                  </linearGradient>
+                </defs>
+                <!-- Area fill -->
+                <path d="M0 65 L20 58 L40 62 L60 50 L80 55 L100 42 L120 38 L140 44 L160 32 L180 28 L200 35 L220 22 L240 18 L260 24 L280 16 L300 12 L320 8 L320 80 L0 80 Z" fill="url(#sparkGrad)"/>
+                <!-- Line -->
+                <path d="M0 65 L20 58 L40 62 L60 50 L80 55 L100 42 L120 38 L140 44 L160 32 L180 28 L200 35 L220 22 L240 18 L260 24 L280 16 L300 12 L320 8" stroke="#f4a261" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- Current price dot -->
+                <circle cx="320" cy="8" r="4" fill="#f4a261"/>
+                <circle cx="320" cy="8" r="8" fill="rgba(244,162,97,.2)"/>
+              </svg>
+              <div class="ep-chart-price">
+                <span class="ep-price-val">87.4</span>
+                <span class="ep-price-unit">€/MWh</span>
+                <span class="ep-price-change ep-up">▲ +3.2%</span>
+              </div>
+            </div>
+
+            <!-- Comparators -->
+            <div class="ep-market-compare">
+              <div class="ep-compare-row">
+                <span class="ep-compare-label">Preço Cliente (antes)</span>
+                <div class="ep-compare-bar-wrap">
+                  <div class="ep-compare-bar" style="width:85%; background: rgba(239,68,68,.4);"></div>
+                </div>
+                <span class="ep-compare-val ep-val-red">124.8 €</span>
+              </div>
+              <div class="ep-compare-row">
+                <span class="ep-compare-label">Preço Negociado</span>
+                <div class="ep-compare-bar-wrap">
+                  <div class="ep-compare-bar" style="width:53%; background: rgba(244,162,97,.7);"></div>
+                </div>
+                <span class="ep-compare-val ep-val-amber">84.6 €</span>
+              </div>
+              <div class="ep-compare-row">
+                <span class="ep-compare-label">Poupança Anual</span>
+                <div class="ep-compare-bar-wrap">
+                  <div class="ep-compare-bar" style="width:32%; background: rgba(77,224,144,.5);"></div>
+                </div>
+                <span class="ep-compare-val ep-val-green">-32%</span>
+              </div>
+            </div>
+
+            <!-- Alert row -->
+            <div class="ep-market-alert">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              Alerta: pico previsto 14h–17h · janela de compra ativa
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CAPABILITY CARDS ===== -->
+  <section class="ep-section" id="servicos-detalhe">
+    <div class="container">
+      <div class="ep-section-head reveal reveal--up">
+        <p class="ep-section-eyebrow">A Nossa Abordagem</p>
+        <h2 class="ep-section-h2">Gestão Inteligente <em>do seu Capital</em></h2>
+        <p class="ep-section-sub">Uma gestão ativa e contínua dos custos energéticos, apoiada em dados em tempo real e negociação especializada.</p>
+      </div>
+
+      <div class="ep-cards-grid">
+
+        <!-- Card 1 -->
+        <div class="ep-card reveal reveal--left">
+          <div class="ep-card-accent"></div>
+          <div class="ep-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div class="ep-card-tag">[OMIE] [MIBEL] [SPOT]</div>
+          <h3>Monitorização de Mercado OMIE/MIBEL</h3>
+          <p>O mercado de energia não perdoa a desatenção. Acompanhamos continuamente a evolução dos preços no mercado ibérico, analisando tendências de volatilidade para identificar a janela exata de oportunidade para fixar ou renegociar o seu preço.</p>
+          <ul class="ep-card-list">
+            <li>Dashboards de preços e tendências em tempo real</li>
+            <li>Alertas críticos de picos e oportunidades no mercado Spot</li>
+            <li>Análise rigorosa de tendências e cenários futuros</li>
+          </ul>
+          <div class="ep-card-quote">
+            "Num mercado de alta volatilidade, a inércia tem um custo direto."
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="ep-card reveal reveal--up">
+          <div class="ep-card-accent ep-card-accent--blue"></div>
+          <div class="ep-card-icon ep-card-icon--blue">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="ep-card-tag ep-card-tag--blue">[RFP] [Negociação]</div>
+          <h3>Negociação e Fecho de Contratos</h3>
+          <p>Atuamos como a sua voz no mercado. Lançamos concursos (RFP) estruturados e conduzimos negociações intensivas com os vários players de mercado para garantir não só o melhor preço, mas também as melhores condições contratuais.</p>
+          <ul class="ep-card-list">
+            <li>Lançamento de RFP a múltiplos comercializadores</li>
+            <li>Análise comparativa imparcial de propostas complexas</li>
+            <li>Gestão completa do processo de switching sem interrupções</li>
+          </ul>
+          <div class="ep-card-photo-wrap">
+            <img src="images/rz_procurement_content.jpg" alt="Consultoria e Negociação" class="ep-card-photo" />
+            <div class="ep-card-photo-badge">RFP · Concurso ativo</div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="ep-card reveal reveal--right">
+          <div class="ep-card-accent ep-card-accent--green"></div>
+          <div class="ep-card-icon ep-card-icon--green">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="ep-card-tag ep-card-tag--green">[AUDITORIA] [FATURA]</div>
+          <h3>Auditoria Energética Documental</h3>
+          <p>Erros de faturação e penalizações reativas são os grandes inimigos silenciosos da rentabilidade. Analisamos detalhadamente o seu histórico de consumos, perfis de carga e estrutura tarifária atual, identificando imediatamente perdas sistémicas.</p>
+          <ul class="ep-card-list">
+            <li>Análise fina de diagramas de cargas</li>
+            <li>Recuperação de custos por erros de faturação</li>
+            <li>Relatórios de otimização de potência e energia reativa</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DATA PIPELINE — PROCESSO ===== -->
+  <section class="ep-pipeline-section">
+    <div class="container">
+      <div class="ep-section-head ep-section-head--dark reveal reveal--up">
+        <p class="ep-section-eyebrow">A Nossa Execução</p>
+        <h2 class="ep-section-h2 ep-h2-white">O Processo <em>Asydim</em></h2>
+        <p class="ep-section-sub ep-sub-dim">Um método de 4 fases que transforma a sua fatura energética numa vantagem competitiva permanente.</p>
+      </div>
+
+      <div class="ep-pipeline">
+        <div class="ep-pipeline-line"></div>
+        <div class="ep-pipeline-steps">
+
+          <div class="ep-pipe-step reveal reveal--up">
+            <div class="ep-pipe-node">
+              <div class="ep-pipe-node-ring"></div>
+              <span>01</span>
+            </div>
+            <div class="ep-pipe-body">
+              <h4>Levantamento &amp; Auditoria Base</h4>
+              <p>Recolhemos faturas e contratos dos últimos 12 a 24 meses. Construímos o seu perfil de consumo exato e mapeamos as ineficiências financeiras atuais.</p>
+              <div class="ep-pipe-tag">[DIAGNÓSTICO]</div>
+            </div>
+          </div>
+
+          <div class="ep-pipe-step reveal reveal--up">
+            <div class="ep-pipe-node">
+              <div class="ep-pipe-node-ring"></div>
+              <span>02</span>
+            </div>
+            <div class="ep-pipe-body">
+              <h4>Estratégia de Posicionamento</h4>
+              <p>Definimos o veículo de compra mais adequado à tolerância de risco da sua empresa: preços fixos, esquemas mistos ou exposição total ao mercado Spot.</p>
+              <div class="ep-pipe-tag">[ESTRATÉGIA]</div>
+            </div>
+          </div>
+
+          <div class="ep-pipe-step reveal reveal--up">
+            <div class="ep-pipe-node">
+              <div class="ep-pipe-node-ring"></div>
+              <span>03</span>
+            </div>
+            <div class="ep-pipe-body">
+              <h4>Concurso e Negociação (RFP)</h4>
+              <p>Abertura de consulta ao mercado. Forçamos a competitividade entre os comercializadores para fechar acordos de fornecimento altamente otimizados.</p>
+              <div class="ep-pipe-tag">[RFP]</div>
+            </div>
+          </div>
+
+          <div class="ep-pipe-step reveal reveal--up">
+            <div class="ep-pipe-node">
+              <div class="ep-pipe-node-ring"></div>
+              <span>04</span>
+            </div>
+            <div class="ep-pipe-body">
+              <h4>Gestão Ativa de Portfolio</h4>
+              <p>Monitorizamos o acordo permanentemente, corrigimos desvios de faturação e enviamos reportes claros da poupança gerada.</p>
+              <div class="ep-pipe-tag">[ONGOING]</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <div class="ep-cta-wrap">
+    <div class="ep-cta-mesh"></div>
+    <div class="ep-cta-orb ep-cta-orb--1"></div>
+    <div class="ep-cta-orb ep-cta-orb--2"></div>
+    <div class="container">
+      <div class="ep-cta-inner reveal reveal--up">
+        <div class="ep-cta-eyebrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Próxima Decisão
+        </div>
+        <h2>A inércia no mercado<br><em>tem um preço elevado.</em></h2>
+        <p>Envie-nos as suas últimas faturas. Realizaremos uma auditoria preliminar gratuita para demonstrar o potencial de poupança imediata e a longo prazo.</p>
+        <div class="ep-cta-btns">
+          <a href="index.html#contacto" class="btn-hero-primary">Pedir Análise Gratuita</a>
+          <a href="index.html"          class="btn-hero-ghost">Voltar ao Início</a>
+        </div>
+        <div class="ep-cta-trust">
+          <div class="ep-trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Resposta em &lt;24h</span>
+          </div>
+          <div class="ep-trust-divider"></div>
+          <div class="ep-trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Sem compromisso</span>
+          </div>
+          <div class="ep-trust-divider"></div>
+          <div class="ep-trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            <span>Auditoria gratuita</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Logo Asydim" class="footer-logo" onerror="this.style.display='none'" />
+        <p>Consultoria &amp; Formação Sustentável</p>
+        <p class="footer-sub">Informática · Inovação · Sustentabilidade</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navegação</h5>
+        <a href="index.html#sobre">Sobre Nós</a>
+        <a href="index.html#servicos">Serviços</a>
+        <a href="index.html#projetos">Projetos</a>
+        <a href="index.html#contacto">Contacto</a>
+      </div>
+      <div class="footer-col">
+        <h5>Soluções</h5>
+        <a href="servico-energia.html">Energy Procurement &amp; Renováveis</a>
+        <a href="servico-domotica.html">Smart House &amp; Domótica</a>
+        <a href="servico-engenharia.html">Engenharia Civil &amp; Remodelações</a>
+        <a href="servico-especialidade.html">Projetos de Especialidade</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contacto</h5>
+        <a href="mailto:info@asydim.com">info@asydim.com</a>
+        <a href="https://www.asydim.pt" target="_blank" rel="noopener">www.asydim.pt</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2025 Asydim — Todos os direitos reservados · Desenvolvido em Portugal</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
