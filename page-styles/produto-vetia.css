@@ -1,0 +1,296 @@
+
+    /* =========================================
+       VETIA — Design System & Mockup Showcase
+       ========================================= */
+
+    /* ── Hero com Mockup (Split Layout) ── */
+    .vt-hero {
+      min-height: 100vh;
+      background: #03130d;
+      position: relative;
+      display: flex; align-items: center; overflow: hidden;
+      padding: 120px 0 100px;
+    }
+    .vt-hero-dots {
+      position: absolute; inset: 0; pointer-events: none; z-index: 0;
+      background-image: radial-gradient(rgba(45, 212, 191, 0.2) 1px, transparent 1px);
+      background-size: 40px 40px;
+      animation: dotGridMove 8s linear infinite;
+    }
+    .vt-hero-fade {
+      position: absolute; bottom: 0; left: 0; right: 0; height: 110px;
+      background: linear-gradient(to bottom, transparent, #fff);
+      pointer-events: none; z-index: 4;
+    }
+    .vt-hero-radial {
+      position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(ellipse 70% 60% at 65% 40%, rgba(13, 148, 136, 0.2) 0%, transparent 70%),
+                  radial-gradient(ellipse 40% 40% at 20% 75%, rgba(45, 212, 191, 0.08) 0%, transparent 60%);
+    }
+    .vt-hero-inner {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 64px; align-items: center; position: relative; z-index: 2;
+      text-align: left;
+    }
+    .vt-hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 18px; border-radius: 50px; margin-bottom: 24px;
+      background: rgba(13, 148, 136, 0.15); border: 1px solid rgba(45, 212, 191, 0.4);
+      font-size: .72rem; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: #2dd4bf;
+    }
+    .vt-hero-badge-dot { width: 7px; height: 7px; border-radius: 50%; background: #2dd4bf; animation: blink 2s infinite; }
+    .vt-hero-h1 {
+      font-family: var(--serif); font-size: clamp(2.8rem, 5vw, 4.2rem);
+      font-weight: 700; line-height: 1.1; color: #fff; margin-bottom: 20px;
+    }
+    .vt-hero-h1 em { font-style: normal; color: #2dd4bf; }
+    .vt-hero-desc {
+      font-size: 1.1rem; color: rgba(255,255,255,.75);
+      line-height: 1.75; margin-bottom: 36px; max-width: 480px;
+    }
+    .vt-partnership-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 16px; border-radius: 50px;
+      background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12);
+      font-size: .8rem; color: rgba(255,255,255,.7); margin-bottom: 40px;
+    }
+    .vt-partnership-pill strong { color: #fff; }
+
+    .vt-hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; justify-content: flex-start; }
+
+    .vt-btn-ghost {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 15px 32px; border-radius: 50px;
+      border: 2px solid rgba(45, 212, 191, 0.35); color: #2dd4bf;
+      font-weight: 700; font-size: .95rem; text-decoration: none;
+      transition: border-color .25s ease, background .25s ease;
+    }
+    .vt-btn-ghost:hover { border-color: #2dd4bf; background: rgba(13, 148, 136, 0.1); }
+
+    .vt-hero-visual { position: relative; }
+    .vt-hero-glow {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+      width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(13, 148, 136, 0.25) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    @keyframes vtHeroFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-16px); }
+    }
+    .vt-mockup-img {
+      width: 100%; border-radius: 20px; position: relative; z-index: 1;
+      box-shadow: 0 30px 80px rgba(13, 148, 136, 0.3), 0 0 0 1px rgba(45, 212, 191, 0.2);
+      animation: vtHeroFloat 6s ease-in-out infinite;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+      cursor: pointer;
+    }
+    .vt-mockup-img:hover {
+      animation-play-state: paused;
+      transform: scale(1.04) translateY(-10px);
+      box-shadow: 0 45px 120px rgba(13, 148, 136, 0.4), 0 0 0 2px rgba(45, 212, 191, 0.4);
+    }
+    .vt2-btn-primary {
+      padding: 16px 36px; border-radius: 50px;
+      background: linear-gradient(135deg, #0d9488, #14b8a6);
+      color: #fff; font-weight: 700; font-size: 1rem;
+      box-shadow: 0 8px 32px rgba(13, 148, 136, 0.4);
+      transition: transform .3s ease, box-shadow .3s ease;
+      display: inline-block; text-decoration: none;
+    }
+    .vt2-btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(13, 148, 136, 0.6); }
+
+    /* Mockup Principal Panorâmico */
+    .vt2-main-mockup {
+      max-width: 1040px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+      transform: translateY(20px);
+    }
+    .vt2-main-mockup img {
+      width: 100%; height: auto; border-radius: 24px 24px 0 0;
+      box-shadow: 0 -20px 60px rgba(13, 148, 136, 0.15);
+      border: 1px solid rgba(45, 212, 191, 0.2);
+      border-bottom: none;
+      display: block;
+    }
+
+    /* ── Métricas de Eficiência ── */
+    .vt2-stats {
+      background: var(--offwh); padding: 80px 0; border-top: 1px solid var(--blight); border-bottom: 1px solid var(--blight);
+    }
+    .vt2-stats-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center;
+    }
+    .vt2-stat-item strong {
+      display: block; font-family: var(--serif); font-size: 2.6rem; font-weight: 800; color: #0f766e;
+    }
+    .vt2-stat-item span { font-size: .82rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+
+    /* ── Secção "Como Funciona" (Pipeline de 4 Etapas) ── */
+    .vt2-workflow {
+      padding: 100px 0; background: #fff;
+    }
+    .vt2-section-head { text-align: center; margin-bottom: 60px; }
+    .vt2-section-head .eyebrow { color: #0d9488 !important; }
+    .vt2-section-head .eyebrow::after { background: #0d9488 !important; left: 50% !important; transform: translateX(-50%) !important; }
+    .vt2-section-h2 { font-family: var(--serif); color: var(--dark); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 700; margin-bottom: 16px; }
+    .vt2-section-h2 em { font-style: italic; color: #0d9488; }
+    .vt2-workflow-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; position: relative;
+    }
+    .vt2-workflow-grid::before {
+      content: ''; position: absolute; top: 48px; left: 50px; right: 50px; height: 2px;
+      background: rgba(13, 148, 136, 0.15); z-index: 0;
+    }
+    .vt2-step-card {
+      background: #f8fafc; border: 1px solid rgba(13, 148, 136, 0.15);
+      border-radius: 16px; padding: 28px 22px; position: relative; z-index: 1;
+      transition: all 0.3s ease;
+    }
+    .vt2-step-card:hover { transform: translateY(-6px); border-color: #0d9488; box-shadow: 0 16px 40px rgba(13, 148, 136, 0.12); }
+    .vt2-step-num {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: linear-gradient(135deg, #0d9488, #2dd4bf);
+      color: #fff; font-family: var(--serif); font-weight: 700; font-size: 1.1rem;
+      display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
+      box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .vt2-step-card:hover .vt2-step-num { transform: scale(1.1); }
+    .vt2-step-card h3 { font-family: var(--serif); font-size: 1.05rem; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+    .vt2-step-card p { font-size: .86rem; color: var(--body); line-height: 1.6; }
+
+    /* ── Z-Pattern Showcase de Mockups ── */
+    .vt2-showcase {
+      padding: 100px 0; background: var(--offwh); border-top: 1px solid var(--blight);
+    }
+    .vt2-showcase-row {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; align-items: center; margin-bottom: 120px;
+    }
+    .vt2-showcase-row:last-child { margin-bottom: 0; }
+    .vt2-showcase-row.reverse .vt2-text { order: 2; }
+    .vt2-showcase-row.reverse .vt2-mockup { order: 1; }
+
+    .vt2-text h2 {
+      font-family: var(--serif); font-size: 2.2rem;
+      color: var(--dark); margin-bottom: 16px; line-height: 1.2;
+    }
+    .vt2-text h2 span { color: #0d9488; }
+    .vt2-text p { font-size: 1.05rem; color: var(--body); line-height: 1.7; margin-bottom: 24px; }
+    .vt2-list { display: flex; flex-direction: column; gap: 12px; }
+    .vt2-list li {
+      font-size: .95rem; color: var(--muted); padding-left: 24px; position: relative;
+    }
+    .vt2-list li::before {
+      content: '✓'; position: absolute; left: 0; top: 0; color: #0d9488; font-weight: 700;
+    }
+
+    /* Molduras de Mockups */
+    .vt2-mockup {
+      position: relative;
+      border-radius: 20px;
+      padding: 28px;
+      background: linear-gradient(145deg, #f0fdfa, #ccfbf1);
+      border: 1px solid #99f6e4;
+      box-shadow: 0 20px 40px rgba(13, 148, 136, 0.08);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .vt2-mockup img {
+      max-width: 100%; height: auto; border-radius: 12px;
+      box-shadow: 0 12px 32px rgba(0,0,0,.08);
+      transition: transform .5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .vt2-mockup:hover img { transform: scale(1.04); }
+
+    /* ── Compatibilidade ── */
+    .vt-compat { padding: 100px 0; background: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; text-align: center; }
+    .vt-compat-head { margin-bottom: 60px; }
+    .vt-compat-head .eyebrow { color: #0d9488 !important; }
+    .vt-compat-head .eyebrow::after { background: #0d9488 !important; left: 50% !important; transform: translateX(-50%) !important; }
+    .vt-compat-head h2 { font-family: var(--serif); color: var(--dark); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 700; margin-bottom: 16px; }
+    .vt-compat-head h2 em { font-style: italic; color: #0d9488; }
+    .vt2-int-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; max-width: 850px; margin: 0 auto; }
+    .vt2-int-tag {
+      padding: 10px 24px; border-radius: 50px;
+      border: 1px solid rgba(13, 148, 136, 0.2); background: #fff;
+      font-size: 0.9rem; font-weight: 600; color: var(--dark);
+      box-shadow: 0 4px 12px rgba(0,0,0,.03);
+      transition: all 0.3s ease; cursor: default;
+    }
+    .vt2-int-tag:hover {
+      transform: translateY(-4px); border-color: #0d9488; color: #0d9488; box-shadow: 0 12px 24px rgba(13, 148, 136, 0.15);
+    }
+
+    /* ── Security Section ── */
+    .vt-security {
+      padding: 100px 0; background: #fff;
+      position: relative; overflow: hidden;
+    }
+    .vt-security::before {
+      content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 80%; height: 80%; background: radial-gradient(circle, rgba(13, 148, 136, 0.05) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .vt-security-head { text-align: center; margin-bottom: 60px; position: relative; z-index: 2; }
+    .vt-security-head .eyebrow { color: #0d9488 !important; }
+    .vt-security-head .eyebrow::after { background: #0d9488 !important; left: 50% !important; transform: translateX(-50%) !important; }
+    .vt-security-head h2 { font-family: var(--serif); color: var(--dark); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 700; margin-bottom: 16px; }
+    .vt-security-head h2 em { font-style: italic; color: #0d9488; }
+    .vt-security-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; position: relative; z-index: 2; }
+    .vt-security-card {
+      background: #f8fafc; border: 1px solid rgba(13, 148, 136, 0.15); border-radius: 20px; padding: 32px;
+      box-shadow: 0 4px 12px rgba(0,0,0,.02);
+      transition: all 0.4s ease;
+    }
+    .vt-security-card:hover {
+      transform: translateY(-5px); border-color: #0d9488; box-shadow: 0 16px 40px rgba(13, 148, 136, 0.12);
+    }
+    .vt-security-icon {
+      width: 48px; height: 48px; border-radius: 12px; margin-bottom: 20px;
+      background: linear-gradient(135deg, #0d9488, #2dd4bf); display: flex; align-items: center; justify-content: center;
+      color: #fff;
+    }
+    .vt-security-card h3 { font-family: var(--serif); color: var(--dark); font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; }
+    .vt-security-card p { color: var(--body); font-size: .95rem; line-height: 1.6; }
+
+    /* ── Parceiro ── */
+    .vt-partner { padding: 100px 0; background: #f8fafc; text-align: center; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; }
+    .vt-partner-block { max-width: 900px; margin: 0 auto; position: relative; }
+    .vt-partner-quote-icon { font-size: 8rem; color: #ccfbf1; font-family: var(--serif); line-height: 0; position: absolute; top: -10px; left: 50%; transform: translateX(-50%); z-index: 0; opacity: 0.6; }
+    .vt-partner blockquote {
+      font-family: var(--serif); font-size: clamp(1.4rem, 2vw, 1.8rem); color: var(--dark);
+      font-style: italic; line-height: 1.6; margin: 60px 0 30px; position: relative; z-index: 1;
+    }
+    .vt-partner-sig { margin-bottom: 24px; position: relative; z-index: 1; display: flex; align-items: center; justify-content: center; gap: 16px; flex-direction: column; }
+    .vt-partner-sig img { height: 40px; width: auto; object-fit: contain; }
+    .vt-partner-desc { color: var(--muted); font-size: 0.95rem; line-height: 1.6; max-width: 600px; margin: 0 auto; position: relative; z-index: 1; }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .vt2-workflow-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+      .vt2-workflow-grid::before { display: none; }
+      .vt2-showcase-row { grid-template-columns: 1fr; gap: 40px; }
+      .vt2-showcase-row.reverse .vt2-text { order: 1; }
+      .vt2-showcase-row.reverse .vt2-mockup { order: 2; }
+      .vt2-stats-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .vt-hero-inner { grid-template-columns: 1fr; }
+      .vt-hero-visual { display: none; }
+      .vt-security-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .vt2-workflow-grid, .vt2-stats-grid, .vt-security-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .vt-hero { padding: 112px 0 64px; }
+      .vt-hero h1 { font-size: clamp(2rem, 8.5vw, 2.8rem); }
+      .vt-hero-actions { flex-direction: column; align-items: stretch; }
+      .vt-hero-actions a { text-align: center; }
+      .vt-hero-badge { max-width: 100%; }
+      .vt-hero-badge-dot { flex-shrink: 0; }
+      .vt-cta { padding-block: 64px; }
+    }

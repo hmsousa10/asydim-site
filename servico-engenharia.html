@@ -3,89 +3,115 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Engenharia Civil &amp; Remodelações — Asydim</title>
-  <meta name="description" content="Gestão de obra, remodelações chave-na-mão, simulação energética BIM e arquitetura sustentável BREEAM/LEED. Asydim." />
+  <title data-i18n="seo.servico-engenharia.title">Engenharia Civil, Gestão de Obra e Remodelações | Asydim</title>
+  <meta name="description" data-i18n-content="seo.servico-engenharia.description" content="Engenharia civil, fiscalização de obra, remodelações e simulação energética para empresas em Portugal. Peça uma proposta para o seu projeto." />
+  <link rel="canonical" href="https://asydim.pt/servico-engenharia.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Asydim" />
+  <meta property="og:locale" content="pt_PT" />
+  <meta property="og:url" content="https://asydim.pt/servico-engenharia.html" />
+  <meta property="og:title" data-i18n-content="seo.servico-engenharia.title" content="Engenharia Civil, Gestão de Obra e Remodelações | Asydim" />
+  <meta property="og:description" data-i18n-content="seo.servico-engenharia.description" content="Engenharia civil, fiscalização de obra, remodelações e simulação energética para empresas em Portugal. Peça uma proposta para o seu projeto." />
+  <meta property="og:image" content="https://asydim.pt/images/sobre_smart_city.png" />
+  <meta property="og:image:alt" content="Asydim — Consultoria e Formação Sustentável" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="presentation.css" />
+<script src="image-fallback.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#conteudo" data-i18n="a11y.skip">Saltar para o conteúdo</a>
 
-  <!-- ===== NAVBAR ===== -->
+
   <header class="navbar" id="navbar">
     <div class="container nav-inner">
       <a href="index.html" class="logo-wrap">
-        <img src="images/logo.png" alt="Logo Asydim" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-        <span class="logo-fallback" style="display:none;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+        <img src="images/logo.png" alt="Logo Asydim" data-i18n-alt="logo.alt" class="logo-img" data-image-fallback="block" />
+        <span class="logo-fallback s-d0466aa33fa8"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
         <span class="logo-text">Asydim</span>
       </a>
-      <nav class="nav-links" aria-label="Menu principal">
-        <a href="index.html#sobre"    class="nav-link">Sobre Nós</a>
-        <a href="index.html#servicos" class="nav-link">Serviços</a>
-        <a href="index.html#projetos" class="nav-link">Projetos</a>
-        <a href="index.html#contacto" class="nav-link">Contacto</a>
-        <a href="index.html#contacto" class="btn-nav">Falar Connosco</a>
+      <nav class="nav-links" data-i18n-aria="nav.menu" aria-label="Menu principal">
+        <a href="index.html#sobre"    class="nav-link" data-i18n="nav.about">Sobre Nós</a>
+        <a href="index.html#servicos" class="nav-link" data-i18n="nav.services">Serviços</a>
+        <a href="index.html#projetos" class="nav-link" data-i18n="nav.projects">Projetos</a>
+        <a href="index.html?assunto=engenharia#contacto" class="nav-link" data-i18n="nav.contact">Contacto</a>
+        <div class="lang-switch" role="group" data-i18n-aria="nav.lang" aria-label="Idioma">
+          <button type="button" class="lang-btn is-active" data-lang="pt" data-i18n-aria="lang.pt" aria-label="Português" aria-pressed="true">PT</button>
+          <span class="lang-sep" aria-hidden="true">|</span>
+          <button type="button" class="lang-btn" data-lang="en" data-i18n-aria="lang.en" aria-label="English" aria-pressed="false">EN</button>
+        </div>
+        <a href="index.html?assunto=engenharia#contacto" class="btn-nav" data-i18n="nav.cta">Falar Connosco</a>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+      <button class="hamburger" id="hamburger" data-i18n-aria="nav.openMenu" aria-label="Abrir menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- Mobile Drawer -->
+
   <div class="nav-drawer-backdrop" id="nav-backdrop"></div>
   <nav class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-lang">
+      <div class="lang-switch lang-switch--drawer" role="group" data-i18n-aria="nav.lang" aria-label="Idioma">
+        <button type="button" class="lang-btn is-active" data-lang="pt" data-i18n-aria="lang.pt" aria-label="Português" aria-pressed="true">PT</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button type="button" class="lang-btn" data-lang="en" data-i18n-aria="lang.en" aria-label="English" aria-pressed="false">EN</button>
+      </div>
+    </div>
     <div class="mobile-drawer-header">
       <div class="mobile-drawer-brand">
-        <img src="images/logo.png" alt="Logo" class="mobile-drawer-logo" onerror="this.style.display='none'" />
+        <img src="images/logo.png" alt="Logo" data-i18n-alt="logo.alt" class="mobile-drawer-logo" data-image-fallback="hide" />
         <span class="mobile-drawer-logo-text">Asydim</span>
       </div>
-      <button class="mobile-drawer-close" id="drawer-close" aria-label="Fechar menu">
+      <button class="mobile-drawer-close" id="drawer-close" data-i18n-aria="nav.closeMenu" aria-label="Fechar menu">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
       </button>
     </div>
     <div class="mobile-drawer-body">
-      <span class="mobile-drawer-label">Navegação</span>
-      <a href="index.html#sobre"    class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></span>Sobre Nós</a>
-      <a href="index.html#servicos" class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span>Serviços</a>
-      <a href="index.html#projetos" class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/></svg></span>Projetos</a>
-      <a href="index.html#contacto" class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Contacto</a>
+      <span class="mobile-drawer-label" data-i18n="nav.navigation">Navegação</span>
+      <a href="index.html#sobre"    class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></span><span data-i18n="nav.about">Sobre Nós</span></a>
+      <a href="index.html#servicos" class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span><span data-i18n="nav.services">Serviços</span></a>
+      <a href="index.html#projetos" class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/></svg></span><span data-i18n="nav.projects">Projetos</span></a>
+      <a href="index.html?assunto=engenharia#contacto" class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><span data-i18n="nav.contact">Contacto</span></a>
     </div>
     <div class="mobile-drawer-footer">
-      <a href="index.html#contacto" class="btn-primary btn-full" id="btn-drawer-cta">Falar Connosco</a>
+      <a href="index.html?assunto=engenharia#contacto" class="btn-primary btn-full" id="btn-drawer-cta" data-i18n="nav.cta">Falar Connosco</a>
     </div>
   </nav>
 
-  <!-- ===== HERO — ENGENHARIA (BLUEPRINT ANIMADO) ===== -->
+
+  <main id="conteudo">
   <section class="eng-hero">
-    <!-- Blueprint grid animated background -->
+
     <div class="eng-hero-grid"></div>
-    <!-- Radial glow -->
+
     <div class="eng-hero-radial"></div>
 
     <div class="container">
       <div class="eng-hero-inner">
 
-        <!-- LEFT: Text -->
+
         <div class="eng-hero-text">
-          <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 22px;">
-            <a href="index.html#servicos" class="sp-hero-back" style="margin-bottom: 0;">
+          <div class="s-4039069e7286">
+            <a href="index.html#servicos" class="sp-hero-back s-b3a2297a12f5">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-              Voltar aos Serviços
+              <span data-i18n="nav.backServices">Voltar aos Serviços</span>
             </a>
-            <div class="sp-hero-badge" style="margin-bottom: 0;">
+            <div class="sp-hero-badge s-b3a2297a12f5">
               <span class="sp-hero-badge-dot"></span>
-              Pilar 03 · Engenharia Civil
+              <span data-i18n="eg.hero.badge">Pilar 03 · Engenharia Civil</span>
             </div>
           </div>
-          <h1 class="eng-hero-h1">Engenharia Civil<br><em>&amp; Construção Sustentável</em></h1>
-          <p class="sp-hero-desc">Unimos engenharia, arquitetura e tecnologia BIM para materializar projetos desde a prancheta até à chave na mão — com rigor técnico, prazos cumpridos e sustentabilidade integrada.</p>
+          <h1 class="eng-hero-h1" data-i18n-html="eg.hero.title">Engenharia Civil<br><em>&amp; Construção Sustentável</em></h1>
+          <p class="sp-hero-desc" data-i18n="eg.hero.desc">Unimos engenharia, arquitetura e tecnologia BIM para materializar projetos desde a prancheta até à chave na mão — com rigor técnico, prazos cumpridos e sustentabilidade integrada.</p>
           <div class="sp-hero-actions">
-            <a href="index.html#contacto" class="btn-hero-primary">Pedir Orçamento</a>
-            <a href="#servicos-detalhe"   class="btn-hero-ghost">Ver Serviços ↓</a>
+            <a href="index.html?assunto=engenharia#contacto" class="btn-hero-primary" data-i18n="eg.hero.ctaPrimary">Pedir Orçamento</a>
+            <a href="#servicos-detalhe"   class="btn-hero-ghost" data-i18n="eg.hero.ctaGhost">Ver Serviços ↓</a>
           </div>
-          <!-- Tech tags — engenharia -->
+
           <div class="sp-hero-tags">
             <span class="tech-tag tech-tag--amber">[BIM]</span>
             <span class="tech-tag">[ESG]</span>
@@ -96,204 +122,204 @@
           </div>
         </div>
 
-        <!-- RIGHT: Blueprint widget -->
+
         <div class="eng-hero-visual">
           <div class="eng-hero-glow"></div>
           <div class="eng-blueprint-card">
-            <!-- Window chrome -->
+
             <div class="sp-dash-header">
               <span class="sp-dash-dot"></span>
               <span class="sp-dash-dot"></span>
               <span class="sp-dash-dot"></span>
-              <span class="sp-dash-title">ASYDIM · OBRA STATUS</span>
+              <span class="sp-dash-title" data-i18n="eg.bp.header">ASYDIM · OBRA STATUS</span>
             </div>
-            <!-- Blueprint SVG schematic -->
+
             <div class="eng-blueprint-svg-wrap">
               <svg viewBox="0 0 220 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="eng-svg">
-                <!-- Floor plan outline -->
+
                 <rect x="10" y="10" width="200" height="100" rx="2" stroke="rgba(69,123,157,.6)" stroke-width="1.2" stroke-dasharray="4 2"/>
-                <!-- Interior walls -->
+
                 <line x1="10" y1="60" x2="120" y2="60" stroke="rgba(69,123,157,.5)" stroke-width="1"/>
                 <line x1="120" y1="10" x2="120" y2="110" stroke="rgba(69,123,157,.5)" stroke-width="1"/>
                 <line x1="120" y1="80" x2="210" y2="80" stroke="rgba(69,123,157,.4)" stroke-width="1"/>
-                <!-- Door arcs -->
+
                 <path d="M10 60 Q26 60 26 44" stroke="rgba(100,200,140,.5)" stroke-width=".8" fill="none"/>
                 <path d="M120 80 Q136 80 136 64" stroke="rgba(100,200,140,.5)" stroke-width=".8" fill="none"/>
-                <!-- Window marks -->
+
                 <line x1="60" y1="10" x2="90" y2="10" stroke="rgba(255,255,255,.4)" stroke-width="2"/>
                 <line x1="150" y1="10" x2="180" y2="10" stroke="rgba(255,255,255,.4)" stroke-width="2"/>
-                <!-- Dimension lines -->
+
                 <line x1="10" y1="118" x2="210" y2="118" stroke="rgba(69,123,157,.3)" stroke-width=".6"/>
                 <line x1="10" y1="115" x2="10" y2="121" stroke="rgba(69,123,157,.3)" stroke-width=".6"/>
                 <line x1="210" y1="115" x2="210" y2="121" stroke="rgba(69,123,157,.3)" stroke-width=".6"/>
-                <!-- Labels -->
-                <text x="65" y="40" font-size="7" fill="rgba(255,255,255,.3)" font-family="monospace">SALA</text>
-                <text x="155" y="50" font-size="7" fill="rgba(255,255,255,.3)" font-family="monospace">SUITE</text>
+
+                <text x="65" y="40" font-size="7" fill="rgba(255,255,255,.3)" font-family="monospace" data-i18n="eg.bp.room1">SALA</text>
+                <text x="155" y="50" font-size="7" fill="rgba(255,255,255,.3)" font-family="monospace" data-i18n="eg.bp.room2">SUITE</text>
                 <text x="140" y="98" font-size="6" fill="rgba(255,255,255,.25)" font-family="monospace">WC</text>
-                <text x="45" y="85" font-size="7" fill="rgba(255,255,255,.3)" font-family="monospace">COZINHA</text>
+                <text x="45" y="85" font-size="7" fill="rgba(255,255,255,.3)" font-family="monospace" data-i18n="eg.bp.room3">COZINHA</text>
               </svg>
             </div>
-            <!-- Metrics row -->
+
             <div class="eng-blueprint-metrics">
               <div class="eng-bp-metric">
-                <span class="eng-bp-label">Progresso</span>
+                <span class="eng-bp-label" data-i18n="eg.bp.m1">Progresso</span>
                 <span class="eng-bp-value">73<span>%</span></span>
               </div>
               <div class="eng-bp-metric">
-                <span class="eng-bp-label">Semana</span>
+                <span class="eng-bp-label" data-i18n="eg.bp.m2">Semana</span>
                 <span class="eng-bp-value">W<span>24</span></span>
               </div>
               <div class="eng-bp-metric">
-                <span class="eng-bp-label">Score ESG</span>
+                <span class="eng-bp-label" data-i18n="eg.bp.m3">Score ESG</span>
                 <span class="eng-bp-value">A<span>+</span></span>
               </div>
             </div>
-            <!-- Progress bar -->
+
             <div class="eng-bp-progress-wrap">
               <div class="eng-bp-progress-bar">
-                <div class="eng-bp-progress-fill" style="width:73%"></div>
+                <div class="eng-bp-progress-fill s-af0ffc447228"></div>
               </div>
-              <span class="eng-bp-progress-label">Execução de Obra · Fase 3/4</span>
+              <span class="eng-bp-progress-label" data-i18n="eg.bp.progress">Execução de Obra · Fase 3/4</span>
             </div>
           </div>
         </div>
 
-      </div><!-- /eng-hero-inner -->
+      </div>
     </div>
   </section>
 
-  <!-- ===== Z-PATTERN SERVICES ===== -->
+
   <section class="sp-section" id="servicos-detalhe">
     <div class="container">
       <div class="sp-section-head reveal reveal--up">
-        <p class="eyebrow">O Que Fazemos</p>
-        <h2>Construção e Reabilitação <span>Sustentável</span></h2>
-        <p>Da fase de projeto à entrega final, garantimos rigor técnico e cumprimento de prazos em cada fase da obra.</p>
+        <p class="eyebrow" data-i18n="eg.sec.eyebrow">O Que Fazemos</p>
+        <h2 data-i18n-html="eg.sec.title">Construção e Reabilitação <span>Sustentável</span></h2>
+        <p data-i18n="eg.sec.sub">Da fase de projeto à entrega final, garantimos rigor técnico e cumprimento de prazos em cada fase da obra.</p>
       </div>
 
-      <!-- Z-Pattern blocks -->
 
-      <!-- Block 1: Visual LEFT · Text RIGHT -->
+
+
       <div class="zp-block reveal reveal--left">
         <div class="zp-visual">
-          <img src="images/eng_obra.jpg" alt="Gestão de Obra" class="zp-bg-img" />
+          <img src="images/eng_obra.jpg" alt="Gestão de Obra" data-i18n-alt="eg.alt.obra" class="zp-bg-img" />
           <div class="zp-glass-badge">
             <div class="zp-icon-wrap">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="stroke: var(--g2);"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="s-7b2328227231"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
             </div>
             <div class="zp-visual-stat">
               <strong>100%</strong>
-              <span>Chave-na-mão</span>
+              <span data-i18n="eg.b1.stat">Chave-na-mão</span>
             </div>
-            <div class="zp-visual-badge zp-visual-badge--teal">[Gestão de Obra]</div>
+            <div class="zp-visual-badge zp-visual-badge--teal" data-i18n="eg.b1.badge">[Gestão de Obra]</div>
           </div>
         </div>
         <div class="zp-content">
-          <p class="eyebrow">Serviço 01</p>
-          <h3>Gestão e Fiscalização <span>de Obra</span></h3>
-          <p>Assumimos a direção técnica completa — assegurando o cumprimento do caderno de encargos, prazos e orçamento. Fiscalização independente e rigorosa com relatórios periódicos ao cliente.</p>
+          <p class="eyebrow" data-i18n="eg.b1.eyebrow">Serviço 01</p>
+          <h3 data-i18n-html="eg.b1.title">Gestão e Fiscalização <span>de Obra</span></h3>
+          <p data-i18n="eg.b1.desc">Assumimos a direção técnica completa — assegurando o cumprimento do caderno de encargos, prazos e orçamento. Fiscalização independente e rigorosa com relatórios periódicos ao cliente.</p>
           <ul class="zp-list">
-            <li>Direção de Obra (DO) e Fiscalização independente</li>
-            <li>Controlo de custos e gestão de desvios</li>
-            <li>Coordenação de subempreiteiros</li>
-            <li>Relatórios periódicos de progresso</li>
+            <li data-i18n="eg.b1.li1">Direção de Obra (DO) e Fiscalização independente</li>
+            <li data-i18n="eg.b1.li2">Controlo de custos e gestão de desvios</li>
+            <li data-i18n="eg.b1.li3">Coordenação de subempreiteiros</li>
+            <li data-i18n="eg.b1.li4">Relatórios periódicos de progresso</li>
           </ul>
           <div class="glass-box zp-glass">
-            <p style="display: flex; align-items: flex-start; gap: 8px;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--amber); flex-shrink: 0; margin-top: 2px;"><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg>
-              <span>Reduzimos em média <strong>18% os desvios orçamentais</strong> face à gestão direta pelo promotor, graças ao controlo técnico independente.</span>
+            <p class="s-77a6410220e2">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="s-cd13532e667c"><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg>
+              <span data-i18n-html="eg.b1.glass">Reduzimos em média <strong>18% os desvios orçamentais</strong> face à gestão direta pelo promotor, graças ao controlo técnico independente.</span>
             </p>
           </div>
         </div>
       </div>
 
-      <!-- Block 2: Text LEFT · Visual RIGHT -->
+
       <div class="zp-block zp-block--reverse reveal reveal--right">
         <div class="zp-content">
-          <p class="eyebrow">Serviço 02</p>
-          <h3>Remodelações <span>Chave-na-Mão</span></h3>
-          <p>Gestão completa de projetos de remodelação residencial e comercial — desde o projeto de arquitetura à entrega das chaves — com controlo total de qualidade e garantia pós-obra.</p>
+          <p class="eyebrow" data-i18n="eg.b2.eyebrow">Serviço 02</p>
+          <h3 data-i18n-html="eg.b2.title">Remodelações <span>Chave-na-Mão</span></h3>
+          <p data-i18n="eg.b2.desc">Gestão completa de projetos de remodelação residencial e comercial — desde o projeto de arquitetura à entrega das chaves — com controlo total de qualidade e garantia pós-obra.</p>
           <ul class="zp-list">
-            <li>Projeto de arquitetura e design de interiores</li>
-            <li>Coordenação de todas as especialidades (MEP)</li>
-            <li>Gestão de materiais, acabamentos e fornecedores</li>
-            <li>Garantia pós-obra de 2 anos</li>
+            <li data-i18n="eg.b2.li1">Projeto de arquitetura e design de interiores</li>
+            <li data-i18n="eg.b2.li2">Coordenação de todas as especialidades (MEP)</li>
+            <li data-i18n="eg.b2.li3">Gestão de materiais, acabamentos e fornecedores</li>
+            <li data-i18n="eg.b2.li4">Garantia pós-obra de 2 anos</li>
           </ul>
         </div>
         <div class="zp-visual">
-          <img src="images/eng_remodelacao.jpg" alt="Remodelação" class="zp-bg-img" />
+          <img src="images/eng_remodelacao.jpg" alt="Remodelação" data-i18n-alt="eg.alt.remod" class="zp-bg-img" />
           <div class="zp-glass-badge">
             <div class="zp-icon-wrap">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="stroke: #1d4ed8;"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="s-da933eb2f9e2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
             </div>
             <div class="zp-visual-stat">
-              <strong>2 Anos</strong>
-              <span>Garantia pós-obra</span>
+              <strong data-i18n="eg.b2.statNum">2 Anos</strong>
+              <span data-i18n="eg.b2.statLabel">Garantia pós-obra</span>
             </div>
-            <div class="zp-visual-badge zp-visual-badge--blue">[Residencial &amp; Comercial]</div>
+            <div class="zp-visual-badge zp-visual-badge--blue" data-i18n="eg.b2.badge">[Residencial &amp; Comercial]</div>
           </div>
         </div>
       </div>
 
-      <!-- Block 3: Visual LEFT · Text RIGHT -->
+
       <div class="zp-block reveal reveal--left">
         <div class="zp-visual">
-          <img src="images/eng_simulacao.jpg" alt="BIM Simulação" class="zp-bg-img" />
+          <img src="images/eng_simulacao.jpg" alt="BIM Simulação" data-i18n-alt="eg.alt.sim" class="zp-bg-img" />
           <div class="zp-glass-badge">
             <div class="zp-icon-wrap">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="stroke: #c2410c;"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="s-18d70d621187"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
             </div>
             <div class="zp-visual-stat">
               <strong>BIM</strong>
-              <span>Modelação avançada</span>
+              <span data-i18n="eg.b3.stat">Modelação avançada</span>
             </div>
             <div class="zp-visual-badge zp-visual-badge--amber">[PowerSim] [RECS]</div>
           </div>
         </div>
         <div class="zp-content">
-          <p class="eyebrow">Serviço 03</p>
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px;">
-            <h3 style="margin-bottom: 0;">Simulação Energética <span>PowerSim</span></h3>
-            <img src="images/parceiros/whatxnext_dark.png" alt="What Next" style="height: 26px; flex-shrink: 0;" />
+          <p class="eyebrow" data-i18n="eg.b3.eyebrow">Serviço 03</p>
+          <div class="s-48cb9522335b">
+            <h3 data-i18n-html="eg.b3.title" class="s-b3a2297a12f5">Simulação Energética <span>PowerSim</span></h3>
+            <img src="images/parceiros/whatxnext_dark.png" alt="What Next" class="s-734e330fbf62" />
           </div>
-          <p>Modelação e simulação energética avançada de edifícios com PowerSim e BIM. Antevisão do desempenho energético antes da construção ou reabilitação, com relatórios EPC detalhados.</p>
+          <p data-i18n="eg.b3.desc">Modelação e simulação energética avançada de edifícios com PowerSim e BIM. Antevisão do desempenho energético antes da construção ou reabilitação, com relatórios EPC detalhados.</p>
           <ul class="zp-list">
-            <li>Modelação BIM e certificação energética (SCE)</li>
-            <li>Análise de envolvente e pontes térmicas</li>
-            <li>Estudo de soluções de reabilitação ETICS</li>
-            <li>Cálculo RECS/SCE e relatórios EPC</li>
+            <li data-i18n="eg.b3.li1">Modelação BIM e certificação energética (SCE)</li>
+            <li data-i18n="eg.b3.li2">Análise de envolvente e pontes térmicas</li>
+            <li data-i18n="eg.b3.li3">Estudo de soluções de reabilitação ETICS</li>
+            <li data-i18n="eg.b3.li4">Cálculo RECS/SCE e relatórios EPC</li>
           </ul>
           <div class="glass-box zp-glass">
-            <p style="display: flex; align-items: flex-start; gap: 8px;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--amber2); flex-shrink: 0; margin-top: 2px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-              <span>Os nossos modelos PowerSim permitem reduzir o consumo energético em até <strong>40%</strong> antes de qualquer obra começar.</span>
+            <p class="s-77a6410220e2">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="s-efef2306d31e"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              <span data-i18n-html="eg.b3.glass">Os nossos modelos PowerSim permitem reduzir o consumo energético em até <strong>40%</strong> antes de qualquer obra começar.</span>
             </p>
           </div>
         </div>
       </div>
 
-      <!-- Block 4: Text LEFT · Visual RIGHT -->
+
       <div class="zp-block zp-block--reverse reveal reveal--right">
         <div class="zp-content">
-          <p class="eyebrow">Serviço 04</p>
-          <h3>Arquitetura <span>Sustentável</span></h3>
-          <p>Projetos de arquitetura com foco na sustentabilidade, eficiência energética e bem-estar. Design bioclimático, materiais de baixo impacto e certificação BREEAM/LEED para projetos de referência.</p>
+          <p class="eyebrow" data-i18n="eg.b4.eyebrow">Serviço 04</p>
+          <h3 data-i18n-html="eg.b4.title">Arquitetura <span>Sustentável</span></h3>
+          <p data-i18n="eg.b4.desc">Projetos de arquitetura com foco na sustentabilidade, eficiência energética e bem-estar. Design bioclimático, materiais de baixo impacto e certificação BREEAM/LEED para projetos de referência.</p>
           <ul class="zp-list">
-            <li>Projetos de arquitetura bioclimática</li>
-            <li>Materiais sustentáveis e economia circular</li>
-            <li>Certificação BREEAM/LEED</li>
-            <li>Integração de sistemas renováveis no projeto</li>
+            <li data-i18n="eg.b4.li1">Projetos de arquitetura bioclimática</li>
+            <li data-i18n="eg.b4.li2">Materiais sustentáveis e economia circular</li>
+            <li data-i18n="eg.b4.li3">Certificação BREEAM/LEED</li>
+            <li data-i18n="eg.b4.li4">Integração de sistemas renováveis no projeto</li>
           </ul>
         </div>
         <div class="zp-visual">
-          <img src="images/eng_arquitetura.jpg" alt="Arquitetura Sustentável" class="zp-bg-img" />
+          <img src="images/eng_arquitetura.jpg" alt="Arquitetura Sustentável" data-i18n-alt="eg.alt.arq" class="zp-bg-img" />
           <div class="zp-glass-badge">
             <div class="zp-icon-wrap">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="stroke: var(--g1);"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="s-cf42759121c4"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
             <div class="zp-visual-stat">
               <strong>BREEAM</strong>
-              <span>Certificação int.</span>
+              <span data-i18n="eg.b4.stat">Certificação int.</span>
             </div>
             <div class="zp-visual-badge zp-visual-badge--teal">[ESG] [LEED]</div>
           </div>
@@ -303,13 +329,13 @@
     </div>
   </section>
 
-  <!-- ===== HORIZONTAL TIMELINE — PROCESSO ===== -->
+
   <section class="sp-section sp-section--alt">
     <div class="container">
       <div class="sp-section-head text-center reveal reveal--up">
-        <p class="eyebrow" style="text-align: center; display: block; margin: 0 auto 16px;">Como Trabalhamos</p>
-        <h2 style="text-align:center;">O Nosso <span>Processo</span></h2>
-        <p style="margin: 14px auto 0; text-align:center; max-width:520px;">Um método estruturado e transparente — do primeiro diagnóstico à entrega da chave — sem surpresas.</p>
+        <p class="eyebrow s-22f603b93105" data-i18n="eg.proc.eyebrow">Como Trabalhamos</p>
+        <h2 data-i18n-html="eg.proc.title" class="s-5a2dfef236e7">O Nosso <span>Processo</span></h2>
+        <p data-i18n="eg.proc.sub" class="s-9fecb6833d33">Um método estruturado e transparente — do primeiro diagnóstico à entrega da chave — sem surpresas.</p>
       </div>
 
       <div class="sp-timeline reveal reveal--up">
@@ -318,32 +344,32 @@
           <div class="sp-timeline-step">
             <div class="sp-step-num">1</div>
             <div class="sp-step-body">
-              <h3>Diagnóstico &amp; Visita</h3>
-              <p>Reunião técnica, visita ao local e avaliação da viabilidade técnica e económica do projeto.</p>
+              <h3 data-i18n="eg.proc.1.title">Diagnóstico &amp; Visita</h3>
+              <p data-i18n="eg.proc.1.desc">Reunião técnica, visita ao local e avaliação da viabilidade técnica e económica do projeto.</p>
             </div>
           </div>
 
           <div class="sp-timeline-step">
             <div class="sp-step-num">2</div>
             <div class="sp-step-body">
-              <h3>Projeto &amp; Licenciamento</h3>
-              <p>Elaboramos os projetos técnicos (arq., estruturas, MEP) e gerimos o licenciamento com as entidades.</p>
+              <h3 data-i18n="eg.proc.2.title">Projeto &amp; Licenciamento</h3>
+              <p data-i18n="eg.proc.2.desc">Elaboramos os projetos técnicos (arq., estruturas, MEP) e gerimos o licenciamento com as entidades.</p>
             </div>
           </div>
 
           <div class="sp-timeline-step">
             <div class="sp-step-num">3</div>
             <div class="sp-step-body">
-              <h3>Execução de Obra</h3>
-              <p>Gestão e fiscalização permanente com controlo de qualidade, segurança e caderno de encargos.</p>
+              <h3 data-i18n="eg.proc.3.title">Execução de Obra</h3>
+              <p data-i18n="eg.proc.3.desc">Gestão e fiscalização permanente com controlo de qualidade, segurança e caderno de encargos.</p>
             </div>
           </div>
 
           <div class="sp-timeline-step">
             <div class="sp-step-num">4</div>
             <div class="sp-step-body">
-              <h3>Entrega &amp; Assistência</h3>
-              <p>Entrega formal com documentação técnica completa (telas finais, manuais) e garantia pós-obra.</p>
+              <h3 data-i18n="eg.proc.4.title">Entrega &amp; Assistência</h3>
+              <p data-i18n="eg.proc.4.desc">Entrega formal com documentação técnica completa (telas finais, manuais) e garantia pós-obra.</p>
             </div>
           </div>
 
@@ -352,7 +378,7 @@
     </div>
   </section>
 
-  <!-- ===== CTA PREMIUM MESH GRADIENT ===== -->
+
   <div class="sp-cta-wrap">
     <div class="sp-cta-mesh sp-cta-mesh--eng"></div>
     <div class="sp-cta-geo sp-cta-geo--tl"></div>
@@ -363,59 +389,68 @@
       <div class="sp-cta-inner reveal reveal--up">
         <div class="sp-cta-eyebrow">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          Próximo Passo
+          <span data-i18n="eg.cta.eyebrow">Próximo Passo</span>
         </div>
-        <h2>Tem um Projeto de Construção<br><em>ou Remodelação?</em></h2>
-        <p>Fale connosco e receba um orçamento detalhado e sem compromisso. Primeira análise técnica gratuita.</p>
+        <h2 data-i18n-html="eg.cta.title">Tem um Projeto de Construção<br><em>ou Remodelação?</em></h2>
+        <p data-i18n="eg.cta.desc">Fale connosco e receba um orçamento detalhado e sem compromisso. Primeira análise técnica gratuita.</p>
         <div class="sp-cta-btns">
-          <a href="index.html#contacto" class="btn-hero-primary">Pedir Orçamento</a>
-          <a href="index.html"          class="btn-hero-ghost">Voltar ao Início</a>
+          <a href="index.html?assunto=engenharia#contacto" class="btn-hero-primary" data-i18n="eg.cta.primary">Pedir Orçamento</a>
+          <a href="index.html"          class="btn-hero-ghost" data-i18n="nav.backHome">Voltar ao Início</a>
         </div>
-        <div class="glass-box" style="max-width:480px; margin: 28px auto 0;">
-          <p style="display: flex; align-items: center; justify-content: center; gap: 8px;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--g1); flex-shrink: 0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Resposta em menos de 24h úteis · Sem compromisso · Visita técnica gratuita</span>
+        <div class="glass-box s-ad46d1abbe0c">
+          <p class="s-c4e6493b225f">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="s-0b4a43190c3d"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span data-i18n="eg.cta.note">Resposta em menos de 24h úteis · Sem compromisso · Visita técnica gratuita</span>
           </p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ===== FOOTER ===== -->
+
+  </main>
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="images/logo.png" alt="Logo Asydim" class="footer-logo" onerror="this.style.display='none'" />
-        <p>Consultoria &amp; Formação Sustentável</p>
-        <p class="footer-sub">Informática · Inovação · Sustentabilidade</p>
+        <img src="images/logo.png" alt="Logo Asydim" data-i18n-alt="logo.alt" class="footer-logo" data-image-fallback="hide" />
+        <p data-i18n="footer.tagline">Consultoria &amp; Formação Sustentável</p>
+        <p class="footer-sub" data-i18n="footer.sub">Informática · Inovação · Sustentabilidade</p>
       </div>
       <div class="footer-col">
-        <h5>Navegação</h5>
-        <a href="index.html#sobre">Sobre Nós</a>
-        <a href="index.html#servicos">Serviços</a>
-        <a href="index.html#projetos">Projetos</a>
-        <a href="index.html#contacto">Contacto</a>
+        <h5 data-i18n="nav.navigation">Navegação</h5>
+        <a href="index.html#sobre" data-i18n="nav.about">Sobre Nós</a>
+        <a href="index.html#servicos" data-i18n="nav.services">Serviços</a>
+        <a href="index.html#projetos" data-i18n="nav.projects">Projetos</a>
+        <a href="index.html?assunto=engenharia#contacto" data-i18n="nav.contact">Contacto</a>
       </div>
       <div class="footer-col">
-        <h5>Soluções</h5>
-        <a href="servico-energia.html">Energy Procurement &amp; Renováveis</a>
-        <a href="servico-domotica.html">Smart House &amp; Domótica</a>
-        <a href="servico-engenharia.html">Engenharia Civil &amp; Remodelações</a>
-        <a href="servico-especialidade.html">Projetos de Especialidade</a>
+        <h5 data-i18n="footer.solutions">Soluções</h5>
+        <a href="servico-energia.html" data-i18n="card.energia.title">Energy Procurement &amp; Renováveis</a>
+        <a href="servico-domotica.html" data-i18n="card.domotica.title">Smart House &amp; Domótica</a>
+        <a href="servico-engenharia.html" data-i18n="card.engenharia.title">Engenharia Civil &amp; Remodelações</a>
+        <a href="servico-especialidade.html" data-i18n="footer.specialty">Projetos de Especialidade</a>
       </div>
       <div class="footer-col">
-        <h5>Contacto</h5>
+        <h5 data-i18n="nav.contact">Contacto</h5>
         <a href="mailto:info@asydim.com">info@asydim.com</a>
-        <a href="https://www.asydim.pt" target="_blank" rel="noopener">www.asydim.pt</a>
+        <a href="https://asydim.pt" target="_blank" rel="noopener noreferrer">asydim.pt</a>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p>© 2025 Asydim — Todos os direitos reservados · Desenvolvido em Portugal</p>
+        <p data-i18n="footer.copy">© 2026 Asydim — Todos os direitos reservados · Desenvolvido em Portugal</p>
       </div>
     </div>
+
+    <nav class="footer-legal container" aria-label="Informação legal" data-i18n-aria="legal.nav">
+      <a href="politica-privacidade.html" data-i18n="legal.privacy">Política de Privacidade e RGPD</a>
+      <a href="termos-condicoes.html" data-i18n="legal.terms">Termos e Condições</a>
+      <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener noreferrer" data-i18n="legal.complaints">Livro de Reclamações Eletrónico ↗</a>
+    </nav>
   </footer>
 
+  <script src="i18n/servico-engenharia.js"></script>
+  <script src="enhancements.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

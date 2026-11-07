@@ -3,357 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MedReminder — Gestão de Medicação com IA · Asydim</title>
-  <meta name="description" content="MedReminder é uma plataforma SaaS HealthTech com IA para gestão de medicação, alertas clínicos e relatórios avançados para hospitais e clínicas." />
+  <title data-i18n="seo.produto-medreminder.title">MedReminder: Gestão da Medicação com IA | Asydim</title>
+  <meta name="description" data-i18n-content="seo.produto-medreminder.description" content="Conheça o MedReminder, a solução digital para apoiar a gestão da medicação e a adesão terapêutica. Peça uma demonstração à Asydim." />
+  <link rel="canonical" href="https://asydim.pt/produto-medreminder.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Asydim" />
+  <meta property="og:locale" content="pt_PT" />
+  <meta property="og:url" content="https://asydim.pt/produto-medreminder.html" />
+  <meta property="og:title" data-i18n-content="seo.produto-medreminder.title" content="MedReminder: Gestão da Medicação com IA | Asydim" />
+  <meta property="og:description" data-i18n-content="seo.produto-medreminder.description" content="Conheça o MedReminder, a solução digital para apoiar a gestão da medicação e a adesão terapêutica. Peça uma demonstração à Asydim." />
+  <meta property="og:image" content="https://asydim.pt/images/sobre_smart_city.png" />
+  <meta property="og:image:alt" content="Asydim — Consultoria e Formação Sustentável" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    /* ── MedReminder Hero ── */
-    .mr-hero {
-      min-height: 100vh;
-      background: #0a0a12;
-      position: relative;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-      padding: 120px 0 100px;
-    }
-    /* Animated dot-grid (same as sp-hero) */
-    .mr-hero-dots {
-      position: absolute; inset: 0; pointer-events: none; z-index: 0;
-      background-image: radial-gradient(rgba(167,139,250,.28) 1px, transparent 1px);
-      background-size: 40px 40px;
-      animation: dotGridMove 8s linear infinite;
-    }
-    /* Bottom fade to white */
-    .mr-hero-fade {
-      position: absolute; bottom: 0; left: 0; right: 0; height: 110px;
-      background: linear-gradient(to bottom, transparent, #fff);
-      pointer-events: none; z-index: 4;
-    }
-    .mr-hero-radial {
-      position: absolute; inset: 0; pointer-events: none;
-      background: radial-gradient(ellipse 70% 60% at 70% 40%, rgba(124,58,237,.22) 0%, transparent 70%),
-                  radial-gradient(ellipse 40% 40% at 20% 80%, rgba(167,139,250,.1) 0%, transparent 60%);
-    }
-    .mr-hero-grid {
-      position: absolute; inset: 0; pointer-events: none;
-      background-image: linear-gradient(rgba(167,139,250,.04) 1px, transparent 1px),
-                        linear-gradient(90deg, rgba(167,139,250,.04) 1px, transparent 1px);
-      background-size: 48px 48px;
-    }
-    .mr-hero-inner {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 64px; align-items: center; position: relative; z-index: 2;
-    }
-    .mr-hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 6px 18px; border-radius: 50px; margin-bottom: 24px;
-      background: rgba(124,58,237,.15); border: 1px solid rgba(167,139,250,.4);
-      font-size: .72rem; font-weight: 700; letter-spacing: 1.5px;
-      text-transform: uppercase; color: #a78bfa;
-    }
-    .mr-hero-badge-dot {
-      width: 7px; height: 7px; border-radius: 50%;
-      background: #a78bfa; animation: pulse 2s infinite;
-    }
-    .mr-hero-h1 {
-      font-family: var(--serif); font-size: clamp(2.8rem, 5vw, 4.2rem);
-      font-weight: 700; line-height: 1.1; color: #fff; margin-bottom: 20px;
-    }
-    .mr-hero-h1 em { font-style: normal; color: #a78bfa; }
-    .mr-hero-desc {
-      font-size: 1.1rem; color: rgba(255,255,255,.65);
-      line-height: 1.75; margin-bottom: 36px; max-width: 480px;
-    }
-    .mr-hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
-    .mr-btn-primary {
-      display: inline-flex; align-items: center; gap: 10px;
-      padding: 15px 32px; border-radius: 50px;
-      background: linear-gradient(135deg, #7c3aed, #a78bfa);
-      color: #fff; font-weight: 700; font-size: .95rem;
-      text-decoration: none; letter-spacing: .3px;
-      box-shadow: 0 4px 24px rgba(124,58,237,.45);
-      transition: transform .25s ease, box-shadow .25s ease;
-    }
-    .mr-btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(124,58,237,.6); }
-    .mr-btn-ghost {
-      display: inline-flex; align-items: center; gap: 10px;
-      padding: 15px 32px; border-radius: 50px;
-      border: 2px solid rgba(167,139,250,.4); color: #a78bfa;
-      font-weight: 700; font-size: .95rem; text-decoration: none;
-      transition: border-color .25s ease, background .25s ease;
-    }
-    .mr-btn-ghost:hover { border-color: #a78bfa; background: rgba(124,58,237,.1); }
-    .mr-kpi-strip {
-      display: flex; gap: 0; border: 1px solid rgba(167,139,250,.2);
-      border-radius: 16px; overflow: hidden; background: rgba(255,255,255,.03);
-      backdrop-filter: blur(8px);
-    }
-    .mr-kpi {
-      flex: 1; padding: 18px 20px; text-align: center;
-      border-right: 1px solid rgba(167,139,250,.15);
-    }
-    .mr-kpi:last-child { border-right: none; }
-    .mr-kpi-value { display: block; font-size: 1.6rem; font-weight: 800; color: #a78bfa; }
-    .mr-kpi-value span { font-size: 1rem; }
-    .mr-kpi-label { font-size: .72rem; color: rgba(255,255,255,.45); text-transform: uppercase; letter-spacing: .8px; }
-    /* Mockup */
-    .mr-hero-visual { position: relative; }
-    .mr-hero-glow {
-      position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
-      width: 500px; height: 500px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(124,58,237,.3) 0%, transparent 65%);
-      pointer-events: none;
-    }
-    @keyframes heroFloat {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-16px); }
-    }
-    .mr-mockup-img {
-      width: 100%; border-radius: 20px; position: relative; z-index: 1;
-      box-shadow: 0 30px 80px rgba(124,58,237,.35), 0 0 0 1px rgba(167,139,250,.2);
-      animation: heroFloat 6s ease-in-out infinite;
-      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
-      cursor: pointer;
-    }
-    .mr-mockup-img:hover {
-      animation-play-state: paused;
-      transform: scale(1.04) translateY(-10px);
-      box-shadow: 0 45px 120px rgba(124,58,237,.5), 0 0 0 2px rgba(167,139,250,.5);
-    }
-    /* Features Section */
-    .mr-section { padding: 100px 0; background: var(--bg); }
-    .mr-section-alt { padding: 100px 0; background: #f8fafc; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .mr-section-head { text-align: center; margin-bottom: 60px; }
-    .mr-eyebrow {
-      display: inline-block; font-size: .72rem; font-weight: 700;
-      letter-spacing: 2px; text-transform: uppercase;
-      color: #7c3aed; margin-bottom: 14px;
-    }
-    .eyebrow::after { background: #7c3aed !important; left: 50% !important; transform: translateX(-50%) !important; }
-    .mr-section-h2 { font-family: var(--serif); color: var(--dark); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 700; margin-bottom: 16px; }
-    .mr-section-h2 em { font-style: italic; color: #7c3aed; }
-    .mr-section-sub { color: var(--muted); max-width: 540px; margin: 0 auto; line-height: 1.7; }
-    /* Feature cards */
-    .mr-features-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-    }
-    .mr-feat-card {
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: 20px; padding: 32px;
-      position: relative; overflow: hidden;
-      transition: transform .3s ease, box-shadow .3s ease;
-    }
-    .mr-feat-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(124,58,237,.12); }
-    .mr-feat-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: linear-gradient(90deg, #7c3aed, #a78bfa);
-    }
-    .mr-feat-icon {
-      width: 52px; height: 52px; border-radius: 14px; margin-bottom: 20px;
-      background: rgba(124,58,237,.1); display: flex; align-items: center; justify-content: center;
-      color: #7c3aed;
-    }
-    .mr-feat-card h3 { font-family: var(--serif); color: var(--dark); font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; }
-    .mr-feat-card p { font-size: .9rem; color: var(--body); line-height: 1.6; }
-    .mr-feat-card strong { color: #7c3aed; font-weight: 600; }
-    /* Integrations */
-    .mr-integration-list {
-      display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; max-width: 800px; margin: 0 auto; margin-top: 40px;
-    }
-    .mr-int-tag {
-      padding: 10px 24px; border-radius: 50px;
-      border: 1px solid rgba(124,58,237,.2); background: #fff;
-      font-size: 0.9rem; font-weight: 600; color: var(--dark);
-      box-shadow: 0 4px 12px rgba(0,0,0,.03);
-      transition: all 0.3s ease;
-      cursor: default;
-    }
-    .mr-int-tag:hover {
-      transform: translateY(-4px);
-      border-color: #7c3aed;
-      color: #7c3aed;
-      box-shadow: 0 12px 24px rgba(124,58,237,.15);
-    }
-    
-    /* ── Security Section ── */
-    .mr-security-section {
-      padding: 100px 0;
-      background: linear-gradient(135deg, #0a0a12 0%, #161224 100%);
-      position: relative; overflow: hidden;
-    }
-    .mr-security-section::before {
-      content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-      width: 80%; height: 80%; background: radial-gradient(circle, rgba(124,58,237,0.08) 0%, transparent 60%);
-      pointer-events: none;
-    }
-    .mr-security-head { text-align: center; margin-bottom: 60px; position: relative; z-index: 2; }
-    .mr-security-head .eyebrow { color: #a78bfa !important; }
-    .mr-security-head .eyebrow::after { background: #a78bfa !important; }
-    .mr-security-head h2 { font-family: var(--serif); color: #fff; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 700; margin-bottom: 16px; }
-    .mr-security-head h2 em { font-style: italic; color: #a78bfa; }
-    .mr-security-head p { color: rgba(255,255,255,.6); max-width: 600px; margin: 0 auto; line-height: 1.7; font-size: 1.05rem; }
 
-    .mr-security-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; position: relative; z-index: 2;
-    }
-    .mr-security-card {
-      background: rgba(255, 255, 255, 0.04); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(167, 139, 250, 0.2); border-radius: 20px; padding: 32px;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 10px 30px rgba(0, 0, 0, 0.2);
-      transition: all 0.4s ease;
-    }
-    .mr-security-card:hover {
-      transform: translateY(-5px); border-color: #7c3aed; box-shadow: 0 10px 30px rgba(124,58,237,.25);
-    }
-    .mr-security-icon {
-      width: 48px; height: 48px; border-radius: 12px; margin-bottom: 20px;
-      background: rgba(167,139,250,.1); display: flex; align-items: center; justify-content: center;
-      color: #a78bfa;
-    }
-    .mr-security-card h3 { font-family: var(--serif); color: #fff; font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; }
-    .mr-security-card p { color: rgba(255, 255, 255, 0.7); font-size: .95rem; line-height: 1.6; }
-    
-    /* ── Z-Pattern Showcase ── */
-    .mr-showcase {
-      padding: 100px 0; background: var(--bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
-    }
-    .mr-showcase-row {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 80px; align-items: center; margin-bottom: 120px;
-    }
-    .mr-showcase-row:last-child { margin-bottom: 0; }
-    .mr-showcase-row.reverse .mr-text { order: 2; }
-    .mr-showcase-row.reverse .mr-visual, .mr-showcase-row.reverse .mr2-mockup { order: 1; }
-
-    .mr-text h2 {
-      font-family: var(--serif);
-      font-size: 2.2rem;
-      color: var(--dark); margin-bottom: 16px; line-height: 1.2;
-    }
-    .mr-text h2 span { color: #7c3aed; }
-    .mr-text p { font-size: 1.05rem; color: var(--body); line-height: 1.7; margin-bottom: 24px; }
-    .mr-list { display: flex; flex-direction: column; gap: 12px; }
-    .mr-list li {
-      font-size: .95rem; color: var(--body); padding-left: 24px; position: relative;
-    }
-    .mr-list li::before {
-      content: '✓'; position: absolute; left: 0; top: 0; color: #a78bfa; font-weight: 700;
-    }
-    .mr-visual {
-      position: relative;
-      border-radius: 20px;
-      padding: 28px;
-      background: linear-gradient(145deg, rgba(124,58,237,.1), rgba(167,139,250,.05));
-      border: 1px solid rgba(124,58,237,.2);
-      box-shadow: 0 20px 40px rgba(124,58,237, 0.08);
-      display: flex; align-items: center; justify-content: center;
-    }
-    .mr-visual img {
-      max-width: 100%; height: auto; border-radius: 12px;
-      box-shadow: 0 12px 32px rgba(0,0,0,.3);
-    }
-    
-    /* ── Hover Showcase (Onboarding) ── */
-    .mr2-mockup {
-      position: relative;
-      border-radius: 20px;
-      padding: 40px 28px;
-      background: linear-gradient(145deg, #f5f3ff, #ede9fe);
-      box-shadow: 0 20px 40px rgba(124,58,237,.1);
-      display: flex; align-items: center; justify-content: center;
-      overflow: hidden;
-    }
-    .mr2-mockup img {
-      max-height: 480px;
-      object-fit: contain;
-      position: relative;
-      z-index: 1;
-      border-radius: 24px;
-      box-shadow: 0 12px 32px rgba(0,0,0,.15);
-      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .mr-showcase-row:hover .mr2-mockup img {
-      transform: scale(1.08);
-    }
-
-    /* CTA */
-    .mr-cta {
-      padding: 100px 0; background: #0a0a12; position: relative; overflow: hidden; text-align: center;
-    }
-    .mr-cta-radial {
-      position: absolute; inset: 0; pointer-events: none;
-      background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(124,58,237,.2) 0%, transparent 70%);
-    }
-    .mr-cta h2 { font-size: clamp(2rem, 4vw, 3rem); color: #fff; font-weight: 700; margin-bottom: 18px; }
-    .mr-cta h2 em { font-style: normal; color: #a78bfa; }
-    .mr-cta p { color: rgba(255,255,255,.6); margin-bottom: 40px; font-size: 1.05rem; }
-    /* Responsive */
-    @media (max-width: 900px) {
-      .mr-hero-inner { grid-template-columns: 1fr; }
-      .mr-hero-visual { display: none; }
-      .mr-features-grid { grid-template-columns: repeat(2, 1fr); }
-      .mr-showcase-row { grid-template-columns: 1fr; gap: 40px; }
-      .mr-showcase-row.reverse .mr-text { order: 1; }
-      .mr-showcase-row.reverse .mr-visual, .mr-showcase-row.reverse .mr2-mockup { order: 2; }
-      .mr-security-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 600px) {
-      .mr-features-grid { grid-template-columns: 1fr; }
-      .mr-security-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+<link rel="stylesheet" href="page-styles/produto-medreminder.css" />
+<link rel="stylesheet" href="presentation.css" />
+<script src="image-fallback.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#conteudo" data-i18n="a11y.skip">Saltar para o conteúdo</a>
 
-  <!-- NAVBAR -->
+
   <header class="navbar" id="navbar">
     <div class="container nav-inner">
       <a href="index.html" class="logo-wrap">
-        <img src="images/logo.png" alt="Logo Asydim" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-        <span class="logo-fallback" style="display:none;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+        <img src="images/logo.png" alt="Logo Asydim" data-i18n-alt="logo.alt" class="logo-img" data-image-fallback="block" />
+        <span class="logo-fallback s-d0466aa33fa8"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
         <span class="logo-text">Asydim</span>
       </a>
-      <nav class="nav-links" aria-label="Menu principal">
-        <a href="index.html#sobre"    class="nav-link">Sobre Nós</a>
-        <a href="index.html#servicos" class="nav-link">Serviços</a>
-        <a href="index.html#projetos" class="nav-link">Projetos</a>
-        <a href="index.html#contacto" class="nav-link">Contacto</a>
-        <a href="index.html#contacto" class="btn-nav">Falar Connosco</a>
+      <nav class="nav-links" data-i18n-aria="nav.menu" aria-label="Menu principal">
+        <a href="index.html#sobre"    class="nav-link" data-i18n="nav.about">Sobre Nós</a>
+        <a href="index.html#servicos" class="nav-link" data-i18n="nav.services">Serviços</a>
+        <a href="index.html#projetos" class="nav-link" data-i18n="nav.projects">Projetos</a>
+        <a href="index.html?assunto=medreminder#contacto" class="nav-link" data-i18n="nav.contact">Contacto</a>
+        <div class="lang-switch" role="group" data-i18n-aria="nav.lang" aria-label="Idioma">
+          <button type="button" class="lang-btn is-active" data-lang="pt" data-i18n-aria="lang.pt" aria-label="Português" aria-pressed="true">PT</button>
+          <span class="lang-sep" aria-hidden="true">|</span>
+          <button type="button" class="lang-btn" data-lang="en" data-i18n-aria="lang.en" aria-label="English" aria-pressed="false">EN</button>
+        </div>
+        <a href="index.html?assunto=medreminder#contacto" class="btn-nav" data-i18n="nav.cta">Falar Connosco</a>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <button class="hamburger" id="hamburger" data-i18n-aria="nav.openMenu" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
 
-  <!-- Mobile Drawer -->
+
   <div class="nav-drawer-backdrop" id="nav-backdrop"></div>
   <nav class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-lang">
+      <div class="lang-switch lang-switch--drawer" role="group" data-i18n-aria="nav.lang" aria-label="Idioma">
+        <button type="button" class="lang-btn is-active" data-lang="pt" data-i18n-aria="lang.pt" aria-label="Português" aria-pressed="true">PT</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button type="button" class="lang-btn" data-lang="en" data-i18n-aria="lang.en" aria-label="English" aria-pressed="false">EN</button>
+      </div>
+    </div>
     <div class="mobile-drawer-header">
       <div class="mobile-drawer-brand">
-        <img src="images/logo.png" alt="Logo" class="mobile-drawer-logo" onerror="this.style.display='none'" />
+        <img src="images/logo.png" alt="Logo" data-i18n-alt="logo.alt" class="mobile-drawer-logo" data-image-fallback="hide" />
         <span class="mobile-drawer-logo-text">Asydim</span>
       </div>
-      <button class="mobile-drawer-close" id="drawer-close" aria-label="Fechar menu">
+      <button class="mobile-drawer-close" id="drawer-close" data-i18n-aria="nav.closeMenu" aria-label="Fechar menu">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
       </button>
     </div>
     <div class="mobile-drawer-body">
-      <span class="mobile-drawer-label">Navegação</span>
-      <a href="index.html#sobre"    class="mobile-drawer-link">Sobre Nós</a>
-      <a href="index.html#servicos" class="mobile-drawer-link">Serviços</a>
-      <a href="index.html#projetos" class="mobile-drawer-link">Projetos</a>
-      <a href="index.html#contacto" class="mobile-drawer-link">Contacto</a>
+      <span class="mobile-drawer-label" data-i18n="nav.navigation">Navegação</span>
+      <a href="index.html#sobre"    class="mobile-drawer-link" data-i18n="nav.about">Sobre Nós</a>
+      <a href="index.html#servicos" class="mobile-drawer-link" data-i18n="nav.services">Serviços</a>
+      <a href="index.html#projetos" class="mobile-drawer-link" data-i18n="nav.projects">Projetos</a>
+      <a href="index.html?assunto=medreminder#contacto" class="mobile-drawer-link" data-i18n="nav.contact">Contacto</a>
     </div>
     <div class="mobile-drawer-footer">
-      <a href="index.html#contacto" class="btn-primary btn-full" id="btn-drawer-cta">Falar Connosco</a>
+      <a href="index.html?assunto=medreminder#contacto" class="btn-primary btn-full" id="btn-drawer-cta" data-i18n="nav.cta">Falar Connosco</a>
     </div>
   </nav>
 
-  <!-- ===== HERO ===== -->
+
+  <main id="conteudo">
   <section class="mr-hero">
     <div class="mr-hero-dots"></div>
     <div class="mr-hero-radial"></div>
@@ -361,31 +91,31 @@
     <div class="container">
       <div class="mr-hero-inner">
         <div class="mr-hero-text">
-          <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-bottom:8px;">
-            <a href="javascript:history.back()" class="sp-hero-back" style="color:rgba(255,255,255,.4);">
+          <div class="s-3ca4eece3920">
+            <a href="javascript:history.back()" class="sp-hero-back s-a85a182ea4ed">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-              Voltar
+              <span data-i18n="mr.hero.back">Voltar</span>
             </a>
           </div>
           <div class="mr-hero-badge">
             <span class="mr-hero-badge-dot"></span>
-            SaaS · HealthTech Multi-Perfil
+            <span data-i18n="mr.hero.badge">SaaS · HealthTech Multi-Perfil</span>
           </div>
           <h1 class="mr-hero-h1">Med<em>Reminder</em></h1>
-          <p class="mr-hero-desc">
+          <p class="mr-hero-desc" data-i18n-html="mr.hero.desc">
             Nunca falhar uma toma. A primeira plataforma colaborativa que une <strong>Pacientes, Cuidadores, Farmácias e Biohackers</strong> num ecossistema único. <strong>Pill Scanner por IA</strong>, alertas inteligentes e <strong>verificador de interações</strong> ao balcão.
           </p>
           <div class="mr-hero-actions">
-            <a href="index.html#contacto" class="mr-btn-primary">
+            <a href="index.html?assunto=medreminder#contacto" class="mr-btn-primary">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-              Pedir Demo
+              <span data-i18n="mr.hero.ctaPrimary">Pedir Demo</span>
             </a>
-            <a href="#features" class="mr-btn-ghost">Ver Ecossistema ↓</a>
+            <a href="#features" class="mr-btn-ghost" data-i18n="mr.hero.ctaGhost">Ver Ecossistema ↓</a>
           </div>
           <div class="mr-kpi-strip">
-            <div class="mr-kpi"><span class="mr-kpi-value">-50<span>%</span></span><span class="mr-kpi-label">Falhas na Toma</span></div>
-            <div class="mr-kpi"><span class="mr-kpi-value">4<span></span></span><span class="mr-kpi-label">Perfis Nativos</span></div>
-            <div class="mr-kpi"><span class="mr-kpi-value">FDA<span></span></span><span class="mr-kpi-label">API Integrada</span></div>
+            <div class="mr-kpi"><span class="mr-kpi-value">-50<span>%</span></span><span class="mr-kpi-label" data-i18n="mr.kpi.1">Falhas na Toma</span></div>
+            <div class="mr-kpi"><span class="mr-kpi-value">4<span></span></span><span class="mr-kpi-label" data-i18n="mr.kpi.2">Perfis Nativos</span></div>
+            <div class="mr-kpi"><span class="mr-kpi-value">FDA<span></span></span><span class="mr-kpi-label" data-i18n="mr.kpi.3">API Integrada</span></div>
           </div>
         </div>
         <div class="mr-hero-visual">
@@ -396,97 +126,97 @@
     </div>
   </section>
 
-  <!-- ===== FEATURES ===== -->
+
   <section class="mr-section" id="features">
     <div class="container">
       <div class="mr-section-head reveal reveal--up">
-        <p class="mr-eyebrow">O Ecossistema a Quatro Frentes</p>
-        <h2 class="mr-section-h2">Uma plataforma, <em>Quatro Segmentos</em></h2>
-        <p class="mr-section-sub" style="color: var(--dark);">O MedReminder <strong>adapta-se dinamicamente</strong> às necessidades de cada utilizador, criando um <strong>efeito de rede único</strong> no mercado europeu.</p>
+        <p class="mr-eyebrow" data-i18n="mr.feat.eyebrow">O Ecossistema a Quatro Frentes</p>
+        <h2 class="mr-section-h2" data-i18n-html="mr.feat.title">Uma plataforma, <em>Quatro Segmentos</em></h2>
+        <p class="mr-section-sub s-6307c30aac0f" data-i18n-html="mr.feat.sub">O MedReminder <strong>adapta-se dinamicamente</strong> às necessidades de cada utilizador, criando um <strong>efeito de rede único</strong> no mercado europeu.</p>
       </div>
       <div class="mr-features-grid reveal reveal--up">
-        <!-- Paciente -->
+
         <div class="mr-feat-card">
           <div class="mr-feat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-          <h3>Pacientes Crónicos</h3>
-          <p><strong>Autonomia total</strong> com o <strong>Pill Scanner por câmara</strong> (TensorFlow), alarmes inconfundíveis e uma interface de <strong>alto contraste</strong> focada apenas na próxima toma.</p>
+          <h3 data-i18n="mr.f1.title">Pacientes Crónicos</h3>
+          <p data-i18n-html="mr.f1.desc"><strong>Autonomia total</strong> com o <strong>Pill Scanner por câmara</strong> (TensorFlow), alarmes inconfundíveis e uma interface de <strong>alto contraste</strong> focada apenas na próxima toma.</p>
         </div>
-        <!-- Cuidador -->
+
         <div class="mr-feat-card">
           <div class="mr-feat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-          <h3>Cuidadores Informais</h3>
-          <p>Tranquilidade para a "<strong>Geração Sanduíche</strong>". Monitorização remota de familiares, <strong>calendário de adesão</strong> (verde/vermelho) e <strong>exportação de relatórios em PDF</strong>.</p>
+          <h3 data-i18n="mr.f2.title">Cuidadores Informais</h3>
+          <p data-i18n-html="mr.f2.desc">Tranquilidade para a "<strong>Geração Sanduíche</strong>". Monitorização remota de familiares, <strong>calendário de adesão</strong> (verde/vermelho) e <strong>exportação de relatórios em PDF</strong>.</p>
         </div>
-        <!-- Farmácia -->
+
         <div class="mr-feat-card">
           <div class="mr-feat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
-          <h3>Rede de Farmácias (B2B)</h3>
-          <p>O <strong>Interaction Checker</strong> cruza dados com APIs clínicas (<strong>DrugBank/FDA</strong>) para alertar o farmacêutico sobre <strong>interações perigosas</strong> ao balcão.</p>
+          <h3 data-i18n="mr.f3.title">Rede de Farmácias (B2B)</h3>
+          <p data-i18n-html="mr.f3.desc">O <strong>Interaction Checker</strong> cruza dados com APIs clínicas (<strong>DrugBank/FDA</strong>) para alertar o farmacêutico sobre <strong>interações perigosas</strong> ao balcão.</p>
         </div>
-        <!-- Biohacker -->
+
         <div class="mr-feat-card">
           <div class="mr-feat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-          <h3>Biohackers e Atletas</h3>
-          <p><strong>Otimização avançada</strong> de <em>stacks</em> de suplementos, prevenção de <strong>antagonismos vitamínicos</strong> e integração com o <strong>Oura Ring</strong> e Apple Health.</p>
+          <h3 data-i18n="mr.f4.title">Biohackers e Atletas</h3>
+          <p data-i18n-html="mr.f4.desc"><strong>Otimização avançada</strong> de <em>stacks</em> de suplementos, prevenção de <strong>antagonismos vitamínicos</strong> e integração com o <strong>Oura Ring</strong> e Apple Health.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== SHOWCASE Z-PATTERN ===== -->
+
   <section class="mr-showcase">
     <div class="container">
-      
-      <!-- Feature 0: Página Principal (Onboarding) -->
+
+
       <div class="mr-showcase-row reveal reveal--up">
         <div class="mr-text">
-          <p class="mr-eyebrow">Zero Atrito</p>
-          <h2>Onboarding Universal e <span>Acesso Direto</span></h2>
-          <p>O ponto de entrada do MedReminder foi desenhado com <strong>foco absoluto na simplicidade</strong>. Sem ecrãs de registo exaustivos, a aplicação garante que qualquer utilizador — independentemente da sua literacia digital — consegue <strong>iniciar o seu plano de saúde num instante</strong>.</p>
+          <p class="mr-eyebrow" data-i18n="mr.s0.eyebrow">Zero Atrito</p>
+          <h2 data-i18n-html="mr.s0.title">Onboarding Universal e <span>Acesso Direto</span></h2>
+          <p data-i18n-html="mr.s0.desc">O ponto de entrada do MedReminder foi desenhado com <strong>foco absoluto na simplicidade</strong>. Sem ecrãs de registo exaustivos, a aplicação garante que qualquer utilizador — independentemente da sua literacia digital — consegue <strong>iniciar o seu plano de saúde num instante</strong>.</p>
           <ul class="mr-list">
-            <li><strong>Seleção de perfil rápida</strong> na entrada da aplicação.</li>
-            <li>Interface <strong>limpa e minimalista</strong> sem distrações desnecessárias.</li>
-            <li><strong>Foco imediato</strong> nas ações principais: alarmes e verificações.</li>
+            <li data-i18n-html="mr.s0.li1"><strong>Seleção de perfil rápida</strong> na entrada da aplicação.</li>
+            <li data-i18n-html="mr.s0.li2">Interface <strong>limpa e minimalista</strong> sem distrações desnecessárias.</li>
+            <li data-i18n-html="mr.s0.li3"><strong>Foco imediato</strong> nas ações principais: alarmes e verificações.</li>
           </ul>
         </div>
         <div class="mr2-mockup">
-          <div style="position: absolute; width: 300px; height: 300px; background: radial-gradient(circle, rgba(124,58,237,0.4) 0%, transparent 70%); border-radius: 50%; filter: blur(20px); z-index: 0;"></div>
-          <img src="images/medreminder_onboarding.png" alt="Página Principal MedReminder" />
+          <div class="s-8d2621367f51"></div>
+          <img src="images/medreminder_onboarding.png" alt="Página Principal MedReminder" data-i18n-alt="mr.alt.s0" />
         </div>
       </div>
 
-      <!-- Feature 1: Interaction Checker -->
+
       <div class="mr-showcase-row reverse reveal reveal--up">
         <div class="mr-text">
-          <p class="mr-eyebrow">Clínico e Profissional</p>
-          <h2>Verificador de <span>Interações (FDA)</span></h2>
-          <p>Não dependa apenas da memória. O MedReminder empodera o farmacêutico ao balcão com <strong>APIs clínicas certificadas</strong>, transformando um aviso genérico numa <strong>intervenção profissional informada</strong>.</p>
+          <p class="mr-eyebrow" data-i18n="mr.s1.eyebrow">Clínico e Profissional</p>
+          <h2 data-i18n-html="mr.s1.title">Verificador de <span>Interações (FDA)</span></h2>
+          <p data-i18n-html="mr.s1.desc">Não dependa apenas da memória. O MedReminder empodera o farmacêutico ao balcão com <strong>APIs clínicas certificadas</strong>, transformando um aviso genérico numa <strong>intervenção profissional informada</strong>.</p>
           <ul class="mr-list">
-            <li><strong>Leitura instantânea</strong> de ingredientes via código de barras.</li>
-            <li><strong>Escala de severidade cruzada</strong> com DrugBank e FDA Open Data.</li>
-            <li>Acesso ao <strong>histórico seguro</strong> de prescrições do utente.</li>
+            <li data-i18n-html="mr.s1.li1"><strong>Leitura instantânea</strong> de ingredientes via código de barras.</li>
+            <li data-i18n-html="mr.s1.li2"><strong>Escala de severidade cruzada</strong> com DrugBank e FDA Open Data.</li>
+            <li data-i18n-html="mr.s1.li3">Acesso ao <strong>histórico seguro</strong> de prescrições do utente.</li>
           </ul>
         </div>
         <div class="mr2-mockup">
-          <div style="position: absolute; width: 300px; height: 300px; background: radial-gradient(circle, rgba(124,58,237,0.4) 0%, transparent 70%); border-radius: 50%; filter: blur(20px); z-index: 0;"></div>
+          <div class="s-8d2621367f51"></div>
           <img src="images/pharma_interaction_checker.png" alt="Interaction Checker Dashboard" />
         </div>
       </div>
 
-      <!-- Feature 2: Pill Scanner -->
+
       <div class="mr-showcase-row reveal reveal--up">
         <div class="mr-text">
-          <p class="mr-eyebrow">Acessibilidade Total</p>
-          <h2>Pill Scanner por <span>Câmara (IA)</span></h2>
-          <p>Eliminámos a <strong>curva de aprendizagem</strong> para os mais idosos. Basta apontar a câmara ao comprimido: o modelo de Visão Computacional (<strong>TensorFlow Lite</strong>) reconhece-o e <strong>adiciona-o automaticamente</strong> ao plano diário.</p>
+          <p class="mr-eyebrow" data-i18n="mr.s2.eyebrow">Acessibilidade Total</p>
+          <h2 data-i18n-html="mr.s2.title">Pill Scanner por <span>Câmara (IA)</span></h2>
+          <p data-i18n-html="mr.s2.desc">Eliminámos a <strong>curva de aprendizagem</strong> para os mais idosos. Basta apontar a câmara ao comprimido: o modelo de Visão Computacional (<strong>TensorFlow Lite</strong>) reconhece-o e <strong>adiciona-o automaticamente</strong> ao plano diário.</p>
           <ul class="mr-list">
-            <li><strong>Zero atrito no onboarding</strong> de novos medicamentos.</li>
-            <li><strong>Verificação cruzada</strong> para evitar erros de dosagem em casa.</li>
-            <li><strong>Alarmes inconfundíveis</strong> até confirmação da toma.</li>
+            <li data-i18n-html="mr.s2.li1"><strong>Zero atrito no onboarding</strong> de novos medicamentos.</li>
+            <li data-i18n-html="mr.s2.li2"><strong>Verificação cruzada</strong> para evitar erros de dosagem em casa.</li>
+            <li data-i18n-html="mr.s2.li3"><strong>Alarmes inconfundíveis</strong> até confirmação da toma.</li>
           </ul>
         </div>
         <div class="mr2-mockup">
-          <div style="position: absolute; width: 300px; height: 300px; background: radial-gradient(circle, rgba(124,58,237,0.4) 0%, transparent 70%); border-radius: 50%; filter: blur(20px); z-index: 0;"></div>
+          <div class="s-8d2621367f51"></div>
           <img src="images/patient_pill_scanner.png" alt="Pill Scanner Interface" />
         </div>
       </div>
@@ -494,52 +224,52 @@
     </div>
   </section>
 
-  <!-- ===== SECURITY & COMPLIANCE ===== -->
+
   <section class="mr-security-section">
     <div class="mr-security-radial"></div>
     <div class="container">
       <div class="mr-security-head reveal reveal--up">
-        <p class="eyebrow">Compliance & Segurança</p>
-        <h2>Proteção de dados clínicos <em>by design</em></h2>
-        <p>A arquitetura do MedReminder foi desenhada desde a base para cumprir as mais rigorosas normas de proteção de dados europeias e internacionais.</p>
+        <p class="eyebrow" data-i18n="mr.sec.eyebrow">Compliance & Segurança</p>
+        <h2 data-i18n-html="mr.sec.title">Proteção de dados clínicos <em>by design</em></h2>
+        <p data-i18n="mr.sec.sub">A arquitetura do MedReminder foi desenhada desde a base para cumprir as mais rigorosas normas de proteção de dados europeias e internacionais.</p>
       </div>
-      
+
       <div class="mr-security-grid">
-        <!-- Cartão 1 -->
-        <div class="mr-security-card reveal reveal--up" style="transition-delay: 0.1s;">
+
+        <div class="mr-security-card reveal reveal--up s-25b72b943102">
           <div class="mr-security-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
           </div>
-          <h3>Conformidade RGPD</h3>
-          <p><strong>Encriptação end-to-end</strong> (AES-256) de toda a informação de saúde. Dados anonimizados e <strong>políticas estritas</strong> de retenção.</p>
+          <h3 data-i18n="mr.sec.c1.title">Conformidade RGPD</h3>
+          <p data-i18n-html="mr.sec.c1.desc"><strong>Encriptação end-to-end</strong> (AES-256) de toda a informação de saúde. Dados anonimizados e <strong>políticas estritas</strong> de retenção.</p>
         </div>
-        
-        <!-- Cartão 2 -->
-        <div class="mr-security-card reveal reveal--up" style="transition-delay: 0.2s;">
+
+
+        <div class="mr-security-card reveal reveal--up s-c9b324caf4d6">
           <div class="mr-security-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
           </div>
-          <h3>Infraestrutura Soberana</h3>
-          <p>Alojamento em <strong>servidores europeus</strong> com certificação <strong>ISO 27001</strong> para dados sensíveis e backups georredundantes diários.</p>
+          <h3 data-i18n="mr.sec.c2.title">Infraestrutura Soberana</h3>
+          <p data-i18n-html="mr.sec.c2.desc">Alojamento em <strong>servidores europeus</strong> com certificação <strong>ISO 27001</strong> para dados sensíveis e backups georredundantes diários.</p>
         </div>
-        
-        <!-- Cartão 3 -->
-        <div class="mr-security-card reveal reveal--up" style="transition-delay: 0.3s;">
+
+
+        <div class="mr-security-card reveal reveal--up s-69e3ed08d812">
           <div class="mr-security-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           </div>
-          <h3>Controlo Granular</h3>
-          <p>O paciente é o <strong>dono dos seus dados</strong>. Gestão rigorosa de permissões (RBAC) para definir o que o cuidador ou farmacêutico pode visualizar.</p>
+          <h3 data-i18n="mr.sec.c3.title">Controlo Granular</h3>
+          <p data-i18n-html="mr.sec.c3.desc">O paciente é o <strong>dono dos seus dados</strong>. Gestão rigorosa de permissões (RBAC) para definir o que o cuidador ou farmacêutico pode visualizar.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== INTEGRAÇÕES ===== -->
+
   <section class="mr-section-alt">
-    <div class="container" style="text-align:center;">
-      <p class="eyebrow reveal reveal--up" style="color: #7c3aed;">Compatibilidade</p>
-      <h2 class="mr-section-h2 reveal reveal--up">Integra com os sistemas que <em>já utiliza</em></h2>
+    <div class="container s-5a2dfef236e7">
+      <p class="eyebrow reveal reveal--up s-f1b672c96719" data-i18n="mr.int.eyebrow">Compatibilidade</p>
+      <h2 class="mr-section-h2 reveal reveal--up" data-i18n-html="mr.int.title">Integra com os sistemas que <em>já utiliza</em></h2>
       <div class="mr-integration-list reveal reveal--up">
         <span class="mr-int-tag">HL7 FHIR</span>
         <span class="mr-int-tag">SONHO</span>
@@ -553,49 +283,58 @@
     </div>
   </section>
 
-  <!-- ===== CTA ===== -->
+
   <section class="mr-cta">
     <div class="mr-cta-radial"></div>
-    <div class="container" style="position:relative; z-index:2;">
-      <h2 class="reveal reveal--up">Pronto para transformar<br><em>a gestão clínica da sua organização?</em></h2>
-      <p class="reveal reveal--up">Solicite uma demonstração gratuita e personalizada para a sua equipa.</p>
-      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;" class="reveal reveal--up">
-        <a href="index.html#contacto" class="mr-btn-primary">Pedir Demonstração</a>
-        <a href="servico-especialidade.html" class="mr-btn-ghost">Ver Todos os Produtos</a>
+    <div class="container s-11f1d848f5e1">
+      <h2 class="reveal reveal--up" data-i18n-html="mr.cta.title">Pronto para transformar<br><em>a gestão clínica da sua organização?</em></h2>
+      <p class="reveal reveal--up" data-i18n="mr.cta.desc">Solicite uma demonstração gratuita e personalizada para a sua equipa.</p>
+      <div class="reveal reveal--up s-7f85ae77f998">
+        <a href="index.html?assunto=medreminder#contacto" class="mr-btn-primary" data-i18n="mr.cta.primary">Pedir Demonstração</a>
+        <a href="servico-especialidade.html" class="mr-btn-ghost" data-i18n="mr.cta.ghost">Ver Todos os Produtos</a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+
+  </main>
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="images/logo.png" alt="Logo Asydim" class="footer-logo" onerror="this.style.display='none'" />
-        <p>Consultoria &amp; Formação Sustentável</p>
-        <p class="footer-sub">Informática · Inovação · Sustentabilidade</p>
+        <img src="images/logo.png" alt="Logo Asydim" data-i18n-alt="logo.alt" class="footer-logo" data-image-fallback="hide" />
+        <p data-i18n="footer.tagline">Consultoria &amp; Formação Sustentável</p>
+        <p class="footer-sub" data-i18n="footer.sub">Informática · Inovação · Sustentabilidade</p>
       </div>
       <div class="footer-col">
-        <h5>Navegação</h5>
-        <a href="index.html#sobre">Sobre Nós</a>
-        <a href="index.html#servicos">Serviços</a>
-        <a href="index.html#projetos">Projetos</a>
-        <a href="index.html#contacto">Contacto</a>
+        <h5 data-i18n="nav.navigation">Navegação</h5>
+        <a href="index.html#sobre" data-i18n="nav.about">Sobre Nós</a>
+        <a href="index.html#servicos" data-i18n="nav.services">Serviços</a>
+        <a href="index.html#projetos" data-i18n="nav.projects">Projetos</a>
+        <a href="index.html?assunto=medreminder#contacto" data-i18n="nav.contact">Contacto</a>
       </div>
       <div class="footer-col">
-        <h5>Produtos SaaS</h5>
+        <h5 data-i18n="mr.footer.saas">Produtos SaaS</h5>
         <a href="produto-medreminder.html">MedReminder</a>
         <a href="produto-vetia.html">VETIA</a>
-        <a href="servico-especialidade.html">Ver Todos</a>
+        <a href="servico-especialidade.html" data-i18n="mr.footer.all">Ver Todos</a>
       </div>
       <div class="footer-col">
-        <h5>Contacto</h5>
+        <h5 data-i18n="nav.contact">Contacto</h5>
         <a href="mailto:info@asydim.com">info@asydim.com</a>
-        <a href="https://www.asydim.pt" target="_blank" rel="noopener">www.asydim.pt</a>
+        <a href="https://asydim.pt" target="_blank" rel="noopener noreferrer">asydim.pt</a>
       </div>
     </div>
-    <div class="footer-bottom"><div class="container"><p>© 2025 Asydim — Todos os direitos reservados · Desenvolvido em Portugal</p></div></div>
+    <div class="footer-bottom"><div class="container"><p data-i18n="footer.copy">© 2026 Asydim — Todos os direitos reservados · Desenvolvido em Portugal</p></div></div>
+
+    <nav class="footer-legal container" aria-label="Informação legal" data-i18n-aria="legal.nav">
+      <a href="politica-privacidade.html" data-i18n="legal.privacy">Política de Privacidade e RGPD</a>
+      <a href="termos-condicoes.html" data-i18n="legal.terms">Termos e Condições</a>
+      <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener noreferrer" data-i18n="legal.complaints">Livro de Reclamações Eletrónico ↗</a>
+    </nav>
   </footer>
 
+  <script src="i18n/produto-medreminder.js"></script>
+  <script src="enhancements.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

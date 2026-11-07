@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /assets/js/
+Disallow: /scripts/
+Disallow: /tests/
+Disallow: /node_modules/
+
+Sitemap: https://asydim.pt/sitemap.xml

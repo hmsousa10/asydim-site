@@ -1,0 +1,142 @@
+
+    /* Telecom Hero - Blue Theme Overrides */
+    .rt-hero-grid {
+      background-image:
+        linear-gradient(rgba(69,123,157,.15) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(69,123,157,.15) 1px, transparent 1px),
+        linear-gradient(rgba(69,123,157,.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(69,123,157,.08) 1px, transparent 1px) !important;
+    }
+    .rt-hero-radial {
+      background:
+        radial-gradient(ellipse at 70% 45%, rgba(69,123,157,.2) 0%, transparent 50%),
+        radial-gradient(ellipse at 20% 70%, rgba(60,180,224,.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 85% 85%, rgba(139,92,246,.08) 0%, transparent 40%) !important;
+    }
+    .rt-hero-scanline {
+      background: linear-gradient(90deg, transparent, rgba(69,123,157,.4), transparent) !important;
+    }
+    .rt-eyebrow-badge {
+      background: rgba(69,123,157,.12) !important;
+      border-color: rgba(69,123,157,.3) !important;
+      color: #60b4e0 !important;
+    }
+    .rt-badge-pulse {
+      background: #60b4e0 !important;
+    }
+    .rt-hero-h1 em {
+      color: #60b4e0 !important;
+    }
+    .rt-hero-desc strong {
+      color: #60b4e0 !important;
+    }
+
+    /* Botão Primário (Azul Tecnológico) */
+    .rt-hero .btn-hero-primary { background: linear-gradient(135deg, #1e3a8a, #3b82f6) !important; box-shadow: 0 6px 24px rgba(59,130,246,0.35) !important; }
+    .rt-hero .btn-hero-primary:hover { box-shadow: 0 10px 32px rgba(59,130,246,0.5) !important; transform: translateY(-2px); }
+
+    /* Dashboard de Rede (Terminal NOC) */
+    .rt-hero-terminal-wrap .rt-terminal { border-color: rgba(59,130,246,0.3) !important; box-shadow: 0 0 60px rgba(59,130,246,0.15), 0 24px 64px rgba(0,0,0,0.6) !important; }
+    .rt-hero-terminal-wrap .rt-terminal-header { border-bottom-color: rgba(59,130,246,0.2) !important; }
+    .rt-terminal-live { color: #38bdf8 !important; }
+    .rt-terminal-live-dot { background: #38bdf8 !important; box-shadow: 0 0 8px rgba(56,189,248,0.6); }
+
+    /* Barras de Dados (Efeito "Fibra Ótica") */
+    .rt-data-bar { background: linear-gradient(90deg, #1d4ed8, #38bdf8) !important; box-shadow: 0 0 8px rgba(56,189,248,0.4); }
+    .rt-data-val { color: #38bdf8 !important; width: 85px !important; white-space: nowrap; }
+    .rt-data-key { width: 80px !important; white-space: nowrap; }
+    .rt-output-line svg { stroke: #38bdf8 !important; }
+
+    /* 3 Column Grid for Telecom Cards */
+    .tc-cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 48px; }
+    @media (max-width: 1100px) { .tc-cards-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 768px) { .tc-cards-grid { grid-template-columns: 1fr; } }
+
+    /* Telecom Theme Overrides for "O Que Fazemos" Cards */
+    #solucoes-tecnicas .rt-section-eyebrow { color: #1d4ed8 !important; }
+    #solucoes-tecnicas .rt-section-h2 em { color: #1d4ed8 !important; }
+    #solucoes-tecnicas .rt-section-sub { color: var(--body) !important; }
+
+    #solucoes-tecnicas .rt-card {
+      border: 1px solid var(--border) !important;
+      background: #ffffff !important;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    #solucoes-tecnicas .rt-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, #1d4ed8, #38bdf8);
+      border-top-left-radius: 20px; border-top-right-radius: 20px;
+    }
+    #solucoes-tecnicas .rt-card:hover {
+      transform: translateY(-6px) !important;
+      box-shadow: 0 20px 48px rgba(29, 78, 216, 0.1) !important;
+    }
+
+    #solucoes-tecnicas .rt-card-icon--blue {
+      background: #eff6ff !important;
+      border: none !important;
+    }
+    #solucoes-tecnicas .rt-card-icon--blue svg {
+      stroke: #1d4ed8 !important;
+    }
+
+    #solucoes-tecnicas .rt-card-tag--blue {
+      display: inline-block !important;
+      padding: 4px 12px !important;
+      background: rgba(29,78,216,0.08) !important;
+      border: 1px solid rgba(29,78,216,0.2) !important;
+      border-radius: 4px !important;
+      font-size: 0.65rem !important;
+      font-weight: 700 !important;
+      color: #1d4ed8 !important;
+      font-family: monospace !important;
+      margin-bottom: 12px;
+    }
+
+    #solucoes-tecnicas .rt-card-list li::before {
+      content: '✓' !important;
+      color: #1d4ed8 !important;
+      font-weight: 700 !important;
+      font-size: .8rem !important;
+    }
+
+    #solucoes-tecnicas .rt-card-photo-badge {
+      border: 1px solid rgba(29,78,216,0.3) !important;
+    }
+
+    /* Bento Grid Telecom Overrides */
+    .sp-section--alt .bento-card { border: 1px solid rgba(29, 78, 216, 0.15) !important; }
+    .sp-section--alt .bento-badge { display: flex !important; gap: 8px !important; background: transparent !important; padding: 0 !important; border: none !important; }
+    .sp-section--alt .bento-badge span {
+      border-radius: 50px; padding: 4px 14px; font-family: var(--sans);
+      text-transform: uppercase; font-size: 0.65rem; font-weight: 700;
+    }
+    .sp-section--alt .bento-badge--blue span { background: rgba(59,130,246,0.12); color: #3b82f6; }
+    .sp-section--alt .bento-badge--violet span { background: rgba(139,92,246,0.12); color: #a78bfa; }
+    .sp-section--alt .bento-badge--amber span { background: rgba(245,158,11,0.12); color: #f59e0b; }
+
+    /* CTA Final Telecom Overrides */
+    .rt-cta-mesh {
+      background:
+        radial-gradient(ellipse at 10% 50%, rgba(59,130,246,.2) 0%, transparent 50%),
+        radial-gradient(ellipse at 90% 20%, rgba(56,189,248,.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 55% 95%, rgba(139,92,246,.08) 0%, transparent 50%),
+        linear-gradient(135deg, #020617 0%, #0f172a 50%, #020617 100%) !important;
+    }
+    .rt-cta-orb--1 { background: radial-gradient(circle, rgba(59,130,246,.1) 0%, transparent 70%) !important; }
+    .rt-cta-orb--2 { background: radial-gradient(circle, rgba(56,189,248,.1) 0%, transparent 70%) !important; }
+    .rt-cta-eyebrow { color: #60b4e0 !important; }
+    .rt-cta-eyebrow svg { stroke: #60b4e0 !important; }
+    .rt-cta-inner h2 em { color: #38bdf8 !important; }
+
+    .rt-cta-wrap .btn-hero-primary {
+      background: linear-gradient(135deg, #1e3a8a, #3b82f6) !important;
+      box-shadow: 0 6px 24px rgba(59,130,246,0.35) !important;
+      border: none !important;
+    }
+    .rt-cta-wrap .btn-hero-primary:hover {
+      box-shadow: 0 10px 32px rgba(59,130,246,0.5) !important;
+      transform: translateY(-2px) !important;
+    }

@@ -1,0 +1,19 @@
+{
+  "name": "asydim-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "harden": "node scripts/harden-source.mjs",
+    "test": "python tests/check_site.py",
+    "preview": "node scripts/preview.mjs",
+    "test:security": "node --test tests/security.test.cjs"
+  },
+  "devDependencies": {
+    "@emailjs/browser": "4.4.1",
+    "terser": "5.51.2",
+    "three": "0.134.0",
+    "vanta": "0.5.24"
+  },
+  "type": "module"
+}

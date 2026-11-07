@@ -3,88 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Energy Procurement &amp; Renováveis — Asydim</title>
-  <meta name="description" content="Soluções de Energy Procurement, energia solar fotovoltaica UPAC, Comunidades de Energia Renovável (CER) e Energy as a Service. Asydim — Consultoria e Formação Sustentável." />
+  <title data-i18n="seo.servico-energia.title">Energia Solar e Renováveis para Empresas | Asydim</title>
+  <meta name="description" data-i18n-content="seo.servico-energia.description" content="Soluções de energia solar UPAC, comunidades de energia e eficiência energética para empresas. Peça uma proposta à Asydim." />
+  <link rel="canonical" href="https://asydim.pt/servico-energia.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Asydim" />
+  <meta property="og:locale" content="pt_PT" />
+  <meta property="og:url" content="https://asydim.pt/servico-energia.html" />
+  <meta property="og:title" data-i18n-content="seo.servico-energia.title" content="Energia Solar e Renováveis para Empresas | Asydim" />
+  <meta property="og:description" data-i18n-content="seo.servico-energia.description" content="Soluções de energia solar UPAC, comunidades de energia e eficiência energética para empresas. Peça uma proposta à Asydim." />
+  <meta property="og:image" content="https://asydim.pt/images/sobre_smart_city.png" />
+  <meta property="og:image:alt" content="Asydim — Consultoria e Formação Sustentável" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="presentation.css" />
+<script src="image-fallback.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#conteudo" data-i18n="a11y.skip">Saltar para o conteúdo</a>
 
-  <!-- ===== NAVBAR ===== -->
+
   <header class="navbar" id="navbar">
     <div class="container nav-inner">
       <a href="index.html" class="logo-wrap">
-        <img src="images/logo.png" alt="Logo Asydim" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-        <span class="logo-fallback" style="display:none;"><svg style="display:inline; vertical-align:middle;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><path d="M12 18a6 6 0 0 0 6-6H6a6 6 0 0 0 6 6z"/></svg></span>
+        <img src="images/logo.png" alt="Logo Asydim" data-i18n-alt="logo.alt" class="logo-img" data-image-fallback="block" />
+        <span class="logo-fallback s-d0466aa33fa8"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="s-2a0ab55d118e"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><path d="M12 18a6 6 0 0 0 6-6H6a6 6 0 0 0 6 6z"/></svg></span>
         <span class="logo-text">Asydim</span>
       </a>
-      <nav class="nav-links" aria-label="Menu principal">
-        <a href="index.html#sobre"    class="nav-link">Sobre Nós</a>
-        <a href="index.html#servicos" class="nav-link">Serviços</a>
-        <a href="index.html#projetos" class="nav-link">Projetos</a>
-        <a href="index.html#contacto" class="nav-link">Contacto</a>
-        <a href="index.html#contacto" class="btn-nav">Falar Connosco</a>
+      <nav class="nav-links" data-i18n-aria="nav.menu" aria-label="Menu principal">
+        <a href="index.html#sobre"    class="nav-link" data-i18n="nav.about">Sobre Nós</a>
+        <a href="index.html#servicos" class="nav-link" data-i18n="nav.services">Serviços</a>
+        <a href="index.html#projetos" class="nav-link" data-i18n="nav.projects">Projetos</a>
+        <a href="index.html?assunto=energia#contacto" class="nav-link" data-i18n="nav.contact">Contacto</a>
+        <div class="lang-switch" role="group" data-i18n-aria="nav.lang" aria-label="Idioma">
+          <button type="button" class="lang-btn is-active" data-lang="pt" data-i18n-aria="lang.pt" aria-label="Português" aria-pressed="true">PT</button>
+          <span class="lang-sep" aria-hidden="true">|</span>
+          <button type="button" class="lang-btn" data-lang="en" data-i18n-aria="lang.en" aria-label="English" aria-pressed="false">EN</button>
+        </div>
+        <a href="index.html?assunto=energia#contacto" class="btn-nav" data-i18n="nav.cta">Falar Connosco</a>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+      <button class="hamburger" id="hamburger" data-i18n-aria="nav.openMenu" aria-label="Abrir menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- Mobile Drawer -->
+
   <div class="nav-drawer-backdrop" id="nav-backdrop"></div>
   <nav class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-lang">
+      <div class="lang-switch lang-switch--drawer" role="group" data-i18n-aria="nav.lang" aria-label="Idioma">
+        <button type="button" class="lang-btn is-active" data-lang="pt" data-i18n-aria="lang.pt" aria-label="Português" aria-pressed="true">PT</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button type="button" class="lang-btn" data-lang="en" data-i18n-aria="lang.en" aria-label="English" aria-pressed="false">EN</button>
+      </div>
+    </div>
     <div class="mobile-drawer-header">
       <div class="mobile-drawer-brand">
-        <img src="images/logo.png" alt="Logo" class="mobile-drawer-logo" onerror="this.style.display='none'" />
+        <img src="images/logo.png" alt="Logo" data-i18n-alt="logo.alt" class="mobile-drawer-logo" data-image-fallback="hide" />
         <span class="mobile-drawer-logo-text">Asydim</span>
       </div>
-      <button class="mobile-drawer-close" id="drawer-close" aria-label="Fechar menu">
+      <button class="mobile-drawer-close" id="drawer-close" data-i18n-aria="nav.closeMenu" aria-label="Fechar menu">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
       </button>
     </div>
     <div class="mobile-drawer-body">
-      <span class="mobile-drawer-label">Navegação</span>
-      <a href="index.html#sobre"    class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></span>Sobre Nós</a>
-      <a href="index.html#servicos" class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span>Serviços</a>
-      <a href="index.html#projetos" class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/></svg></span>Projetos</a>
-      <a href="index.html#contacto" class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Contacto</a>
+      <span class="mobile-drawer-label" data-i18n="nav.navigation">Navegação</span>
+      <a href="index.html#sobre"    class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></span><span data-i18n="nav.about">Sobre Nós</span></a>
+      <a href="index.html#servicos" class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span><span data-i18n="nav.services">Serviços</span></a>
+      <a href="index.html#projetos" class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/></svg></span><span data-i18n="nav.projects">Projetos</span></a>
+      <a href="index.html?assunto=energia#contacto" class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><span data-i18n="nav.contact">Contacto</span></a>
     </div>
     <div class="mobile-drawer-footer">
-      <a href="index.html#contacto" class="btn-primary btn-full" id="btn-drawer-cta">Falar Connosco</a>
+      <a href="index.html?assunto=energia#contacto" class="btn-primary btn-full" id="btn-drawer-cta" data-i18n="nav.cta">Falar Connosco</a>
     </div>
   </nav>
 
-  <!-- ===== HERO — ENERGIA (SOLAR DASHBOARD) ===== -->
+
+  <main id="conteudo">
   <section class="en-hero">
-    <!-- Animated particle rays (solar effect) -->
+
     <div class="en-hero-rays"></div>
     <div class="en-hero-radial"></div>
 
     <div class="container">
       <div class="en-hero-inner">
 
-        <!-- LEFT: Text -->
+
         <div class="en-hero-text">
-          <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 22px;">
-            <a href="index.html#servicos" class="sp-hero-back" style="margin-bottom: 0;">
+          <div class="s-4039069e7286">
+            <a href="index.html#servicos" class="sp-hero-back s-b3a2297a12f5">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-              Voltar aos Serviços
+              <span data-i18n="nav.backServices">Voltar aos Serviços</span>
             </a>
-            <div class="en-hero-badge" style="margin-bottom: 0;">
+            <div class="en-hero-badge s-b3a2297a12f5">
               <span class="en-hero-badge-dot"></span>
-              Pilar 01 · Energy &amp; Renováveis
+              <span data-i18n="en.hero.badge">Pilar 01 · Energy &amp; Renováveis</span>
             </div>
           </div>
-          <h1 class="en-hero-h1">Energy Procurement<br><em>&amp; Energias Renováveis</em></h1>
-          <p class="sp-hero-desc">Aliamos a inteligência do mercado energético à geração de energia limpa. Reduzimos os seus custos operacionais e aceleramos a transição para um modelo energético autónomo e sustentável.</p>
+          <h1 class="en-hero-h1" data-i18n-html="en.hero.title">Energy Procurement<br><em>&amp; Energias Renováveis</em></h1>
+          <p class="sp-hero-desc" data-i18n="en.hero.desc">Aliamos a inteligência do mercado energético à geração de energia limpa. Reduzimos os seus custos operacionais e aceleramos a transição para um modelo energético autónomo e sustentável.</p>
           <div class="sp-hero-actions">
-            <a href="index.html#contacto" class="btn-hero-primary">Pedir Proposta</a>
-            <a href="#servicos-detalhe"   class="btn-hero-ghost">Ver Soluções ↓</a>
+            <a href="index.html?assunto=energia#contacto" class="btn-hero-primary" data-i18n="en.hero.ctaPrimary">Pedir Proposta</a>
+            <a href="#servicos-detalhe"   class="btn-hero-ghost" data-i18n="en.hero.ctaGhost">Ver Soluções ↓</a>
           </div>
-          <!-- Tech tags -->
+
           <div class="sp-hero-tags">
             <span class="tech-tag tech-tag--amber">[UPAC]</span>
             <span class="tech-tag">[ESG]</span>
@@ -95,11 +121,11 @@
           </div>
         </div>
 
-        <!-- RIGHT: Energy dashboard widget -->
+
         <div class="en-hero-visual">
           <div class="en-hero-glow"></div>
           <div class="en-dash-card">
-            <!-- Window chrome -->
+
             <div class="sp-dash-header">
               <span class="sp-dash-dot"></span>
               <span class="sp-dash-dot"></span>
@@ -107,10 +133,10 @@
               <span class="sp-dash-title">ASYDIM · ENERGY MONITOR</span>
             </div>
 
-            <!-- Live metrics -->
+
             <div class="en-dash-metrics">
               <div class="en-dash-metric-main">
-                <span class="en-dash-metric-label">Produção Solar Agora</span>
+                <span class="en-dash-metric-label" data-i18n="en.dash.mainLabel">Produção Solar Agora</span>
                 <div class="en-dash-metric-value">
                   <span class="en-dash-big">47.3</span>
                   <span class="en-dash-unit">kW</span>
@@ -119,36 +145,36 @@
               </div>
               <div class="en-dash-metric-row">
                 <div class="en-dash-kpi">
-                  <span class="en-dash-kpi-label">Poupança Hoje</span>
+                  <span class="en-dash-kpi-label" data-i18n="en.dash.kpi1">Poupança Hoje</span>
                   <span class="en-dash-kpi-val en-kpi-green">€ 84</span>
                 </div>
                 <div class="en-dash-kpi">
-                  <span class="en-dash-kpi-label">CO₂ Evitado</span>
+                  <span class="en-dash-kpi-label" data-i18n="en.dash.kpi2">CO₂ Evitado</span>
                   <span class="en-dash-kpi-val en-kpi-green">23 kg</span>
                 </div>
               </div>
             </div>
 
-            <!-- Bar chart (hourly production) -->
+
             <div class="en-dash-chart-wrap">
-              <div class="en-dash-chart-label">Produção por hora (kWh)</div>
+              <div class="en-dash-chart-label" data-i18n="en.dash.chartLabel">Produção por hora (kWh)</div>
               <div class="en-dash-bars">
-                <div class="en-bar-group"><div class="en-bar" style="height:35%"></div><span>8h</span></div>
-                <div class="en-bar-group"><div class="en-bar" style="height:55%"></div><span>9h</span></div>
-                <div class="en-bar-group"><div class="en-bar" style="height:72%"></div><span>10h</span></div>
-                <div class="en-bar-group"><div class="en-bar" style="height:88%"></div><span>11h</span></div>
-                <div class="en-bar-group"><div class="en-bar en-bar--active" style="height:100%"></div><span>12h</span></div>
-                <div class="en-bar-group"><div class="en-bar" style="height:92%"></div><span>13h</span></div>
-                <div class="en-bar-group"><div class="en-bar" style="height:78%"></div><span>14h</span></div>
-                <div class="en-bar-group"><div class="en-bar en-bar--dim" style="height:45%"></div><span>15h</span></div>
+                <div class="en-bar-group"><div class="en-bar s-37e2ae346dda"></div><span>8h</span></div>
+                <div class="en-bar-group"><div class="en-bar s-a62736662526"></div><span>9h</span></div>
+                <div class="en-bar-group"><div class="en-bar s-779faf9b61cc"></div><span>10h</span></div>
+                <div class="en-bar-group"><div class="en-bar s-91def0418b20"></div><span>11h</span></div>
+                <div class="en-bar-group"><div class="en-bar en-bar--active s-26ecbf76a0f2"></div><span>12h</span></div>
+                <div class="en-bar-group"><div class="en-bar s-14f6acf8d720"></div><span>13h</span></div>
+                <div class="en-bar-group"><div class="en-bar s-6f33767a38bf"></div><span>14h</span></div>
+                <div class="en-bar-group"><div class="en-bar en-bar--dim s-da8f8b865382"></div><span>15h</span></div>
               </div>
             </div>
 
-            <!-- ROI strip -->
+
             <div class="en-dash-footer-strip">
               <div class="en-dash-roi">
-                <span>ROI estimado</span>
-                <strong>3.2 anos</strong>
+                <span data-i18n="en.dash.roiLabel">ROI estimado</span>
+                <strong data-i18n="en.dash.roiVal">3.2 anos</strong>
               </div>
               <div class="en-dash-roi-bar">
                 <div class="en-dash-roi-fill"></div>
@@ -157,23 +183,23 @@
           </div>
         </div>
 
-      </div><!-- /en-hero-inner -->
+      </div>
     </div>
   </section>
 
-  <!-- ===== BENTO GRID — SOLUÇÕES ENERGÉTICAS ===== -->
+
   <section class="sp-section" id="servicos-detalhe">
     <div class="container">
       <div class="sp-section-head reveal reveal--up">
-        <p class="eyebrow">O Que Fazemos</p>
-        <h2>Soluções Energéticas <span>Completas</span></h2>
-        <p>Da auditoria energética ao dimensionamento fotovoltaico, cobrimos todo o ciclo de transformação da sua empresa.</p>
+        <p class="eyebrow" data-i18n="en.sec.eyebrow">O Que Fazemos</p>
+        <h2 data-i18n-html="en.sec.title">Soluções Energéticas <span>Completas</span></h2>
+        <p data-i18n="en.sec.sub">Da auditoria energética ao dimensionamento fotovoltaico, cobrimos todo o ciclo de transformação da sua empresa.</p>
       </div>
 
-      <!-- Bento Grid — Layout diferente do especialidade: 3 colunas, hero card topo -->
+
       <div class="en-bento-grid">
 
-        <!-- Card 1 — HERO WIDE: Energy Procurement -->
+
         <div class="en-bento-card en-bento-card--hero reveal reveal--up">
           <div class="en-bento-card-bg"></div>
           <div class="en-bento-inner">
@@ -181,108 +207,108 @@
             <div class="en-bento-icon en-icon--amber">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
             </div>
-            <h3>Monitorização &amp; Energy Procurement</h3>
-            <p>Acompanhamento em tempo real do mercado de eletricidade e gás natural. Negociamos contratos de fornecimento nas melhores condições para a sua empresa, com monitorização contínua OMIE/MIBEL.</p>
+            <h3 data-i18n="en.c1.title">Monitorização &amp; Energy Procurement</h3>
+            <p data-i18n="en.c1.desc">Acompanhamento em tempo real do mercado de eletricidade e gás natural. Negociamos contratos de fornecimento nas melhores condições para a sua empresa, com monitorização contínua OMIE/MIBEL.</p>
             <ul>
-              <li>Análise de consumos e perfil de carga detalhado</li>
-              <li>Negociação com comercializadores em mercado liberalizado</li>
-              <li>Relatórios de poupança e benchmarking setorial</li>
-              <li>Monitorização contínua de preços spot OMIE/MIBEL</li>
+              <li data-i18n="en.c1.li1">Análise de consumos e perfil de carga detalhado</li>
+              <li data-i18n="en.c1.li2">Negociação com comercializadores em mercado liberalizado</li>
+              <li data-i18n="en.c1.li3">Relatórios de poupança e benchmarking setorial</li>
+              <li data-i18n="en.c1.li4">Monitorização contínua de preços spot OMIE/MIBEL</li>
             </ul>
             <div class="bento-glass">
-              <p><svg style="display:inline; margin-right:4px; vertical-align:-3px; stroke: var(--amber2);" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> Clientes que aderiram ao nosso serviço de procurement reduziram a fatura energética em média <strong>22% no primeiro ano</strong>, sem qualquer investimento inicial.</p>
+              <p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="s-e86d997548bd"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> <span data-i18n-html="en.c1.glass">Clientes que aderiram ao nosso serviço de procurement reduziram a fatura energética em média <strong>22% no primeiro ano</strong>, sem qualquer investimento inicial.</span></p>
             </div>
           </div>
         </div>
 
-        <!-- Card 2 — STAT: ROI -->
+
         <div class="en-bento-card en-bento-card--stat reveal reveal--right">
           <div class="en-stat-icon">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><text x="4" y="20" font-size="20" stroke="none" fill="currentColor">€</text></svg>
           </div>
-          <div class="en-stat-num">3–5<span style="display:block;">anos</span></div>
-          <div class="en-stat-label">Retorno médio do investimento solar (ROI)</div>
+          <div class="en-stat-num" data-i18n-html="en.c2.num">3–5<span class="s-e53982496b11">anos</span></div>
+          <div class="en-stat-label" data-i18n="en.c2.label">Retorno médio do investimento solar (ROI)</div>
         </div>
 
-        <!-- Card 3 — MEDIUM: Solar UPAC -->
+
         <div class="en-bento-card en-bento-card--medium reveal reveal--up">
-          <div class="bento-badge bento-badge--amber">[UPAC] [PVSyst] [Fotovoltaico]</div>
+          <div class="bento-badge bento-badge--amber" data-i18n="en.c3.badge">[UPAC] [PVSyst] [Fotovoltaico]</div>
           <div class="en-bento-icon en-icon--amber">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
           </div>
-          <h3>Energia Solar Fotovoltaica (UPAC)</h3>
-          <p>Dimensionamento, projeto e instalação de sistemas fotovoltaicos com PVSyst. Maximizamos a produção e minimizamos o tempo de retorno para a sua organização.</p>
+          <h3 data-i18n="en.c3.title">Energia Solar Fotovoltaica (UPAC)</h3>
+          <p data-i18n="en.c3.desc">Dimensionamento, projeto e instalação de sistemas fotovoltaicos com PVSyst. Maximizamos a produção e minimizamos o tempo de retorno para a sua organização.</p>
           <ul>
-            <li>Estudo de viabilidade e análise de ROI</li>
-            <li>Dimensionamento técnico (PVSyst)</li>
-            <li>Instalação e ligação à rede (DGEG)</li>
-            <li>Monitorização da produção em tempo real</li>
+            <li data-i18n="en.c3.li1">Estudo de viabilidade e análise de ROI</li>
+            <li data-i18n="en.c3.li2">Dimensionamento técnico (PVSyst)</li>
+            <li data-i18n="en.c3.li3">Instalação e ligação à rede (DGEG)</li>
+            <li data-i18n="en.c3.li4">Monitorização da produção em tempo real</li>
           </ul>
         </div>
 
-        <!-- Card 4 — MEDIUM: CER -->
+
         <div class="en-bento-card en-bento-card--medium reveal reveal--up">
-          <div class="bento-badge">[CER] [AutoConsumo] [DGEG]</div>
+          <div class="bento-badge" data-i18n="en.c4.badge">[CER] [AutoConsumo] [DGEG]</div>
           <div class="en-bento-icon en-icon--green">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
-          <h3>Comunidades de Energia Renovável (CER)</h3>
-          <p>Constituição e gestão de Comunidades de Energia Renovável e regimes de AutoConsumo Coletivo. Partilhe energia e reduza a fatura de forma coletiva e legal.</p>
+          <h3 data-i18n="en.c4.title">Comunidades de Energia Renovável (CER)</h3>
+          <p data-i18n="en.c4.desc">Constituição e gestão de Comunidades de Energia Renovável e regimes de AutoConsumo Coletivo. Partilhe energia e reduza a fatura de forma coletiva e legal.</p>
           <ul>
-            <li>Estruturação jurídica e regulatória da CER</li>
-            <li>Gestão de coeficientes de repartição (DGEG)</li>
-            <li>Plataforma de monitorização e faturação</li>
-            <li>AutoConsumo Coletivo em condomínios e PME</li>
+            <li data-i18n="en.c4.li1">Estruturação jurídica e regulatória da CER</li>
+            <li data-i18n="en.c4.li2">Gestão de coeficientes de repartição (DGEG)</li>
+            <li data-i18n="en.c4.li3">Plataforma de monitorização e faturação</li>
+            <li data-i18n="en.c4.li4">AutoConsumo Coletivo em condomínios e PME</li>
           </ul>
         </div>
 
-        <!-- Card 5 — STAT: CO₂ -->
+
         <div class="en-bento-card en-bento-card--stat en-bento-card--stat-green reveal reveal--left">
           <div class="en-stat-icon en-stat-icon--green">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
           <div class="en-stat-num en-stat-num--green">-60<span>%</span></div>
-          <div class="en-stat-label">Redução típica de emissões CO₂ em empresas com UPAC + CER</div>
+          <div class="en-stat-label" data-i18n="en.c5.label">Redução típica de emissões CO₂ em empresas com UPAC + CER</div>
         </div>
 
-        <!-- Card 6 — WIDE: EaaS -->
-        <div class="en-bento-card en-bento-card--wide-bottom reveal reveal--up" style="padding: 0;">
-          <div class="eaas-card-grid" style="padding: 40px;">
+
+        <div class="en-bento-card en-bento-card--wide-bottom reveal reveal--up s-98781402ac5c">
+          <div class="eaas-card-grid s-0d5f59d1ab70">
             <div class="eaas-card-content">
               <div class="eaas-badge">[EaaS] [BESS] [Scope 1·2·3]</div>
-              <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px;">
-                <h3 style="margin-bottom: 0;">Energy as a Service (EaaS)</h3>
-                <img src="images/parceiros/youdera.svg" alt="Youdera" style="height: 26px; flex-shrink: 0;" />
+              <div class="s-48cb9522335b">
+                <h3 class="s-b3a2297a12f5">Energy as a Service (EaaS)</h3>
+                <img src="images/parceiros/youdera.svg" alt="Youdera" class="s-734e330fbf62" />
               </div>
-              <p>Modelo de serviço integrado onde a Asydim assume a gestão completa da sua infraestrutura energética — sem investimento inicial da sua parte. Paga apenas pelos resultados.</p>
+              <p data-i18n="en.c6.desc">Modelo de serviço integrado onde a Asydim assume a gestão completa da sua infraestrutura energética — sem investimento inicial da sua parte. Paga apenas pelos resultados.</p>
               <ul>
-                <li>Modelo pay-per-use sem CAPEX para o cliente</li>
-                <li>Gestão de ativos energéticos (BESS, PV, micro-redes)</li>
-                <li>Consultoria de sustentabilidade e estratégia ESG</li>
-                <li>Relatórios de emissões Scope 1, 2 e 3</li>
+                <li data-i18n="en.c6.li1">Modelo pay-per-use sem CAPEX para o cliente</li>
+                <li data-i18n="en.c6.li2">Gestão de ativos energéticos (BESS, PV, micro-redes)</li>
+                <li data-i18n="en.c6.li3">Consultoria de sustentabilidade e estratégia ESG</li>
+                <li data-i18n="en.c6.li4">Relatórios de emissões Scope 1, 2 e 3</li>
               </ul>
             </div>
             <div class="eaas-card-visual">
-              <img src="images/eaas-bg.png" alt="Energy as a Service Infrastructure" class="eaas-bg-img" />
+              <img src="images/eaas-bg.png" alt="Energy as a Service Infrastructure" data-i18n-alt="en.alt.eaas" class="eaas-bg-img" />
               <div class="eaas-glass-badge">
                 <span class="zero">ZERO</span>
-                <span class="text">CAPEX Inicial</span>
+                <span class="text" data-i18n="en.c6.capex">CAPEX Inicial</span>
               </div>
             </div>
           </div>
         </div>
 
-      </div><!-- /en-bento-grid -->
+      </div>
     </div>
   </section>
 
-  <!-- ===== HORIZONTAL TIMELINE — PROCESSO ===== -->
+
   <section class="sp-section sp-section--alt">
     <div class="container">
       <div class="sp-section-head text-center reveal reveal--up">
-        <p class="eyebrow" style="text-align: center; display: block; margin: 0 auto 16px;">Como Trabalhamos</p>
-        <h2 style="text-align:center;">O Nosso <span>Processo</span></h2>
-        <p style="margin: 14px auto 0; text-align:center; max-width:520px;">Um método transparente e orientado a resultados concretos e mensuráveis — da auditoria à monitorização contínua.</p>
+        <p class="eyebrow s-22f603b93105" data-i18n="en.proc.eyebrow">Como Trabalhamos</p>
+        <h2 data-i18n-html="en.proc.title" class="s-5a2dfef236e7">O Nosso <span>Processo</span></h2>
+        <p data-i18n="en.proc.sub" class="s-9fecb6833d33">Um método transparente e orientado a resultados concretos e mensuráveis — da auditoria à monitorização contínua.</p>
       </div>
 
       <div class="sp-timeline en-timeline reveal reveal--up">
@@ -291,32 +317,32 @@
           <div class="sp-timeline-step">
             <div class="sp-step-num en-step-num">1</div>
             <div class="sp-step-body">
-              <h3>Auditoria Energética</h3>
-              <p>Analisamos consumos históricos, perfil de carga, contratos e infraestrutura. Identificamos poupanças imediatas.</p>
+              <h3 data-i18n="en.proc.1.title">Auditoria Energética</h3>
+              <p data-i18n="en.proc.1.desc">Analisamos consumos históricos, perfil de carga, contratos e infraestrutura. Identificamos poupanças imediatas.</p>
             </div>
           </div>
 
           <div class="sp-timeline-step">
             <div class="sp-step-num en-step-num">2</div>
             <div class="sp-step-body">
-              <h3>Estudo &amp; Proposta</h3>
-              <p>Elaboramos estudo técnico-económico com simulações de ROI, payback e impacto ambiental (CO₂ evitado).</p>
+              <h3 data-i18n="en.proc.2.title">Estudo &amp; Proposta</h3>
+              <p data-i18n="en.proc.2.desc">Elaboramos estudo técnico-económico com simulações de ROI, payback e impacto ambiental (CO₂ evitado).</p>
             </div>
           </div>
 
           <div class="sp-timeline-step">
             <div class="sp-step-num en-step-num">3</div>
             <div class="sp-step-body">
-              <h3>Implementação</h3>
-              <p>Gerimos todo o processo: aprovação regulatória (DGEG), instalação e entrada em exploração com fiscalização técnica.</p>
+              <h3 data-i18n="en.proc.3.title">Implementação</h3>
+              <p data-i18n="en.proc.3.desc">Gerimos todo o processo: aprovação regulatória (DGEG), instalação e entrada em exploração com fiscalização técnica.</p>
             </div>
           </div>
 
           <div class="sp-timeline-step">
             <div class="sp-step-num en-step-num">4</div>
             <div class="sp-step-body">
-              <h3>Monitorização &amp; Reporting</h3>
-              <p>Dashboards em tempo real e relatórios periódicos de desempenho, poupança e impacto ESG para stakeholders.</p>
+              <h3 data-i18n="en.proc.4.title">Monitorização &amp; Reporting</h3>
+              <p data-i18n="en.proc.4.desc">Dashboards em tempo real e relatórios periódicos de desempenho, poupança e impacto ESG para stakeholders.</p>
             </div>
           </div>
 
@@ -325,12 +351,12 @@
     </div>
   </section>
 
-  <!-- ===== CTA PREMIUM — MESH SOLAR ===== -->
+
   <div class="sp-cta-wrap">
     <div class="sp-cta-mesh sp-cta-mesh--energy"></div>
     <div class="sp-cta-geo sp-cta-geo--tl"></div>
     <div class="sp-cta-geo sp-cta-geo--br"></div>
-    <!-- Solar ray accent -->
+
     <div class="en-cta-ray en-cta-ray--1"></div>
     <div class="en-cta-ray en-cta-ray--2"></div>
 
@@ -338,56 +364,65 @@
       <div class="sp-cta-inner reveal reveal--up">
         <div class="sp-cta-eyebrow">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>
-          Análise Gratuita
+          <span data-i18n="en.cta.eyebrow">Análise Gratuita</span>
         </div>
-        <h2>Pronto para Reduzir a sua<br><em>Fatura de Energia?</em></h2>
-        <p>Fale connosco e receba uma análise gratuita do potencial de poupança da sua empresa — sem compromisso.</p>
+        <h2 data-i18n-html="en.cta.title">Pronto para Reduzir a sua<br><em>Fatura de Energia?</em></h2>
+        <p data-i18n="en.cta.desc">Fale connosco e receba uma análise gratuita do potencial de poupança da sua empresa — sem compromisso.</p>
         <div class="sp-cta-btns">
-          <a href="index.html#contacto" class="btn-hero-primary">Pedir Análise Gratuita</a>
-          <a href="index.html"          class="btn-hero-ghost">Voltar ao Início</a>
+          <a href="index.html?assunto=energia#contacto" class="btn-hero-primary" data-i18n="en.cta.primary">Pedir Análise Gratuita</a>
+          <a href="index.html"          class="btn-hero-ghost" data-i18n="nav.backHome">Voltar ao Início</a>
         </div>
-        <div class="glass-box" style="max-width:500px; margin: 28px auto 0;">
-          <p><svg style="display:inline; margin-right:4px; vertical-align:-3px; stroke: var(--amber);" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg> Resposta em menos de 24h úteis · Sem compromisso · Estudo de ROI incluído</p>
+        <div class="glass-box s-394e2d08e77d">
+          <p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="s-af4411c987da"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg> <span data-i18n="en.cta.note">Resposta em menos de 24h úteis · Sem compromisso · Estudo de ROI incluído</span></p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ===== FOOTER ===== -->
+
+  </main>
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="images/logo.png" alt="Logo Asydim" class="footer-logo" onerror="this.style.display='none'" />
-        <p>Consultoria &amp; Formação Sustentável</p>
-        <p class="footer-sub">Informática · Inovação · Sustentabilidade</p>
+        <img src="images/logo.png" alt="Logo Asydim" data-i18n-alt="logo.alt" class="footer-logo" data-image-fallback="hide" />
+        <p data-i18n="footer.tagline">Consultoria &amp; Formação Sustentável</p>
+        <p class="footer-sub" data-i18n="footer.sub">Informática · Inovação · Sustentabilidade</p>
       </div>
       <div class="footer-col">
-        <h5>Navegação</h5>
-        <a href="index.html#sobre">Sobre Nós</a>
-        <a href="index.html#servicos">Serviços</a>
-        <a href="index.html#projetos">Projetos</a>
-        <a href="index.html#contacto">Contacto</a>
+        <h5 data-i18n="nav.navigation">Navegação</h5>
+        <a href="index.html#sobre" data-i18n="nav.about">Sobre Nós</a>
+        <a href="index.html#servicos" data-i18n="nav.services">Serviços</a>
+        <a href="index.html#projetos" data-i18n="nav.projects">Projetos</a>
+        <a href="index.html?assunto=energia#contacto" data-i18n="nav.contact">Contacto</a>
       </div>
       <div class="footer-col">
-        <h5>Soluções</h5>
-        <a href="servico-energia.html">Energy Procurement &amp; Renováveis</a>
-        <a href="servico-domotica.html">Smart House &amp; Domótica</a>
-        <a href="servico-engenharia.html">Engenharia Civil &amp; Remodelações</a>
-        <a href="servico-especialidade.html">Projetos de Especialidade</a>
+        <h5 data-i18n="footer.solutions">Soluções</h5>
+        <a href="servico-energia.html" data-i18n="card.energia.title">Energy Procurement &amp; Renováveis</a>
+        <a href="servico-domotica.html" data-i18n="card.domotica.title">Smart House &amp; Domótica</a>
+        <a href="servico-engenharia.html" data-i18n="card.engenharia.title">Engenharia Civil &amp; Remodelações</a>
+        <a href="servico-especialidade.html" data-i18n="footer.specialty">Projetos de Especialidade</a>
       </div>
       <div class="footer-col">
-        <h5>Contacto</h5>
+        <h5 data-i18n="nav.contact">Contacto</h5>
         <a href="mailto:info@asydim.com">info@asydim.com</a>
-        <a href="https://www.asydim.pt" target="_blank" rel="noopener">www.asydim.pt</a>
+        <a href="https://asydim.pt" target="_blank" rel="noopener noreferrer">asydim.pt</a>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p>© 2025 Asydim — Todos os direitos reservados · Desenvolvido em Portugal</p>
+        <p data-i18n="footer.copy">© 2026 Asydim — Todos os direitos reservados · Desenvolvido em Portugal</p>
       </div>
     </div>
+
+    <nav class="footer-legal container" aria-label="Informação legal" data-i18n-aria="legal.nav">
+      <a href="politica-privacidade.html" data-i18n="legal.privacy">Política de Privacidade e RGPD</a>
+      <a href="termos-condicoes.html" data-i18n="legal.terms">Termos e Condições</a>
+      <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener noreferrer" data-i18n="legal.complaints">Livro de Reclamações Eletrónico ↗</a>
+    </nav>
   </footer>
 
+  <script src="i18n/servico-energia.js"></script>
+  <script src="enhancements.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

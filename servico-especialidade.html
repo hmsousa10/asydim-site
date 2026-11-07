@@ -3,103 +3,129 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projetos de Especialidade B2B — Asydim</title>
-  <meta name="description" content="Redes de fibra ótica, consultoria ESG/CSRD, SaaS com IA (MedReminder & VETIA) e formações técnicas certificadas. Asydim — Consultoria e Formação Sustentável." />
+  <title data-i18n="seo.servico-especialidade.title">Projetos de Especialidade e Infraestruturas B2B | Asydim</title>
+  <meta name="description" data-i18n-content="seo.servico-especialidade.description" content="Projetos de especialidade, redes técnicas, eficiência energética e soluções digitais B2B. Fale com a equipa Asydim sobre o seu projeto." />
+  <link rel="canonical" href="https://asydim.pt/servico-especialidade.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Asydim" />
+  <meta property="og:locale" content="pt_PT" />
+  <meta property="og:url" content="https://asydim.pt/servico-especialidade.html" />
+  <meta property="og:title" data-i18n-content="seo.servico-especialidade.title" content="Projetos de Especialidade e Infraestruturas B2B | Asydim" />
+  <meta property="og:description" data-i18n-content="seo.servico-especialidade.description" content="Projetos de especialidade, redes técnicas, eficiência energética e soluções digitais B2B. Fale com a equipa Asydim sobre o seu projeto." />
+  <meta property="og:image" content="https://asydim.pt/images/sobre_smart_city.png" />
+  <meta property="og:image:alt" content="Asydim — Consultoria e Formação Sustentável" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="presentation.css" />
+<script src="image-fallback.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#conteudo" data-i18n="a11y.skip">Saltar para o conteúdo</a>
 
-  <!-- ===== NAVBAR ===== -->
+
   <header class="navbar" id="navbar">
     <div class="container nav-inner">
       <a href="index.html" class="logo-wrap">
-        <img src="images/logo.png" alt="Logo Asydim" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-        <span class="logo-fallback" style="display:none;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+        <img src="images/logo.png" alt="Logo Asydim" data-i18n-alt="logo.alt" class="logo-img" data-image-fallback="block" />
+        <span class="logo-fallback s-d0466aa33fa8"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
         <span class="logo-text">Asydim</span>
       </a>
-      <nav class="nav-links" aria-label="Menu principal">
-        <a href="index.html#sobre"    class="nav-link">Sobre Nós</a>
-        <a href="index.html#servicos" class="nav-link">Serviços</a>
-        <a href="index.html#projetos" class="nav-link">Projetos</a>
-        <a href="index.html#contacto" class="nav-link">Contacto</a>
-        <a href="index.html#contacto" class="btn-nav">Falar Connosco</a>
+      <nav class="nav-links" data-i18n-aria="nav.menu" aria-label="Menu principal">
+        <a href="index.html#sobre"    class="nav-link" data-i18n="nav.about">Sobre Nós</a>
+        <a href="index.html#servicos" class="nav-link" data-i18n="nav.services">Serviços</a>
+        <a href="index.html#projetos" class="nav-link" data-i18n="nav.projects">Projetos</a>
+        <a href="index.html?assunto=especialidade#contacto" class="nav-link" data-i18n="nav.contact">Contacto</a>
+        <div class="lang-switch" role="group" data-i18n-aria="nav.lang" aria-label="Idioma">
+          <button type="button" class="lang-btn is-active" data-lang="pt" data-i18n-aria="lang.pt" aria-label="Português" aria-pressed="true">PT</button>
+          <span class="lang-sep" aria-hidden="true">|</span>
+          <button type="button" class="lang-btn" data-lang="en" data-i18n-aria="lang.en" aria-label="English" aria-pressed="false">EN</button>
+        </div>
+        <a href="index.html?assunto=especialidade#contacto" class="btn-nav" data-i18n="nav.cta">Falar Connosco</a>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+      <button class="hamburger" id="hamburger" data-i18n-aria="nav.openMenu" aria-label="Abrir menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- Mobile Drawer -->
+
   <div class="nav-drawer-backdrop" id="nav-backdrop"></div>
   <nav class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-lang">
+      <div class="lang-switch lang-switch--drawer" role="group" data-i18n-aria="nav.lang" aria-label="Idioma">
+        <button type="button" class="lang-btn is-active" data-lang="pt" data-i18n-aria="lang.pt" aria-label="Português" aria-pressed="true">PT</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button type="button" class="lang-btn" data-lang="en" data-i18n-aria="lang.en" aria-label="English" aria-pressed="false">EN</button>
+      </div>
+    </div>
     <div class="mobile-drawer-header">
       <div class="mobile-drawer-brand">
-        <img src="images/logo.png" alt="Logo" class="mobile-drawer-logo" onerror="this.style.display='none'" />
+        <img src="images/logo.png" alt="Logo" data-i18n-alt="logo.alt" class="mobile-drawer-logo" data-image-fallback="hide" />
         <span class="mobile-drawer-logo-text">Asydim</span>
       </div>
-      <button class="mobile-drawer-close" id="drawer-close" aria-label="Fechar menu">
+      <button class="mobile-drawer-close" id="drawer-close" data-i18n-aria="nav.closeMenu" aria-label="Fechar menu">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
       </button>
     </div>
     <div class="mobile-drawer-body">
-      <span class="mobile-drawer-label">Navegação</span>
-      <a href="index.html#sobre"    class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></span>Sobre Nós</a>
-      <a href="index.html#servicos" class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span>Serviços</a>
-      <a href="index.html#projetos" class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/></svg></span>Projetos</a>
-      <a href="index.html#contacto" class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Contacto</a>
+      <span class="mobile-drawer-label" data-i18n="nav.navigation">Navegação</span>
+      <a href="index.html#sobre"    class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></span><span data-i18n="nav.about">Sobre Nós</span></a>
+      <a href="index.html#servicos" class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span><span data-i18n="nav.services">Serviços</span></a>
+      <a href="index.html#projetos" class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/></svg></span><span data-i18n="nav.projects">Projetos</span></a>
+      <a href="index.html?assunto=especialidade#contacto" class="mobile-drawer-link"><span class="mobile-drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><span data-i18n="nav.contact">Contacto</span></a>
     </div>
     <div class="mobile-drawer-footer">
-      <a href="index.html#contacto" class="btn-primary btn-full" id="btn-drawer-cta">Falar Connosco</a>
+      <a href="index.html?assunto=especialidade#contacto" class="btn-primary btn-full" id="btn-drawer-cta" data-i18n="nav.cta">Falar Connosco</a>
     </div>
   </nav>
 
-  <!-- ===== HERO — ASSIMÉTRICO COM DASHBOARD FLUTUANTE ===== -->
+
+  <main id="conteudo">
   <section class="sp-hero">
     <div class="sp-hero-radial"></div>
     <div class="container">
       <div class="sp-hero-inner">
 
-        <!-- Left: Text -->
+
         <div class="sp-hero-text">
-          <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 22px;">
-            <a href="index.html#servicos" class="sp-hero-back" style="margin-bottom: 0;">
+          <div class="s-4039069e7286">
+            <a href="index.html#servicos" class="sp-hero-back s-b3a2297a12f5">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-              Voltar aos Serviços
+              <span data-i18n="nav.backServices">Voltar aos Serviços</span>
             </a>
-            <div class="sp-hero-badge" style="margin-bottom: 0;">
+            <div class="sp-hero-badge s-b3a2297a12f5">
               <span class="sp-hero-badge-dot"></span>
-              Pilar 04 · Projetos B2B
+              <span data-i18n="es.hero.badge">Pilar 04 · Projetos B2B</span>
             </div>
           </div>
-          <h1>Projetos de<br><em>Especialidade B2B</em></h1>
-          <p class="sp-hero-desc">O pilar mais transversal da nossa operação: infraestrutura de telecomunicações, consultoria ESG avançada, soluções SaaS com IA e formação técnica certificada para profissionais e organizações.</p>
+          <h1 data-i18n-html="es.hero.title">Projetos de<br><em>Especialidade B2B</em></h1>
+          <p class="sp-hero-desc" data-i18n="es.hero.desc">O pilar mais transversal da nossa operação: infraestrutura de telecomunicações, consultoria ESG avançada, soluções SaaS com IA e formação técnica certificada para profissionais e organizações.</p>
           <div class="sp-hero-actions">
-            <a href="index.html#contacto" class="btn-hero-primary">Falar com a Equipa</a>
-            <a href="#servicos-detalhe"   class="btn-hero-ghost">Ver Soluções ↓</a>
+            <a href="index.html?assunto=especialidade#contacto" class="btn-hero-primary" data-i18n="es.hero.ctaPrimary">Falar com a Equipa</a>
+            <a href="#servicos-detalhe"   class="btn-hero-ghost" data-i18n="es.hero.ctaGhost">Ver Soluções ↓</a>
           </div>
-          <!-- Tech tags -->
+
           <div class="sp-hero-tags">
             <span class="tech-tag">[B2B]</span>
             <span class="tech-tag tech-tag--blue">[Telecom]</span>
             <span class="tech-tag">[ESG]</span>
             <span class="tech-tag tech-tag--violet">[SaaS]</span>
             <span class="tech-tag tech-tag--blue">[FTTH]</span>
-            <span class="tech-tag">[IA]</span>
+            <span class="tech-tag" data-i18n="es.hero.tagAi">[IA]</span>
             <span class="tech-tag tech-tag--amber">[CSRD]</span>
           </div>
-          <!-- Stats strip -->
+
           <div class="sp-hero-stats">
-            <div class="sp-stat"><strong>Fibra</strong><span>Redes FTTH/FTTO</span></div>
-            <div class="sp-stat"><strong>IA</strong><span>MedReminder &amp; VETIA</span></div>
-            <div class="sp-stat"><strong>ESG</strong><span>Reporte GRI/CSRD</span></div>
+            <div class="sp-stat"><strong data-i18n="es.stat1.strong">Fibra</strong><span data-i18n="es.stat1.span">Redes FTTH/FTTO</span></div>
+            <div class="sp-stat"><strong data-i18n="es.stat2.strong">IA</strong><span>MedReminder &amp; VETIA</span></div>
+            <div class="sp-stat"><strong>ESG</strong><span data-i18n="es.stat3.span">Reporte GRI/CSRD</span></div>
           </div>
         </div>
 
-        <!-- Right: Floating dashboard widget -->
+
         <div class="sp-hero-visual">
           <div class="sp-dash-glow"></div>
           <div class="sp-hero-dashboard">
@@ -110,50 +136,50 @@
               <span class="sp-dash-title">ASYDIM · B2B DASHBOARD</span>
             </div>
             <div class="sp-dash-metric">
-              <span class="sp-dash-label">Projetos Ativos</span>
+              <span class="sp-dash-label" data-i18n="es.dash.m1">Projetos Ativos</span>
               <span class="sp-dash-value">24 <span>+12%</span></span>
             </div>
             <div class="sp-dash-metric">
-              <span class="sp-dash-label">Score ESG Médio</span>
+              <span class="sp-dash-label" data-i18n="es.dash.m2">Score ESG Médio</span>
               <span class="sp-dash-value">87 <span>pts</span></span>
             </div>
             <div class="sp-dash-metric">
-              <span class="sp-dash-label">Clientes Enterprise</span>
+              <span class="sp-dash-label" data-i18n="es.dash.m3">Clientes Enterprise</span>
               <span class="sp-dash-value">43 <span>org.</span></span>
             </div>
             <div class="sp-dash-bar-wrap">
               <div class="sp-dash-bar-row">
-                <div class="sp-dash-bar-label"><span>Telecom &amp; Fibra</span><span>92%</span></div>
-                <div class="sp-dash-bar"><div class="sp-dash-bar-fill" style="width:92%"></div></div>
+                <div class="sp-dash-bar-label"><span data-i18n="es.dash.b1">Telecom &amp; Fibra</span><span>92%</span></div>
+                <div class="sp-dash-bar"><div class="sp-dash-bar-fill s-b6958c6d494f"></div></div>
               </div>
               <div class="sp-dash-bar-row">
                 <div class="sp-dash-bar-label"><span>ESG &amp; CSRD</span><span>78%</span></div>
-                <div class="sp-dash-bar"><div class="sp-dash-bar-fill" style="width:78%; background: linear-gradient(90deg, #457b9d, #60b4e0);"></div></div>
+                <div class="sp-dash-bar"><div class="sp-dash-bar-fill s-7ddda74374e8"></div></div>
               </div>
               <div class="sp-dash-bar-row">
-                <div class="sp-dash-bar-label"><span>SaaS &amp; IA</span><span>65%</span></div>
-                <div class="sp-dash-bar"><div class="sp-dash-bar-fill" style="width:65%; background: linear-gradient(90deg, #7c3aed, #a78bfa);"></div></div>
+                <div class="sp-dash-bar-label"><span data-i18n="es.dash.b3">SaaS &amp; IA</span><span>65%</span></div>
+                <div class="sp-dash-bar"><div class="sp-dash-bar-fill s-964e99bc4ee0"></div></div>
               </div>
             </div>
           </div>
         </div>
 
-      </div><!-- /sp-hero-inner -->
+      </div>
     </div>
   </section>
 
-  <!-- ===== BENTO GRID — O QUE FAZEMOS ===== -->
+
   <section class="sp-section" id="servicos-detalhe">
     <div class="container">
       <div class="sp-section-head reveal reveal--up">
-        <p class="eyebrow">O Que Fazemos</p>
-        <h2>A Nossa Base Técnica e <span>Tecnológica</span></h2>
-        <p>Infraestrutura complexa, sistemas digitais e capacitação técnica que suportam as operações vitais dos nossos clientes empresariais.</p>
+        <p class="eyebrow" data-i18n="es.sec.eyebrow">O Que Fazemos</p>
+        <h2 data-i18n-html="es.sec.title">A Nossa Base Técnica e <span>Tecnológica</span></h2>
+        <p data-i18n="es.sec.sub">Infraestrutura complexa, sistemas digitais e capacitação técnica que suportam as operações vitais dos nossos clientes empresariais.</p>
       </div>
 
       <div class="bento-grid">
 
-        <!-- Card 1 — WIDE: Telecom -->
+
         <div class="bento-card bento-card--wide bento-card--blue reveal reveal--left">
           <div class="bento-badge bento-badge--blue">[Telecom] [FTTH]</div>
           <div class="bento-icon bento-icon--blue">
@@ -162,102 +188,106 @@
               <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/>
             </svg>
           </div>
-          <h3>Redes de Fibra Ótica &amp; Telecom B2B</h3>
-          <p>Projeto, instalação e auditoria de redes de telecomunicações empresariais. Infraestrutura de fibra ótica FTTH/FTTO e soluções de conectividade de alta velocidade para organizações exigentes.</p>
+          <h3 data-i18n="es.c1.title">Redes de Fibra Ótica &amp; Telecom B2B</h3>
+          <p data-i18n="es.c1.desc">Projeto, instalação e auditoria de redes de telecomunicações empresariais. Infraestrutura de fibra ótica FTTH/FTTO e soluções de conectividade de alta velocidade para organizações exigentes.</p>
           <ul>
-            <li>Projeto de redes FTTH, FTTO e GPON</li>
-            <li>Instalação de cabos, caixas e equipamentos passivos</li>
-            <li>Auditoria e certificação de redes existentes</li>
-            <li>Soluções Wi-Fi empresarial (Wi-Fi 6 / 6E)</li>
+            <li data-i18n="es.c1.li1">Projeto de redes FTTH, FTTO e GPON</li>
+            <li data-i18n="es.c1.li2">Instalação de cabos, caixas e equipamentos passivos</li>
+            <li data-i18n="es.c1.li3">Auditoria e certificação de redes existentes</li>
+            <li data-i18n="es.c1.li4">Soluções Wi-Fi empresarial (Wi-Fi 6 / 6E)</li>
           </ul>
-          <div class="bento-glass">
-            <p style="display: flex; align-items: flex-start; gap: 8px;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--amber); flex-shrink: 0; margin-top: 2px;"><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg>
-              <span>As nossas redes suportam desde pequenos escritórios a campus multi-site com SLA garantido, reduzindo latência em até 40% face a soluções copper.</span>
+          <div class="bento-glass s-fec3619ed0de">
+            <p class="s-77a6410220e2">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="s-cd13532e667c"><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg>
+              <span data-i18n="es.c1.glass">As nossas redes suportam desde pequenos escritórios a campus multi-site com SLA garantido, reduzindo latência em até 40% face a soluções copper.</span>
             </p>
           </div>
+          <a href="servico-telecomunicacoes.html" class="h-68c0486c9710 s-5cd6f80a03c9">
+            <span data-i18n="es.c1.cta">Saber Mais sobre Telecomunicações</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
         </div>
 
-        <!-- Card 2 — NARROW: Stat Fibra -->
-        <div class="bento-card bento-card--narrow reveal reveal--right" style="display:flex; flex-direction:column; justify-content:center; text-align:center;">
-          <div class="bento-icon bento-icon--green" style="margin: 0 auto 14px;">
+
+        <div class="bento-card bento-card--narrow reveal reveal--right s-e7b3d0094cf0">
+          <div class="bento-icon bento-icon--green s-8903337edcbc">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
             </svg>
           </div>
-          <div class="bento-stat-num">99.9<span style="font-size:1.4rem">%</span></div>
-          <div class="bento-stat-label">Uptime garantido<br>em redes FTTO</div>
+          <div class="bento-stat-num">99.9<span class="s-5dfe0f207e83">%</span></div>
+          <div class="bento-stat-label" data-i18n-html="es.c2.label">Uptime garantido<br>em redes FTTO</div>
         </div>
-        <!-- Card 5 — FULL WIDTH: SaaS IA DESTAQUE -->
-        <div class="bento-card bento-card--full reveal reveal--up" style="padding: 0; overflow: hidden; background: linear-gradient(135deg, #f5f0ff 0%, #faf8ff 60%, #f0eaff 100%); border-color: rgba(124,58,237,.2);">
-          <!-- Full-width purple top bar (overrides ::before) -->
-          <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #7c3aed, #a78bfa, #7c3aed); z-index: 10; border-radius: 20px 20px 0 0;"></div>
-          <!-- Purple glow accents -->
-          <div style="position: absolute; top: -80px; right: -80px; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(124,58,237,.12) 0%, transparent 70%); pointer-events: none;"></div>
-          <div style="position: absolute; bottom: -60px; left: -60px; width: 220px; height: 220px; border-radius: 50%; background: radial-gradient(circle, rgba(167,139,250,.1) 0%, transparent 70%); pointer-events: none;"></div>
 
-          <div style="display: flex; flex-wrap: wrap; gap: 0; align-items: stretch; min-height: 380px;">
+        <div class="bento-card bento-card--full reveal reveal--up s-ec259dfdb3ce">
 
-            <!-- LEFT: Text & CTAs -->
-            <div style="flex: 1; min-width: 260px; padding: clamp(24px, 5vw, 48px); display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 1;">
-              <div class="bento-badge bento-badge--violet" style="margin-bottom: 20px; width: fit-content;">[SaaS] [IA] [HealthTech] [AgroTech]</div>
-              <h3 style="font-size: 1.9rem; margin-bottom: 14px; line-height: 1.2;">SaaS com IA:<br><em style="font-style: normal; color: #7c3aed;">MedReminder &amp; VETIA</em></h3>
-              <p>Plataformas SaaS verticais com motor de IA integrado — MedReminder para HealthTech e VETIA para AgroTech — com APIs de integração enterprise e planos B2B escaláveis.</p>
-              <ul style="margin-bottom: 32px;">
-                <li>MedReminder: alertas de medicação e relatórios clínicos</li>
-                <li>VETIA: gestão de explorações agropecuárias</li>
-                <li>APIs de integração com sistemas existentes</li>
-                <li>Planos de licenciamento B2B e enterprise</li>
+          <div class="s-cdf7135fe3b5"></div>
+
+          <div class="s-5b6705e62cb4"></div>
+          <div class="s-0a8512a95eac"></div>
+
+          <div class="s-17eb3ecabe52">
+
+
+            <div class="s-bf18338afea7">
+              <div class="bento-badge bento-badge--violet s-060944242ac5" data-i18n="es.saas.badge">[SaaS] [IA] [HealthTech] [AgroTech]</div>
+              <h3 data-i18n-html="es.saas.title" class="s-73a4f8390755">SaaS com IA:<br><em class="s-25334b4c3f82">MedReminder &amp; VETIA</em></h3>
+              <p data-i18n="es.saas.desc">Plataformas SaaS verticais com motor de IA integrado — MedReminder para HealthTech e VETIA para AgroTech — com APIs de integração enterprise e planos B2B escaláveis.</p>
+              <ul class="s-e8a8a9c051f6">
+                <li data-i18n="es.saas.li1">MedReminder: alertas de medicação e relatórios clínicos</li>
+                <li data-i18n="es.saas.li2">VETIA: gestão de explorações agropecuárias</li>
+                <li data-i18n="es.saas.li3">APIs de integração com sistemas existentes</li>
+                <li data-i18n="es.saas.li4">Planos de licenciamento B2B e enterprise</li>
               </ul>
-              <!-- CTA Buttons -->
-              <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-                <a href="produto-medreminder.html" style="display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; border-radius: 50px; background: linear-gradient(135deg, #7c3aed, #a78bfa); color: #fff; font-weight: 700; font-size: .9rem; text-decoration: none; letter-spacing: .3px; box-shadow: 0 4px 20px rgba(124,58,237,.4); transition: transform .25s ease, box-shadow .25s ease;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 30px rgba(124,58,237,.55)';" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 20px rgba(124,58,237,.4)';">
+
+              <div class="s-664de56cb930">
+                <a href="produto-medreminder.html" class="h-9080abc40dfc s-90c553415c94">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                  Ver MedReminder
+                  <span data-i18n="es.saas.cta1">Ver MedReminder</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
-                <a href="produto-vetia.html" style="display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; border-radius: 50px; background: transparent; color: #7c3aed; font-weight: 700; font-size: .9rem; text-decoration: none; letter-spacing: .3px; border: 2px solid rgba(124,58,237,.4); transition: transform .25s ease, background .25s ease, border-color .25s ease;" onmouseover="this.style.transform='translateY(-3px)';this.style.background='rgba(124,58,237,.08)';this.style.borderColor='rgba(124,58,237,.7)';" onmouseout="this.style.transform='';this.style.background='transparent';this.style.borderColor='rgba(124,58,237,.4)';">
+                <a href="produto-vetia.html" class="h-225f90c3ff9f s-d5647e2b4651">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 0v10l4 4"/></svg>
-                  Ver VETIA
+                  <span data-i18n="es.saas.cta2">Ver VETIA</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
               </div>
             </div>
 
-            <!-- RIGHT: Mockup image -->
-            <div style="flex: 1; min-width: 260px; position: relative; overflow: hidden; min-height: 250px;">
-              <div style="position: absolute; inset: 0; background: linear-gradient(to right, #f5f0ff 0%, transparent 20%); z-index: 2; pointer-events: none;"></div>
-              <img src="images/saas_mockups.png" alt="MedReminder & VETIA Mockups" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;" />
+
+            <div class="s-ec6ad4c52768">
+              <div class="s-36970a69586e"></div>
+              <img src="images/saas_mockups.png" alt="MedReminder & VETIA Mockups" class="s-c685ecdad507" />
             </div>
 
           </div>
         </div>
 
-        <!-- Card 3 — MEDIUM: Formações -->
+
         <div class="bento-card bento-card--medium bento-card--amber reveal reveal--up">
-          <div class="bento-badge bento-badge--amber">[Formação] [Certificação] [B2B]</div>
+          <div class="bento-badge bento-badge--amber" data-i18n="es.c3.badge">[Formação] [Certificação] [B2B]</div>
           <div class="bento-icon bento-icon--amber">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
             </svg>
           </div>
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; flex-wrap: wrap;">
-            <h3 style="margin-bottom: 0;">Formações Técnicas Certificadas</h3>
-            <div style="display: flex; gap: 16px; align-items: center;">
-              <img src="images/parceiros/whatxnext_dark.png" alt="WhatNext" style="height: 24px;" />
-              <img src="images/parceiros/triformis.png" alt="Triformis Técnica" style="height: 24px;" onerror="this.style.display='none'" />
+          <div class="s-04e5b0c610fb">
+            <h3 data-i18n="es.c3.title" class="s-b3a2297a12f5">Formações Técnicas Certificadas</h3>
+            <div class="s-0b0ce2ed0766">
+              <img src="images/parceiros/whatxnext_dark.png" alt="WhatNext" class="s-6176e29634e1" />
+              <img src="images/parceiros/triformis.png" alt="Triformis Técnica" data-image-fallback="hide" class="s-6176e29634e1" />
             </div>
           </div>
-          <p>Programas de formação profissional certificada em energia, telecomunicações, domótica e IA. Também disponibilizamos Simuladores de Decisão para treino de competências de gestão em contexto real.</p>
+          <p data-i18n="es.c3.desc">Programas de formação profissional certificada em energia, telecomunicações, domótica e IA. Também disponibilizamos Simuladores de Decisão para treino de competências de gestão em contexto real.</p>
           <ul>
-            <li>Formação a Engenheiros no ambito do ITED/ITUR</li>
-            <li>Formação em domótica Teletask e GTC</li>
-            <li>Simuladores de decisão WhatNext para equipas de gestão</li>
-            <li>Formação a Tecnicos de Telecomunicações ITED/ITUR & Ofertas ORAC/P</li>
+            <li data-i18n="es.c3.li1">Formação a Engenheiros no ambito do ITED/ITUR</li>
+            <li data-i18n="es.c3.li2">Formação em domótica Teletask e GTC</li>
+            <li data-i18n="es.c3.li3">Simuladores de decisão WhatNext para equipas de gestão</li>
+            <li data-i18n="es.c3.li4">Formação a Tecnicos de Telecomunicações ITED/ITUR & Ofertas ORAC/P</li>
           </ul>
         </div>
 
-        <!-- Card 4 — MEDIUM: ESG -->
+
         <div class="bento-card bento-card--medium bento-card--teal reveal reveal--up">
           <div class="bento-badge">[ESG] [CSRD] [GRI]</div>
           <div class="bento-icon bento-icon--green">
@@ -265,28 +295,28 @@
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
             </svg>
           </div>
-          <h3>Consultoria ESG &amp; Gap Analysis</h3>
-          <p>Acompanhamento especializado em estratégia de sustentabilidade, relatório CSRD e análise de lacunas face aos objetivos de descarbonização.</p>
+          <h3 data-i18n="es.c4.title">Consultoria ESG &amp; Gap Analysis</h3>
+          <p data-i18n="es.c4.desc">Acompanhamento especializado em estratégia de sustentabilidade, relatório CSRD e análise de lacunas face aos objetivos de descarbonização.</p>
           <ul>
-            <li>Diagnóstico e gap analysis ESG</li>
-            <li>Relatórios GRI e CSRD (ESRS)</li>
-            <li>Planos de descarbonização (Scope 1, 2, 3)</li>
-            <li>Formação ESG para quadros e direção</li>
+            <li data-i18n="es.c4.li1">Diagnóstico e gap analysis ESG</li>
+            <li data-i18n="es.c4.li2">Relatórios GRI e CSRD (ESRS)</li>
+            <li data-i18n="es.c4.li3">Planos de descarbonização (Scope 1, 2, 3)</li>
+            <li data-i18n="es.c4.li4">Formação ESG para quadros e direção</li>
           </ul>
         </div>
 
 
-      </div><!-- /bento-grid -->
+      </div>
     </div>
   </section>
 
-  <!-- ===== HORIZONTAL TIMELINE — COMO TRABALHAMOS ===== -->
+
   <section class="sp-section sp-section--alt">
     <div class="container">
       <div class="sp-section-head text-center reveal reveal--up">
-        <p class="eyebrow" style="text-align: center; display: block; margin: 0 auto 16px;">Como Trabalhamos</p>
-        <h2 style="text-align:center;">Abordagem <span>B2B</span> Especializada</h2>
-        <p style="margin: 14px auto 0; text-align:center;">Um processo estruturado, transparente e orientado a resultados mensuráveis para cada organização.</p>
+        <p class="eyebrow s-22f603b93105" data-i18n="es.proc.eyebrow">Como Trabalhamos</p>
+        <h2 data-i18n-html="es.proc.title" class="s-5a2dfef236e7">Abordagem <span>B2B</span> Especializada</h2>
+        <p data-i18n="es.proc.sub" class="s-f692b0e20276">Um processo estruturado, transparente e orientado a resultados mensuráveis para cada organização.</p>
       </div>
 
       <div class="sp-timeline reveal reveal--up">
@@ -295,32 +325,32 @@
           <div class="sp-timeline-step">
             <div class="sp-step-num">1</div>
             <div class="sp-step-body">
-              <h3>Diagnóstico &amp; Âmbito</h3>
-              <p>Reunião técnica para compreender os objetivos, maturidade digital e áreas prioritárias de intervenção.</p>
+              <h3 data-i18n="es.proc.1.title">Diagnóstico &amp; Âmbito</h3>
+              <p data-i18n="es.proc.1.desc">Reunião técnica para compreender os objetivos, maturidade digital e áreas prioritárias de intervenção.</p>
             </div>
           </div>
 
           <div class="sp-timeline-step">
             <div class="sp-step-num">2</div>
             <div class="sp-step-body">
-              <h3>Proposta Técnica</h3>
-              <p>Arquitetura da solução, faseamento, KPIs de sucesso e modelo de pricing transparente e detalhado.</p>
+              <h3 data-i18n="es.proc.2.title">Proposta Técnica</h3>
+              <p data-i18n="es.proc.2.desc">Arquitetura da solução, faseamento, KPIs de sucesso e modelo de pricing transparente e detalhado.</p>
             </div>
           </div>
 
           <div class="sp-timeline-step">
             <div class="sp-step-num">3</div>
             <div class="sp-step-body">
-              <h3>Implementação</h3>
-              <p>Execução com equipa técnica especializada, integração com sistemas legados e formação dos utilizadores.</p>
+              <h3 data-i18n="es.proc.3.title">Implementação</h3>
+              <p data-i18n="es.proc.3.desc">Execução com equipa técnica especializada, integração com sistemas legados e formação dos utilizadores.</p>
             </div>
           </div>
 
           <div class="sp-timeline-step">
             <div class="sp-step-num">4</div>
             <div class="sp-step-body">
-              <h3>Suporte &amp; Evolução</h3>
-              <p>Acompanhamento pós-implementação com SLA definido, relatórios de desempenho e roadmap contínuo.</p>
+              <h3 data-i18n="es.proc.4.title">Suporte &amp; Evolução</h3>
+              <p data-i18n="es.proc.4.desc">Acompanhamento pós-implementação com SLA definido, relatórios de desempenho e roadmap contínuo.</p>
             </div>
           </div>
 
@@ -329,10 +359,10 @@
     </div>
   </section>
 
-  <!-- ===== CTA PREMIUM COM MESH GRADIENT ===== -->
+
   <div class="sp-cta-wrap">
     <div class="sp-cta-mesh"></div>
-    <!-- Geometric accents -->
+
     <div class="sp-cta-geo sp-cta-geo--tl"></div>
     <div class="sp-cta-geo sp-cta-geo--br"></div>
     <div class="sp-cta-geo sp-cta-geo--tr"></div>
@@ -341,59 +371,68 @@
       <div class="sp-cta-inner reveal reveal--up">
         <div class="sp-cta-eyebrow">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-          Próximo Passo
+          <span data-i18n="es.cta.eyebrow">Próximo Passo</span>
         </div>
-        <h2>Vamos Transformar a sua<br><em>Empresa com Tecnologia?</em></h2>
-        <p>Fale com os nossos especialistas e descubra como as nossas soluções B2B podem criar valor real e mensurável para a sua organização.</p>
+        <h2 data-i18n-html="es.cta.title">Vamos Transformar a sua<br><em>Empresa com Tecnologia?</em></h2>
+        <p data-i18n="es.cta.desc">Fale com os nossos especialistas e descubra como as nossas soluções B2B podem criar valor real e mensurável para a sua organização.</p>
         <div class="sp-cta-btns">
-          <a href="index.html#contacto" class="btn-hero-primary">Falar com Especialista</a>
-          <a href="index.html"          class="btn-hero-ghost">Voltar ao Início</a>
+          <a href="index.html?assunto=especialidade#contacto" class="btn-hero-primary" data-i18n="es.cta.primary">Falar com Especialista</a>
+          <a href="index.html"          class="btn-hero-ghost" data-i18n="nav.backHome">Voltar ao Início</a>
         </div>
-        <div class="glass-box" style="max-width:480px; margin: 28px auto 0;">
-          <p style="display: flex; align-items: center; justify-content: center; gap: 8px;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--g1); flex-shrink: 0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Resposta em menos de 24h úteis · Sem compromisso · Primeira análise gratuita</span>
+        <div class="glass-box s-ad46d1abbe0c">
+          <p class="s-c4e6493b225f">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="s-0b4a43190c3d"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span data-i18n="es.cta.note">Resposta em menos de 24h úteis · Sem compromisso · Primeira análise gratuita</span>
           </p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ===== FOOTER ===== -->
+
+  </main>
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="images/logo.png" alt="Logo Asydim" class="footer-logo" onerror="this.style.display='none'" />
-        <p>Consultoria &amp; Formação Sustentável</p>
-        <p class="footer-sub">Informática · Inovação · Sustentabilidade</p>
+        <img src="images/logo.png" alt="Logo Asydim" data-i18n-alt="logo.alt" class="footer-logo" data-image-fallback="hide" />
+        <p data-i18n="footer.tagline">Consultoria &amp; Formação Sustentável</p>
+        <p class="footer-sub" data-i18n="footer.sub">Informática · Inovação · Sustentabilidade</p>
       </div>
       <div class="footer-col">
-        <h5>Navegação</h5>
-        <a href="index.html#sobre">Sobre Nós</a>
-        <a href="index.html#servicos">Serviços</a>
-        <a href="index.html#projetos">Projetos</a>
-        <a href="index.html#contacto">Contacto</a>
+        <h5 data-i18n="nav.navigation">Navegação</h5>
+        <a href="index.html#sobre" data-i18n="nav.about">Sobre Nós</a>
+        <a href="index.html#servicos" data-i18n="nav.services">Serviços</a>
+        <a href="index.html#projetos" data-i18n="nav.projects">Projetos</a>
+        <a href="index.html?assunto=especialidade#contacto" data-i18n="nav.contact">Contacto</a>
       </div>
       <div class="footer-col">
-        <h5>Soluções</h5>
-        <a href="servico-energia.html">Energy Procurement &amp; Renováveis</a>
-        <a href="servico-domotica.html">Smart House &amp; Domótica</a>
-        <a href="servico-engenharia.html">Engenharia Civil &amp; Remodelações</a>
-        <a href="servico-especialidade.html">Projetos de Especialidade</a>
+        <h5 data-i18n="footer.solutions">Soluções</h5>
+        <a href="servico-energia.html" data-i18n="card.energia.title">Energy Procurement &amp; Renováveis</a>
+        <a href="servico-domotica.html" data-i18n="card.domotica.title">Smart House &amp; Domótica</a>
+        <a href="servico-engenharia.html" data-i18n="card.engenharia.title">Engenharia Civil &amp; Remodelações</a>
+        <a href="servico-especialidade.html" data-i18n="footer.specialty">Projetos de Especialidade</a>
       </div>
       <div class="footer-col">
-        <h5>Contacto</h5>
+        <h5 data-i18n="nav.contact">Contacto</h5>
         <a href="mailto:info@asydim.com">info@asydim.com</a>
-        <a href="https://www.asydim.pt" target="_blank" rel="noopener">www.asydim.pt</a>
+        <a href="https://asydim.pt" target="_blank" rel="noopener noreferrer">asydim.pt</a>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p>© 2025 Asydim — Todos os direitos reservados · Desenvolvido em Portugal</p>
+        <p data-i18n="footer.copy">© 2026 Asydim — Todos os direitos reservados · Desenvolvido em Portugal</p>
       </div>
     </div>
+
+    <nav class="footer-legal container" aria-label="Informação legal" data-i18n-aria="legal.nav">
+      <a href="politica-privacidade.html" data-i18n="legal.privacy">Política de Privacidade e RGPD</a>
+      <a href="termos-condicoes.html" data-i18n="legal.terms">Termos e Condições</a>
+      <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener noreferrer" data-i18n="legal.complaints">Livro de Reclamações Eletrónico ↗</a>
+    </nav>
   </footer>
 
+  <script src="i18n/servico-especialidade.js"></script>
+  <script src="enhancements.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

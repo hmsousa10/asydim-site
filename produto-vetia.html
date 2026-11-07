@@ -3,347 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VetIA — Gestão Clínica & Diagnóstico Veterinário com IA · Asydim</title>
-  <meta name="description" content="VetIA é uma plataforma SaaS VetTech com IA para gestão clínica, diagnóstico assistido por deep learning e comunicação inteligente com tutores." />
+  <title data-i18n="seo.produto-vetia.title">VetIA: Inteligência Artificial para Veterinária | Asydim</title>
+  <meta name="description" data-i18n-content="seo.produto-vetia.description" content="Simplifique processos e documentação clínica veterinária com o VetIA. Conheça a solução de inteligência artificial e peça uma demonstração." />
+  <link rel="canonical" href="https://asydim.pt/produto-vetia.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Asydim" />
+  <meta property="og:locale" content="pt_PT" />
+  <meta property="og:url" content="https://asydim.pt/produto-vetia.html" />
+  <meta property="og:title" data-i18n-content="seo.produto-vetia.title" content="VetIA: Inteligência Artificial para Veterinária | Asydim" />
+  <meta property="og:description" data-i18n-content="seo.produto-vetia.description" content="Simplifique processos e documentação clínica veterinária com o VetIA. Conheça a solução de inteligência artificial e peça uma demonstração." />
+  <meta property="og:image" content="https://asydim.pt/images/sobre_smart_city.png" />
+  <meta property="og:image:alt" content="Asydim — Consultoria e Formação Sustentável" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 
-  <style>
-    /* =========================================
-       VETIA — Design System & Mockup Showcase
-       ========================================= */
 
-    /* ── Hero com Mockup (Split Layout) ── */
-    .vt-hero {
-      min-height: 100vh;
-      background: #03130d;
-      position: relative;
-      display: flex; align-items: center; overflow: hidden;
-      padding: 120px 0 100px;
-    }
-    .vt-hero-dots {
-      position: absolute; inset: 0; pointer-events: none; z-index: 0;
-      background-image: radial-gradient(rgba(45, 212, 191, 0.2) 1px, transparent 1px);
-      background-size: 40px 40px;
-      animation: dotGridMove 8s linear infinite;
-    }
-    .vt-hero-fade {
-      position: absolute; bottom: 0; left: 0; right: 0; height: 110px;
-      background: linear-gradient(to bottom, transparent, #fff);
-      pointer-events: none; z-index: 4;
-    }
-    .vt-hero-radial {
-      position: absolute; inset: 0; pointer-events: none;
-      background: radial-gradient(ellipse 70% 60% at 65% 40%, rgba(13, 148, 136, 0.2) 0%, transparent 70%),
-                  radial-gradient(ellipse 40% 40% at 20% 75%, rgba(45, 212, 191, 0.08) 0%, transparent 60%);
-    }
-    .vt-hero-inner {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 64px; align-items: center; position: relative; z-index: 2;
-      text-align: left;
-    }
-    .vt-hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 6px 18px; border-radius: 50px; margin-bottom: 24px;
-      background: rgba(13, 148, 136, 0.15); border: 1px solid rgba(45, 212, 191, 0.4);
-      font-size: .72rem; font-weight: 700; letter-spacing: 1.5px;
-      text-transform: uppercase; color: #2dd4bf;
-    }
-    .vt-hero-badge-dot { width: 7px; height: 7px; border-radius: 50%; background: #2dd4bf; animation: blink 2s infinite; }
-    .vt-hero-h1 {
-      font-family: var(--serif); font-size: clamp(2.8rem, 5vw, 4.2rem);
-      font-weight: 700; line-height: 1.1; color: #fff; margin-bottom: 20px;
-    }
-    .vt-hero-h1 em { font-style: normal; color: #2dd4bf; }
-    .vt-hero-desc {
-      font-size: 1.1rem; color: rgba(255,255,255,.75);
-      line-height: 1.75; margin-bottom: 36px; max-width: 480px;
-    }
-    .vt-partnership-pill {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 6px 16px; border-radius: 50px;
-      background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12);
-      font-size: .8rem; color: rgba(255,255,255,.7); margin-bottom: 40px;
-    }
-    .vt-partnership-pill strong { color: #fff; }
-    
-    .vt-hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; justify-content: flex-start; }
-    
-    .vt-btn-ghost {
-      display: inline-flex; align-items: center; gap: 10px;
-      padding: 15px 32px; border-radius: 50px;
-      border: 2px solid rgba(45, 212, 191, 0.35); color: #2dd4bf;
-      font-weight: 700; font-size: .95rem; text-decoration: none;
-      transition: border-color .25s ease, background .25s ease;
-    }
-    .vt-btn-ghost:hover { border-color: #2dd4bf; background: rgba(13, 148, 136, 0.1); }
-    
-    .vt-hero-visual { position: relative; }
-    .vt-hero-glow {
-      position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
-      width: 500px; height: 500px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(13, 148, 136, 0.25) 0%, transparent 65%);
-      pointer-events: none;
-    }
-    @keyframes vtHeroFloat {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-16px); }
-    }
-    .vt-mockup-img {
-      width: 100%; border-radius: 20px; position: relative; z-index: 1;
-      box-shadow: 0 30px 80px rgba(13, 148, 136, 0.3), 0 0 0 1px rgba(45, 212, 191, 0.2);
-      animation: vtHeroFloat 6s ease-in-out infinite;
-      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
-      cursor: pointer;
-    }
-    .vt-mockup-img:hover {
-      animation-play-state: paused;
-      transform: scale(1.04) translateY(-10px);
-      box-shadow: 0 45px 120px rgba(13, 148, 136, 0.4), 0 0 0 2px rgba(45, 212, 191, 0.4);
-    }
-    .vt2-btn-primary {
-      padding: 16px 36px; border-radius: 50px;
-      background: linear-gradient(135deg, #0d9488, #14b8a6);
-      color: #fff; font-weight: 700; font-size: 1rem;
-      box-shadow: 0 8px 32px rgba(13, 148, 136, 0.4);
-      transition: transform .3s ease, box-shadow .3s ease;
-      display: inline-block; text-decoration: none;
-    }
-    .vt2-btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(13, 148, 136, 0.6); }
-
-    /* Mockup Principal Panorâmico */
-    .vt2-main-mockup {
-      max-width: 1040px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 2;
-      transform: translateY(20px);
-    }
-    .vt2-main-mockup img {
-      width: 100%; height: auto; border-radius: 24px 24px 0 0;
-      box-shadow: 0 -20px 60px rgba(13, 148, 136, 0.15);
-      border: 1px solid rgba(45, 212, 191, 0.2);
-      border-bottom: none;
-      display: block;
-    }
-
-    /* ── Métricas de Eficiência ── */
-    .vt2-stats {
-      background: var(--offwh); padding: 80px 0; border-top: 1px solid var(--blight); border-bottom: 1px solid var(--blight);
-    }
-    .vt2-stats-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center;
-    }
-    .vt2-stat-item strong {
-      display: block; font-family: var(--serif); font-size: 2.6rem; font-weight: 800; color: #0f766e;
-    }
-    .vt2-stat-item span { font-size: .82rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
-
-    /* ── Secção "Como Funciona" (Pipeline de 4 Etapas) ── */
-    .vt2-workflow {
-      padding: 100px 0; background: #fff;
-    }
-    .vt2-section-head { text-align: center; margin-bottom: 60px; }
-    .vt2-section-head .eyebrow { color: #0d9488 !important; }
-    .vt2-section-head .eyebrow::after { background: #0d9488 !important; left: 50% !important; transform: translateX(-50%) !important; }
-    .vt2-section-h2 { font-family: var(--serif); color: var(--dark); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 700; margin-bottom: 16px; }
-    .vt2-section-h2 em { font-style: italic; color: #0d9488; }
-    .vt2-workflow-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; position: relative;
-    }
-    .vt2-workflow-grid::before {
-      content: ''; position: absolute; top: 48px; left: 50px; right: 50px; height: 2px;
-      background: rgba(13, 148, 136, 0.15); z-index: 0;
-    }
-    .vt2-step-card {
-      background: #f8fafc; border: 1px solid rgba(13, 148, 136, 0.15);
-      border-radius: 16px; padding: 28px 22px; position: relative; z-index: 1;
-      transition: all 0.3s ease;
-    }
-    .vt2-step-card:hover { transform: translateY(-6px); border-color: #0d9488; box-shadow: 0 16px 40px rgba(13, 148, 136, 0.12); }
-    .vt2-step-num {
-      width: 44px; height: 44px; border-radius: 50%;
-      background: linear-gradient(135deg, #0d9488, #2dd4bf);
-      color: #fff; font-family: var(--serif); font-weight: 700; font-size: 1.1rem;
-      display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
-      box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
-      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    }
-    .vt2-step-card:hover .vt2-step-num { transform: scale(1.1); }
-    .vt2-step-card h3 { font-family: var(--serif); font-size: 1.05rem; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
-    .vt2-step-card p { font-size: .86rem; color: var(--body); line-height: 1.6; }
-
-    /* ── Z-Pattern Showcase de Mockups ── */
-    .vt2-showcase {
-      padding: 100px 0; background: var(--offwh); border-top: 1px solid var(--blight);
-    }
-    .vt2-showcase-row {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 80px; align-items: center; margin-bottom: 120px;
-    }
-    .vt2-showcase-row:last-child { margin-bottom: 0; }
-    .vt2-showcase-row.reverse .vt2-text { order: 2; }
-    .vt2-showcase-row.reverse .vt2-mockup { order: 1; }
-
-    .vt2-text h2 {
-      font-family: var(--serif); font-size: 2.2rem;
-      color: var(--dark); margin-bottom: 16px; line-height: 1.2;
-    }
-    .vt2-text h2 span { color: #0d9488; }
-    .vt2-text p { font-size: 1.05rem; color: var(--body); line-height: 1.7; margin-bottom: 24px; }
-    .vt2-list { display: flex; flex-direction: column; gap: 12px; }
-    .vt2-list li {
-      font-size: .95rem; color: var(--muted); padding-left: 24px; position: relative;
-    }
-    .vt2-list li::before {
-      content: '✓'; position: absolute; left: 0; top: 0; color: #0d9488; font-weight: 700;
-    }
-
-    /* Molduras de Mockups */
-    .vt2-mockup {
-      position: relative;
-      border-radius: 20px;
-      padding: 28px;
-      background: linear-gradient(145deg, #f0fdfa, #ccfbf1);
-      border: 1px solid #99f6e4;
-      box-shadow: 0 20px 40px rgba(13, 148, 136, 0.08);
-      display: flex; align-items: center; justify-content: center;
-    }
-    .vt2-mockup img {
-      max-width: 100%; height: auto; border-radius: 12px;
-      box-shadow: 0 12px 32px rgba(0,0,0,.08);
-      transition: transform .5s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .vt2-mockup:hover img { transform: scale(1.04); }
-
-    /* ── Compatibilidade ── */
-    .vt-compat { padding: 100px 0; background: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; text-align: center; }
-    .vt-compat-head { margin-bottom: 60px; }
-    .vt-compat-head .eyebrow { color: #0d9488 !important; }
-    .vt-compat-head .eyebrow::after { background: #0d9488 !important; left: 50% !important; transform: translateX(-50%) !important; }
-    .vt-compat-head h2 { font-family: var(--serif); color: var(--dark); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 700; margin-bottom: 16px; }
-    .vt-compat-head h2 em { font-style: italic; color: #0d9488; }
-    .vt2-int-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; max-width: 850px; margin: 0 auto; }
-    .vt2-int-tag {
-      padding: 10px 24px; border-radius: 50px;
-      border: 1px solid rgba(13, 148, 136, 0.2); background: #fff;
-      font-size: 0.9rem; font-weight: 600; color: var(--dark);
-      box-shadow: 0 4px 12px rgba(0,0,0,.03);
-      transition: all 0.3s ease; cursor: default;
-    }
-    .vt2-int-tag:hover {
-      transform: translateY(-4px); border-color: #0d9488; color: #0d9488; box-shadow: 0 12px 24px rgba(13, 148, 136, 0.15);
-    }
-
-    /* ── Security Section ── */
-    .vt-security {
-      padding: 100px 0; background: #fff;
-      position: relative; overflow: hidden;
-    }
-    .vt-security::before {
-      content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-      width: 80%; height: 80%; background: radial-gradient(circle, rgba(13, 148, 136, 0.05) 0%, transparent 60%);
-      pointer-events: none;
-    }
-    .vt-security-head { text-align: center; margin-bottom: 60px; position: relative; z-index: 2; }
-    .vt-security-head .eyebrow { color: #0d9488 !important; }
-    .vt-security-head .eyebrow::after { background: #0d9488 !important; left: 50% !important; transform: translateX(-50%) !important; }
-    .vt-security-head h2 { font-family: var(--serif); color: var(--dark); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 700; margin-bottom: 16px; }
-    .vt-security-head h2 em { font-style: italic; color: #0d9488; }
-    .vt-security-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; position: relative; z-index: 2; }
-    .vt-security-card {
-      background: #f8fafc; border: 1px solid rgba(13, 148, 136, 0.15); border-radius: 20px; padding: 32px;
-      box-shadow: 0 4px 12px rgba(0,0,0,.02);
-      transition: all 0.4s ease;
-    }
-    .vt-security-card:hover {
-      transform: translateY(-5px); border-color: #0d9488; box-shadow: 0 16px 40px rgba(13, 148, 136, 0.12);
-    }
-    .vt-security-icon {
-      width: 48px; height: 48px; border-radius: 12px; margin-bottom: 20px;
-      background: linear-gradient(135deg, #0d9488, #2dd4bf); display: flex; align-items: center; justify-content: center;
-      color: #fff;
-    }
-    .vt-security-card h3 { font-family: var(--serif); color: var(--dark); font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; }
-    .vt-security-card p { color: var(--body); font-size: .95rem; line-height: 1.6; }
-
-    /* ── Parceiro ── */
-    .vt-partner { padding: 100px 0; background: #f8fafc; text-align: center; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; }
-    .vt-partner-block { max-width: 900px; margin: 0 auto; position: relative; }
-    .vt-partner-quote-icon { font-size: 8rem; color: #ccfbf1; font-family: var(--serif); line-height: 0; position: absolute; top: -10px; left: 50%; transform: translateX(-50%); z-index: 0; opacity: 0.6; }
-    .vt-partner blockquote {
-      font-family: var(--serif); font-size: clamp(1.4rem, 2vw, 1.8rem); color: var(--dark);
-      font-style: italic; line-height: 1.6; margin: 60px 0 30px; position: relative; z-index: 1;
-    }
-    .vt-partner-sig { margin-bottom: 24px; position: relative; z-index: 1; display: flex; align-items: center; justify-content: center; gap: 16px; flex-direction: column; }
-    .vt-partner-sig img { height: 40px; width: auto; object-fit: contain; }
-    .vt-partner-desc { color: var(--muted); font-size: 0.95rem; line-height: 1.6; max-width: 600px; margin: 0 auto; position: relative; z-index: 1; }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      .vt2-workflow-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
-      .vt2-workflow-grid::before { display: none; }
-      .vt2-showcase-row { grid-template-columns: 1fr; gap: 40px; }
-      .vt2-showcase-row.reverse .vt2-text { order: 1; }
-      .vt2-showcase-row.reverse .vt2-mockup { order: 2; }
-      .vt2-stats-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
-      .vt-hero-inner { grid-template-columns: 1fr; }
-      .vt-hero-visual { display: none; }
-      .vt-security-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 480px) {
-      .vt2-workflow-grid, .vt2-stats-grid, .vt-security-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+<link rel="stylesheet" href="page-styles/produto-vetia.css" />
+<link rel="stylesheet" href="presentation.css" />
+<script src="image-fallback.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#conteudo" data-i18n="a11y.skip">Saltar para o conteúdo</a>
 
-  <!-- ===== NAVBAR ===== -->
+
   <header class="navbar" id="navbar">
     <div class="container nav-inner">
       <a href="index.html" class="logo-wrap">
-        <img src="images/logo.png" alt="Logo Asydim" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-        <span class="logo-fallback" style="display:none;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+        <img src="images/logo.png" alt="Logo Asydim" data-i18n-alt="logo.alt" class="logo-img" data-image-fallback="block" />
+        <span class="logo-fallback s-d0466aa33fa8"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
         <span class="logo-text">Asydim</span>
       </a>
-      <nav class="nav-links" aria-label="Menu principal">
-        <a href="index.html#sobre"    class="nav-link">Sobre Nós</a>
-        <a href="index.html#servicos" class="nav-link">Serviços</a>
-        <a href="index.html#projetos" class="nav-link">Projetos</a>
-        <a href="index.html#contacto" class="nav-link">Contacto</a>
-        <a href="index.html#contacto" class="btn-nav">Falar Connosco</a>
+      <nav class="nav-links" data-i18n-aria="nav.menu" aria-label="Menu principal">
+        <a href="index.html#sobre"    class="nav-link" data-i18n="nav.about">Sobre Nós</a>
+        <a href="index.html#servicos" class="nav-link" data-i18n="nav.services">Serviços</a>
+        <a href="index.html#projetos" class="nav-link" data-i18n="nav.projects">Projetos</a>
+        <a href="index.html?assunto=vetia#contacto" class="nav-link" data-i18n="nav.contact">Contacto</a>
+        <div class="lang-switch" role="group" data-i18n-aria="nav.lang" aria-label="Idioma">
+          <button type="button" class="lang-btn is-active" data-lang="pt" data-i18n-aria="lang.pt" aria-label="Português" aria-pressed="true">PT</button>
+          <span class="lang-sep" aria-hidden="true">|</span>
+          <button type="button" class="lang-btn" data-lang="en" data-i18n-aria="lang.en" aria-label="English" aria-pressed="false">EN</button>
+        </div>
+        <a href="index.html?assunto=vetia#contacto" class="btn-nav" data-i18n="nav.cta">Falar Connosco</a>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <button class="hamburger" id="hamburger" data-i18n-aria="nav.openMenu" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
 
-  <!-- Mobile Drawer -->
+
   <div class="nav-drawer-backdrop" id="nav-backdrop"></div>
   <nav class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-lang">
+      <div class="lang-switch lang-switch--drawer" role="group" data-i18n-aria="nav.lang" aria-label="Idioma">
+        <button type="button" class="lang-btn is-active" data-lang="pt" data-i18n-aria="lang.pt" aria-label="Português" aria-pressed="true">PT</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button type="button" class="lang-btn" data-lang="en" data-i18n-aria="lang.en" aria-label="English" aria-pressed="false">EN</button>
+      </div>
+    </div>
     <div class="mobile-drawer-header">
       <div class="mobile-drawer-brand">
-        <img src="images/logo.png" alt="Logo" class="mobile-drawer-logo" onerror="this.style.display='none'" />
+        <img src="images/logo.png" alt="Logo" data-i18n-alt="logo.alt" class="mobile-drawer-logo" data-image-fallback="hide" />
         <span class="mobile-drawer-logo-text">Asydim</span>
       </div>
-      <button class="mobile-drawer-close" id="drawer-close" aria-label="Fechar menu">
+      <button class="mobile-drawer-close" id="drawer-close" data-i18n-aria="nav.closeMenu" aria-label="Fechar menu">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
       </button>
     </div>
     <div class="mobile-drawer-body">
-      <span class="mobile-drawer-label">Navegação</span>
-      <a href="index.html#sobre"    class="mobile-drawer-link">Sobre Nós</a>
-      <a href="index.html#servicos" class="mobile-drawer-link">Serviços</a>
-      <a href="index.html#projetos" class="mobile-drawer-link">Projetos</a>
-      <a href="index.html#contacto" class="mobile-drawer-link">Contacto</a>
+      <span class="mobile-drawer-label" data-i18n="nav.navigation">Navegação</span>
+      <a href="index.html#sobre"    class="mobile-drawer-link" data-i18n="nav.about">Sobre Nós</a>
+      <a href="index.html#servicos" class="mobile-drawer-link" data-i18n="nav.services">Serviços</a>
+      <a href="index.html#projetos" class="mobile-drawer-link" data-i18n="nav.projects">Projetos</a>
+      <a href="index.html?assunto=vetia#contacto" class="mobile-drawer-link" data-i18n="nav.contact">Contacto</a>
     </div>
     <div class="mobile-drawer-footer">
-      <a href="index.html#contacto" class="btn-primary btn-full" id="btn-drawer-cta">Falar Connosco</a>
+      <a href="index.html?assunto=vetia#contacto" class="btn-primary btn-full" id="btn-drawer-cta" data-i18n="nav.cta">Falar Connosco</a>
     </div>
   </nav>
 
-  <!-- ===== HERO (Split Layout) ===== -->
+
+  <main id="conteudo">
   <section class="vt-hero">
     <div class="vt-hero-dots"></div>
     <div class="vt-hero-radial"></div>
@@ -351,260 +92,269 @@
     <div class="container">
       <div class="vt-hero-inner">
         <div class="vt-hero-text">
-          <div style="margin-bottom:12px;">
-            <a href="javascript:history.back()" class="sp-hero-back" style="color:rgba(255,255,255,.4);">
+          <div class="s-4636770b4968">
+            <a href="javascript:history.back()" class="sp-hero-back s-a85a182ea4ed">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-              Voltar
+              <span data-i18n="vt.hero.back">Voltar</span>
             </a>
           </div>
           <div class="vt-hero-badge">
             <span class="vt-hero-badge-dot"></span>
-            SaaS · VetTech & Inteligência Artificial
+            <span data-i18n="vt.hero.badge">SaaS · VetTech & Inteligência Artificial</span>
           </div>
           <h1 class="vt-hero-h1">Vet<em>IA</em></h1>
-          <p class="vt-hero-desc">
+          <p class="vt-hero-desc" data-i18n-html="vt.hero.desc">
             O assistente clínico digital desenhado para modernizar <strong>hospitais e clínicas veterinárias</strong>. <strong>Diagnóstico assistido</strong> por <em>Deep Learning</em>, <strong>automatização inteligente</strong> de stocks e <strong>comunicação proativa</strong> com tutores.
           </p>
 
           <div class="vt-partnership-pill reveal reveal--up">
-            <span>Validação Clínica: <strong>We Care For Pet × ASYDIM</strong></span>
+            <span data-i18n-html="vt.hero.partner">Validação Clínica: <strong>We Care For Pet × ASYDIM</strong></span>
           </div>
 
           <div class="vt-hero-actions reveal reveal--up">
-            <a href="index.html#contacto" class="vt2-btn-primary">Pedir Demonstração</a>
-            <a href="#como-funciona" class="vt-btn-ghost">Como Funciona ↓</a>
+            <a href="index.html?assunto=vetia#contacto" class="vt2-btn-primary" data-i18n="vt.hero.ctaPrimary">Pedir Demonstração</a>
+            <a href="#como-funciona" class="vt-btn-ghost" data-i18n="vt.hero.ctaGhost">Como Funciona ↓</a>
           </div>
         </div>
-        
+
         <div class="vt-hero-visual reveal reveal--up">
           <div class="vt-hero-glow"></div>
-          <img src="images/vetia_mockup.png" alt="Dashboard Principal do VetIA" class="vt-mockup-img" />
+          <img src="images/vetia_mockup.png" alt="Dashboard Principal do VetIA" data-i18n-alt="vt.alt.hero" class="vt-mockup-img" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== ESTATÍSTICAS DE IMPACTO CLÍNICO ===== -->
+
   <section class="vt2-stats">
     <div class="container">
       <div class="vt2-stats-grid reveal reveal--up">
-        <div class="vt2-stat-item"><strong>-45%</strong><span>Tempo em Diagnóstico</span></div>
-        <div class="vt2-stat-item"><strong>100%</strong><span>Rastreio de Stock</span></div>
-        <div class="vt2-stat-item"><strong>24/7</strong><span>Triagem via NLP</span></div>
-        <div class="vt2-stat-item"><strong>0</strong><span>Roturas Farmacêuticas</span></div>
+        <div class="vt2-stat-item"><strong>-45%</strong><span data-i18n="vt.stat.1">Tempo em Diagnóstico</span></div>
+        <div class="vt2-stat-item"><strong>100%</strong><span data-i18n="vt.stat.2">Rastreio de Stock</span></div>
+        <div class="vt2-stat-item"><strong>24/7</strong><span data-i18n="vt.stat.3">Triagem via NLP</span></div>
+        <div class="vt2-stat-item"><strong>0</strong><span data-i18n="vt.stat.4">Roturas Farmacêuticas</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ===== COMO FUNCIONA (PIPELINE OPERACIONAL) ===== -->
+
   <section class="vt2-workflow" id="como-funciona">
     <div class="container">
       <div class="vt2-section-head reveal reveal--up">
-        <p class="eyebrow text-center">Fluxo Clínico</p>
-        <h2 class="vt2-section-h2 text-center">Como o VetIA <em>Otimiza a sua Clínica</em></h2>
-        <p class="section-sub text-center" style="margin: 0 auto;">Um <strong>ecossistema contínuo</strong> que conecta a triagem, o diagnóstico, o internamento e a <strong>fidelização do tutor</strong>.</p>
+        <p class="eyebrow text-center" data-i18n="vt.wf.eyebrow">Fluxo Clínico</p>
+        <h2 class="vt2-section-h2 text-center" data-i18n-html="vt.wf.title">Como o VetIA <em>Otimiza a sua Clínica</em></h2>
+        <p class="section-sub text-center s-6002529ccd3d" data-i18n-html="vt.wf.sub">Um <strong>ecossistema contínuo</strong> que conecta a triagem, o diagnóstico, o internamento e a <strong>fidelização do tutor</strong>.</p>
       </div>
 
       <div class="vt2-workflow-grid reveal reveal--up">
         <div class="vt2-step-card">
           <div class="vt2-step-num">1</div>
-          <h3>Triagem Inteligente</h3>
-          <p>Recolha prévia de sintomas via <strong>assistente de conversação (NLP)</strong> antes mesmo do animal entrar no consultório.</p>
+          <h3 data-i18n="vt.wf.1.title">Triagem Inteligente</h3>
+          <p data-i18n-html="vt.wf.1.desc">Recolha prévia de sintomas via <strong>assistente de conversação (NLP)</strong> antes mesmo do animal entrar no consultório.</p>
         </div>
 
         <div class="vt2-step-card">
           <div class="vt2-step-num">2</div>
-          <h3>Diagnóstico Assistido</h3>
-          <p>Cruzamento de parâmetros analíticos e imagens radiográficas com <strong>algoritmos preditivos</strong> de apoio à decisão médica.</p>
+          <h3 data-i18n="vt.wf.2.title">Diagnóstico Assistido</h3>
+          <p data-i18n-html="vt.wf.2.desc">Cruzamento de parâmetros analíticos e imagens radiográficas com <strong>algoritmos preditivos</strong> de apoio à decisão médica.</p>
         </div>
 
         <div class="vt2-step-card">
           <div class="vt2-step-num">3</div>
-          <h3>Prescrição & Stocks</h3>
-          <p><strong>Abatimento automático em inventário</strong> com cálculo de posologia adaptado à espécie, idade e peso do paciente.</p>
+          <h3 data-i18n="vt.wf.3.title">Prescrição & Stocks</h3>
+          <p data-i18n-html="vt.wf.3.desc"><strong>Abatimento automático em inventário</strong> com cálculo de posologia adaptado à espécie, idade e peso do paciente.</p>
         </div>
 
         <div class="vt2-step-card">
           <div class="vt2-step-num">4</div>
-          <h3>Acompanhamento</h3>
-          <p><strong>Lembretes automáticos pós-cirúrgicos</strong> e avisos preventivos de vacinação e desparasitação enviados aos tutores.</p>
+          <h3 data-i18n="vt.wf.4.title">Acompanhamento</h3>
+          <p data-i18n-html="vt.wf.4.desc"><strong>Lembretes automáticos pós-cirúrgicos</strong> e avisos preventivos de vacinação e desparasitação enviados aos tutores.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== SHOWCASE DE MOCKUPS (Z-PATTERN) ===== -->
+
   <section class="vt2-showcase">
     <div class="container">
 
-      <!-- BLOCO 1: Diagnóstico Assistido por Deep Learning -->
+
       <div class="vt2-showcase-row reveal reveal--up">
         <div class="vt2-text">
-          <p class="eyebrow" style="color: #0d9488;">Suporte à Decisão</p>
-          <h2>Diagnóstico Assistido por <span>Deep Learning</span></h2>
-          <p>Acelere a identificação de anomalias radiológicas, padrões laboratoriais e patologias complexas com o <strong>motor de IA treinado especificamente</strong> para medicina veterinária.</p>
+          <p class="eyebrow s-0cd832f86c05" data-i18n="vt.s1.eyebrow">Suporte à Decisão</p>
+          <h2 data-i18n-html="vt.s1.title">Diagnóstico Assistido por <span>Deep Learning</span></h2>
+          <p data-i18n-html="vt.s1.desc">Acelere a identificação de anomalias radiológicas, padrões laboratoriais e patologias complexas com o <strong>motor de IA treinado especificamente</strong> para medicina veterinária.</p>
           <ul class="vt2-list">
-            <li>Deteção preliminar de padrões em exames complementares de diagnóstico.</li>
-            <li>Redução substancial da margem de erro em situações de urgência.</li>
-            <li>Histórico clínico unificado com linha temporal de evolução do animal.</li>
+            <li data-i18n="vt.s1.li1">Deteção preliminar de padrões em exames complementares de diagnóstico.</li>
+            <li data-i18n="vt.s1.li2">Redução substancial da margem de erro em situações de urgência.</li>
+            <li data-i18n="vt.s1.li3">Histórico clínico unificado com linha temporal de evolução do animal.</li>
           </ul>
         </div>
         <div class="vt2-mockup">
-          <!-- MOCKUP 2: Interface de Análise de Imagem / Apoio ao Diagnóstico -->
-          <img src="images/mockup-vetia-diagnostico.png" alt="Módulo de Diagnóstico por IA VetIA" 
-               style="background: #fff; height: 320px; width: 100%;" />
+
+          <img src="images/mockup-vetia-diagnostico.png" alt="Módulo de Diagnóstico por IA VetIA" data-i18n-alt="vt.alt.s1" class="s-9b90f133ba5e"
+               />
         </div>
       </div>
 
-      <!-- BLOCO 2: Gestão Automatizada de Stocks & Farmácia (Reverse) -->
+
       <div class="vt2-showcase-row reverse reveal reveal--up">
         <div class="vt2-text">
-          <p class="eyebrow" style="color: #0d9488;">Farmácia & Logística</p>
-          <h2>Automatização Total de <span>Stocks e Medicamentos</span></h2>
-          <p>Elimine perdas financeiras com produtos fora de validade e garanta que os <strong>medicamentos críticos estão sempre disponíveis</strong> sem necessidade de inventários manuais exaustivos.</p>
+          <p class="eyebrow s-0cd832f86c05" data-i18n="vt.s2.eyebrow">Farmácia & Logística</p>
+          <h2 data-i18n-html="vt.s2.title">Automatização Total de <span>Stocks e Medicamentos</span></h2>
+          <p data-i18n-html="vt.s2.desc">Elimine perdas financeiras com produtos fora de validade e garanta que os <strong>medicamentos críticos estão sempre disponíveis</strong> sem necessidade de inventários manuais exaustivos.</p>
           <ul class="vt2-list">
-            <li>Abatimento em tempo real a cada ato clínico ou cirúrgico.</li>
-            <li>Alertas inteligentes de ponto de encomenda e prazos de validade.</li>
-            <li>Rastreabilidade integral de lotes e substâncias controladas.</li>
+            <li data-i18n="vt.s2.li1">Abatimento em tempo real a cada ato clínico ou cirúrgico.</li>
+            <li data-i18n="vt.s2.li2">Alertas inteligentes de ponto de encomenda e prazos de validade.</li>
+            <li data-i18n="vt.s2.li3">Rastreabilidade integral de lotes e substâncias controladas.</li>
           </ul>
         </div>
-        <div class="vt2-mockup" style="background: linear-gradient(145deg, #f8fafc, #f1f5f9); border-color: #e2e8f0;">
-          <!-- MOCKUP 3: Painel de Controlo de Stocks e Farmácia -->
-          <img src="images/mockup-vetia-stocks.png" alt="Gestão de Stocks VetIA" 
-               style="background: #fff; height: 320px; width: 100%; border: 1px solid #e2e8f0;" />
+        <div class="vt2-mockup s-433d63241930">
+
+          <img src="images/mockup-vetia-stocks.png" alt="Gestão de Stocks VetIA" data-i18n-alt="vt.alt.s2" class="s-3e03122dc458"
+               />
         </div>
       </div>
 
-      <!-- BLOCO 3: Comunicação Inteligente com Tutores (NLP) -->
+
       <div class="vt2-showcase-row reveal reveal--up">
         <div class="vt2-text">
-          <p class="eyebrow" style="color: #0d9488;">Relacionamento & Fidelização</p>
-          <h2>Comunicação Fluida com <span>Tutores via NLP</span></h2>
-          <p>Mantenha os tutores informados e cumpra os <strong>planos de saúde preventivos</strong> com um assistente virtual capaz de responder a dúvidas frequentes e agendar procedimentos.</p>
+          <p class="eyebrow s-0cd832f86c05" data-i18n="vt.s3.eyebrow">Relacionamento & Fidelização</p>
+          <h2 data-i18n-html="vt.s3.title">Comunicação Fluida com <span>Tutores via NLP</span></h2>
+          <p data-i18n-html="vt.s3.desc">Mantenha os tutores informados e cumpra os <strong>planos de saúde preventivos</strong> com um assistente virtual capaz de responder a dúvidas frequentes e agendar procedimentos.</p>
           <ul class="vt2-list">
-            <li>Processamento de Linguagem Natural adaptado ao vocabulário dos tutores.</li>
-            <li>Envio autónomo de relatórios de internamento e planos de medicação caseira.</li>
-            <li>Aumento comprovado na taxa de retorno para vacinação e consultas anuais.</li>
+            <li data-i18n="vt.s3.li1">Processamento de Linguagem Natural adaptado ao vocabulário dos tutores.</li>
+            <li data-i18n="vt.s3.li2">Envio autónomo de relatórios de internamento e planos de medicação caseira.</li>
+            <li data-i18n="vt.s3.li3">Aumento comprovado na taxa de retorno para vacinação e consultas anuais.</li>
           </ul>
         </div>
-        <div class="vt2-mockup" style="background: linear-gradient(145deg, #f0fdf4, #dcfce7); border-color: #bbf7d0;">
-          <!-- MOCKUP 4: App do Tutor / Assistente de Chat e Notificações -->
-          <img src="images/mockup-vetia-tutores.png" alt="App de Comunicação com Tutores VetIA" 
-               style="background: #fff; height: 320px; width: 100%; border: 1px solid #bbf7d0;" />
+        <div class="vt2-mockup s-6ce1e8f6fbc2">
+
+          <img src="images/mockup-vetia-tutores.png" alt="App de Comunicação com Tutores VetIA" data-i18n-alt="vt.alt.s3" class="s-4a9d18af5b0a"
+               />
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- ===== COMPATIBILIDADE ===== -->
+
   <section class="vt-compat">
     <div class="container">
       <div class="vt-compat-head reveal reveal--up">
-        <p class="eyebrow">Compatibilidade</p>
-        <h2>Integra com o hardware que <em>já utiliza</em></h2>
+        <p class="eyebrow" data-i18n="vt.compat.eyebrow">Compatibilidade</p>
+        <h2 data-i18n-html="vt.compat.title">Integra com o hardware que <em>já utiliza</em></h2>
       </div>
       <div class="vt2-int-list reveal reveal--up">
         <span class="vt2-int-tag">DICOM / PACS</span>
-        <span class="vt2-int-tag">Equipamentos IDEXX</span>
-        <span class="vt2-int-tag">Integração Zoetis</span>
+        <span class="vt2-int-tag" data-i18n="vt.compat.t2">Equipamentos IDEXX</span>
+        <span class="vt2-int-tag" data-i18n="vt.compat.t3">Integração Zoetis</span>
         <span class="vt2-int-tag">REST API</span>
-        <span class="vt2-int-tag">ERP Faturação</span>
+        <span class="vt2-int-tag" data-i18n="vt.compat.t5">ERP Faturação</span>
         <span class="vt2-int-tag">Gateways SMS/WhatsApp</span>
       </div>
     </div>
   </section>
 
-  <!-- ===== SEGURANÇA ===== -->
+
   <section class="vt-security">
     <div class="container">
       <div class="vt-security-head reveal reveal--up">
-        <p class="eyebrow">Compliance & Privacidade</p>
-        <h2>Os dados dos tutores e pacientes, <em>blindados</em></h2>
+        <p class="eyebrow" data-i18n="vt.sec.eyebrow">Compliance & Privacidade</p>
+        <h2 data-i18n-html="vt.sec.title">Os dados dos tutores e pacientes, <em>blindados</em></h2>
       </div>
       <div class="vt-security-grid">
-        <div class="vt-security-card reveal reveal--up" style="transition-delay: 0.1s;">
+        <div class="vt-security-card reveal reveal--up s-25b72b943102">
           <div class="vt-security-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
           </div>
-          <h3>Conformidade RGPD</h3>
-          <p>Proteção absoluta e encriptação end-to-end dos dados pessoais e financeiros dos tutores, cumprindo a lei europeia.</p>
+          <h3 data-i18n="vt.sec.c1.title">Conformidade RGPD</h3>
+          <p data-i18n="vt.sec.c1.desc">Proteção absoluta e encriptação end-to-end dos dados pessoais e financeiros dos tutores, cumprindo a lei europeia.</p>
         </div>
-        <div class="vt-security-card reveal reveal--up" style="transition-delay: 0.2s;">
+        <div class="vt-security-card reveal reveal--up s-c9b324caf4d6">
           <div class="vt-security-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
           </div>
-          <h3>Histórico Inquebrável</h3>
-          <p>Backups diários georredundantes. O histórico clínico dos pacientes e radiografias nunca se perdem, independentemente do que aconteça na clínica.</p>
+          <h3 data-i18n="vt.sec.c2.title">Histórico Inquebrável</h3>
+          <p data-i18n="vt.sec.c2.desc">Backups diários georredundantes. O histórico clínico dos pacientes e radiografias nunca se perdem, independentemente do que aconteça na clínica.</p>
         </div>
-        <div class="vt-security-card reveal reveal--up" style="transition-delay: 0.3s;">
+        <div class="vt-security-card reveal reveal--up s-69e3ed08d812">
           <div class="vt-security-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           </div>
-          <h3>Permissões Granulares</h3>
-          <p>Acesso baseado em perfis (RBAC). Médicos, enfermeiros e equipa de receção acedem apenas à informação estritamente necessária.</p>
+          <h3 data-i18n="vt.sec.c3.title">Permissões Granulares</h3>
+          <p data-i18n="vt.sec.c3.desc">Acesso baseado em perfis (RBAC). Médicos, enfermeiros e equipa de receção acedem apenas à informação estritamente necessária.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== WE CARE FOR PET ===== -->
+
   <section class="vt-partner">
     <div class="container reveal reveal--up">
       <div class="vt-partner-block">
         <div class="vt-partner-quote-icon">"</div>
-        <blockquote>O VetIA não nasceu num laboratório isolado. Foi forjado e iterado na exigência real do dia a dia clínico, para resolver problemas reais.</blockquote>
+        <blockquote data-i18n="vt.partner.quote">O VetIA não nasceu num laboratório isolado. Foi forjado e iterado na exigência real do dia a dia clínico, para resolver problemas reais.</blockquote>
         <div class="vt-partner-sig">
-          <img src="images/parceiros/wecareforpet.png" alt="We Care For Pet Logo" height="40" onerror="this.style.display='none'">
+          <img src="images/parceiros/wecareforpet.png" alt="We Care For Pet Logo" height="40" data-image-fallback="hide">
         </div>
-        <p class="vt-partner-desc">Uma parceria estratégica de engenharia clínica entre a <strong style="color: #0d9488;">We Care For Pet</strong> e a <strong style="color: #0d9488;">ASYDIM</strong>. O objetivo? Reduzir a carga burocrática e devolver o tempo dos médicos aos pacientes.</p>
+        <p class="vt-partner-desc" data-i18n-html="vt.partner.desc">Uma parceria estratégica de engenharia clínica entre a <strong class="s-0cd832f86c05">We Care For Pet</strong> e a <strong class="s-0cd832f86c05">ASYDIM</strong>. O objetivo? Reduzir a carga burocrática e devolver o tempo dos médicos aos pacientes.</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== CTA FINAL ===== -->
-  <section class="vt2-stats" style="background: #03130d; text-align: center; padding: 100px 0; border: none;">
+
+  <section class="vt2-stats s-7166b005e859">
     <div class="container reveal reveal--up">
-      <h2 style="color: #fff; font-family: var(--serif); font-size: 2.5rem; margin-bottom: 20px;">Capacite a sua equipa veterinária com IA.</h2>
-      <p style="color: rgba(255,255,255,.75); max-width: 540px; margin: 0 auto 40px;">Solicite uma sessão de demonstração e descubra como o VetIA <strong>reduz a carga burocrática</strong> para que os médicos se <strong>foquem nos pacientes</strong>.</p>
-      <a href="index.html#contacto" class="vt2-btn-primary">Agendar Demonstração Clínica</a>
+      <h2 data-i18n="vt.cta.title" class="s-989325dc5c8c">Capacite a sua equipa veterinária com IA.</h2>
+      <p data-i18n-html="vt.cta.desc" class="s-88b53ad60868">Solicite uma sessão de demonstração e descubra como o VetIA <strong>reduz a carga burocrática</strong> para que os médicos se <strong>foquem nos pacientes</strong>.</p>
+      <a href="index.html?assunto=vetia#contacto" class="vt2-btn-primary" data-i18n="vt.cta.primary">Agendar Demonstração Clínica</a>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+
+  </main>
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="images/logo.png" alt="Logo Asydim" class="footer-logo" onerror="this.style.display='none'" />
-        <p>Consultoria &amp; Formação Sustentável</p>
-        <p class="footer-sub">Informática · Inovação · Sustentabilidade</p>
+        <img src="images/logo.png" alt="Logo Asydim" data-i18n-alt="logo.alt" class="footer-logo" data-image-fallback="hide" />
+        <p data-i18n="footer.tagline">Consultoria &amp; Formação Sustentável</p>
+        <p class="footer-sub" data-i18n="footer.sub">Informática · Inovação · Sustentabilidade</p>
       </div>
       <div class="footer-col">
-        <h5>Navegação</h5>
-        <a href="index.html#sobre">Sobre Nós</a>
-        <a href="index.html#servicos">Serviços</a>
-        <a href="index.html#projetos">Projetos</a>
-        <a href="index.html#contacto">Contacto</a>
+        <h5 data-i18n="nav.navigation">Navegação</h5>
+        <a href="index.html#sobre" data-i18n="nav.about">Sobre Nós</a>
+        <a href="index.html#servicos" data-i18n="nav.services">Serviços</a>
+        <a href="index.html#projetos" data-i18n="nav.projects">Projetos</a>
+        <a href="index.html?assunto=vetia#contacto" data-i18n="nav.contact">Contacto</a>
       </div>
       <div class="footer-col">
-        <h5>Produtos SaaS</h5>
+        <h5 data-i18n="vt.footer.saas">Produtos SaaS</h5>
         <a href="produto-medreminder.html">MedReminder (HealthTech)</a>
         <a href="produto-vetia.html">VetIA (VetTech)</a>
-        <a href="servico-especialidade.html">Especialidades B2B</a>
+        <a href="servico-especialidade.html" data-i18n="vt.footer.spec">Especialidades B2B</a>
       </div>
       <div class="footer-col">
-        <h5>Contacto</h5>
+        <h5 data-i18n="nav.contact">Contacto</h5>
         <a href="mailto:info@asydim.com">info@asydim.com</a>
-        <a href="https://www.asydim.pt" target="_blank" rel="noopener">www.asydim.pt</a>
+        <a href="https://asydim.pt" target="_blank" rel="noopener noreferrer">asydim.pt</a>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p>© 2025 Asydim — Todos os direitos reservados · Desenvolvido em Portugal</p>
+        <p data-i18n="footer.copy">© 2026 Asydim — Todos os direitos reservados · Desenvolvido em Portugal</p>
       </div>
     </div>
+
+    <nav class="footer-legal container" aria-label="Informação legal" data-i18n-aria="legal.nav">
+      <a href="politica-privacidade.html" data-i18n="legal.privacy">Política de Privacidade e RGPD</a>
+      <a href="termos-condicoes.html" data-i18n="legal.terms">Termos e Condições</a>
+      <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener noreferrer" data-i18n="legal.complaints">Livro de Reclamações Eletrónico ↗</a>
+    </nav>
   </footer>
 
+  <script src="i18n/produto-vetia.js"></script>
+  <script src="enhancements.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
